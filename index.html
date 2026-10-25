@@ -1,0 +1,457 @@
+<title>جدول أكل العيلة</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
+<style>
+/* Layout: weekly board — 5 day cards in a grid, summary strip above, shopping list + library drawers below */
+:root{
+  --bg:#f6f1e8; --surface:#fffdf9; --surface-2:#f1e9dc; --line:#dccfb9;
+  --fg:#2b2419; --muted:#7a6a52;
+  --accent:#8a4b2f; --accent-fg:#fff; --accent-soft:#f3dfd3;
+  --lunch:#b8742f; --dinner:#3e6b5c;
+  --ok:#2f7d4e; --warn:#b4731a; --hot:#b3402f;
+  --font-display:"Cairo",system-ui,sans-serif;
+  --font-body:"IBM Plex Sans Arabic","Cairo",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#1c1814; --surface:#262019; --surface-2:#2f2820; --line:#443a2e;
+  --fg:#f0e8dc; --muted:#b3a38c; --accent:#d9926f; --accent-fg:#1c1814; --accent-soft:#3d2a20;
+  --lunch:#e0a45c; --dinner:#7fb8a3; --ok:#6ec48c; --warn:#e0a24a; --hot:#e07a68; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#1c1814; --surface:#262019; --surface-2:#2f2820; --line:#443a2e;
+  --fg:#f0e8dc; --muted:#b3a38c; --accent:#d9926f; --accent-fg:#1c1814; --accent-soft:#3d2a20;
+  --lunch:#e0a45c; --dinner:#7fb8a3; --ok:#6ec48c; --warn:#e0a24a; --hot:#e07a68; color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 48px;font-size:15px}
+.wrap{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+h1,h2,h3{font-family:var(--font-display);margin:0;text-wrap:balance;line-height:1.25}
+h1{font-size:clamp(26px,4vw,36px);font-weight:800}
+h2{font-size:18px;font-weight:700}
+h3{font-size:15px;font-weight:700}
+.sub{color:var(--muted);margin:4px 0 0}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:14px}
+.actions{display:flex;flex-wrap:wrap;gap:8px}
+button{font:inherit;font-family:var(--font-display);font-weight:700;border:1px solid var(--line);background:var(--surface);color:var(--fg);
+  padding:9px 16px;border-radius:999px;cursor:pointer;transition:background .15s,transform .1s}
+button:hover{background:var(--surface-2)}
+button:active{transform:scale(.97)}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button.primary{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+button.primary:hover{filter:brightness(1.08)}
+button.ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+button.sm{padding:4px 10px;font-size:12.5px;font-weight:600}
+button:disabled{opacity:.5;cursor:not-allowed}
+.pill{display:inline-flex;align-items:center;gap:4px;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:600;background:var(--surface-2);color:var(--muted)}
+.pill.ok{background:var(--ok);color:#fff}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.stat .k{font-size:12px;color:var(--muted);font-weight:600}
+.stat .v{font-family:var(--font-display);font-size:24px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.2}
+.stat .u{font-size:12px;color:var(--muted);margin-right:3px}
+.gauge{height:6px;background:var(--surface-2);border-radius:3px;margin-top:8px;overflow:hidden}
+.gauge i{display:block;height:100%;border-radius:3px;background:var(--ok)}
+.gauge i.warn{background:var(--warn)}.gauge i.hot{background:var(--hot)}
+
+.week{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+@media(max-width:980px){.week{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.week{grid-template-columns:1fr}}
+.day{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.day-h{padding:10px 14px;background:var(--surface-2);display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.day-h h2{font-size:17px}
+.day-h .date{font-size:12px;color:var(--muted)}
+.day-total{padding:8px 14px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;font-variant-numeric:tabular-nums;margin-top:auto}
+.day-total b{color:var(--fg);font-family:var(--font-display)}
+.meal{padding:12px 14px;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--line)}
+.meal:first-of-type{border-top:0}
+.meal .tag{font-size:11.5px;font-weight:700;letter-spacing:.04em}
+.meal.lunch .tag{color:var(--lunch)}.meal.dinner .tag{color:var(--dinner)}
+.meal .name{font-family:var(--font-display);font-weight:700;font-size:16px;line-height:1.3;background:none;border:0;padding:0;text-align:start;color:var(--fg);border-radius:4px;display:flex;justify-content:space-between;gap:6px;align-items:center}
+.meal .name:hover{color:var(--accent);background:none}
+.meal .name .chev{font-size:12px;color:var(--muted);transition:transform .15s}
+.meal .name[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.meal .side{font-size:13px;color:var(--muted)}
+.meal .kcal{font-variant-numeric:tabular-nums;font-size:13px;display:flex;gap:10px;flex-wrap:wrap;color:var(--muted)}
+.meal .kcal b{color:var(--fg)}
+.meal .hamdan{font-size:12.5px;background:var(--accent-soft);border-radius:8px;padding:5px 8px;line-height:1.45}
+.meal .hamdan span{font-weight:700;color:var(--accent)}
+.meal .row{display:flex;justify-content:space-between;align-items:center;gap:6px;margin-top:2px;flex-wrap:wrap}
+.votes{display:flex;gap:4px}
+.votes button{padding:3px 8px;font-size:12px;border-radius:8px;display:inline-flex;gap:4px;align-items:center}
+.votes button.on{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+.lock{opacity:.55}.lock.on{opacity:1;border-color:var(--accent);color:var(--accent)}
+.ing{background:var(--surface-2);border-radius:10px;padding:10px 12px;font-size:13px;display:flex;flex-direction:column;gap:8px}
+.ing h3{font-size:13px;color:var(--muted)}
+.ing ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:3px 10px}
+.ing li{display:flex;justify-content:space-between;gap:6px;font-variant-numeric:tabular-nums}
+.ing li span:last-child{color:var(--muted);white-space:nowrap}
+.ing .tools{display:flex;flex-wrap:wrap;gap:4px}
+.ing .tools span{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:1px 7px;font-size:12px}
+.ing .steps{color:var(--muted);line-height:1.55}
+
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px}
+details.panel summary{cursor:pointer;font-family:var(--font-display);font-weight:700;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:8px}
+details.panel summary::-webkit-details-marker{display:none}
+details.panel summary::after{content:"+";font-size:20px;color:var(--muted)}
+details[open].panel summary::after{content:"–"}
+.settings{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:14px}
+label.f{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted);font-weight:600}
+input[type=number],select{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--fg)}
+input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips label{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border:1px solid var(--line);border-radius:999px;font-size:13px;cursor:pointer;background:var(--surface)}
+.chips input{accent-color:var(--accent)}
+.lib{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;margin-top:14px}
+.lib .it{border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:13px;display:flex;flex-direction:column;gap:3px;background:var(--surface)}
+.lib .it b{font-family:var(--font-display)}
+.lib .it .m{color:var(--muted);font-variant-numeric:tabular-nums;font-size:12px}
+.lib .it.off{opacity:.4}
+.note{font-size:13px;color:var(--muted);line-height:1.6}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:12px}
+.rule{background:var(--surface-2);border-radius:10px;padding:10px 12px;font-size:13.5px}
+.rule b{font-family:var(--font-display);display:block}
+
+/* shopping list */
+.shop{display:none}
+.shop.on{display:block}
+.shop-h{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.cat{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cat h3{background:var(--surface-2);padding:8px 12px;display:flex;justify-content:space-between}
+.cat h3 small{color:var(--muted);font-weight:600;font-variant-numeric:tabular-nums}
+.cat ul{list-style:none;margin:0;padding:6px 8px;display:flex;flex-direction:column}
+.cat li label{display:flex;align-items:center;gap:8px;padding:5px 4px;border-radius:6px;cursor:pointer;font-size:14px}
+.cat li label:hover{background:var(--surface-2)}
+.cat li input{accent-color:var(--ok);width:17px;height:17px;flex:none}
+.cat li .q{margin-inline-start:auto;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;font-size:13px}
+.cat li.done label{opacity:.45;text-decoration:line-through}
+.pantry{margin-top:12px}
+.pantry .chips span{background:var(--surface-2);border-radius:999px;padding:3px 10px;font-size:13px}
+.toolsbox{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.toolsbox span{background:var(--surface-2);border-radius:8px;padding:4px 10px;font-size:13px}
+.toast{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));right:50%;transform:translateX(50%);background:var(--fg);color:var(--bg);padding:9px 16px;border-radius:999px;font-weight:600;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:20}
+.toast.show{opacity:1}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap" dir="rtl" lang="ar">
+<header>
+  <div>
+    <h1>جدول أكل العيلة</h1>
+    <p class="sub" id="range">الغدا تقليدي، العشا خفيف وعصري — ٤ أفراد</p>
+  </div>
+  <div class="actions">
+    <button class="primary" id="gen">🔄 ولّد أسبوع جديد</button>
+    <button class="ok" id="confirm">✅ ثبّت الأسبوع وطلّع قائمة الجمعية</button>
+    <button id="copy">نسخ الجدول</button>
+  </div>
+</header>
+
+<section class="stats" id="stats"></section>
+<section class="week" id="week"></section>
+
+<section class="panel shop" id="shop"></section>
+
+<details class="panel">
+  <summary>الإعدادات وقواعد العيلة</summary>
+  <div class="settings">
+    <label class="f">أقصى كالوري للغدا (للشخص)<input type="number" id="maxL" value="780" step="10" min="400"></label>
+    <label class="f">أقصى كالوري للعشا (للشخص)<input type="number" id="maxD" value="650" step="10" min="300"></label>
+    <label class="f">أول يوم في الأسبوع<select id="start"><option value="1">الاثنين</option><option value="0">الأحد</option><option value="6">السبت</option></select></label>
+    <label class="f">عدد الأيام<select id="ndays"><option>5</option><option>6</option><option>7</option></select></label>
+  </div>
+  <div class="settings">
+    <div><div class="note" style="margin-bottom:6px">أنواع العشا المسموحة</div><div class="chips" id="dtypes"></div></div>
+    <div><div class="note" style="margin-bottom:6px">مكوّنات مستبعدة</div><div class="chips" id="excl"></div></div>
+    <div><div class="note" style="margin-bottom:6px">التصويت</div><button class="sm" id="reset">تصفير التصويت</button></div>
+  </div>
+  <div class="rules">
+    <div class="rule"><b>حمدان</b>بروتين مشوي بس (دجاج / لحم / سمك) + عيش أبيض. بدون صالونة ولا صوصات. حصته محسوبة لحالها.</div>
+    <div class="rule"><b>خليفة</b>كل شيء ما عدا الخيار والكوسة والباذنجان — مستبعدة من كل الطبخات والسلطات.</div>
+    <div class="rule"><b>أم زايد وزايد</b>كل شيء، بدون قيود.</div>
+    <div class="rule"><b>التصويت</b>زايد وحمدان يصوتون على كل وجبة 👍 أو 👎. اللي ياخذ 👎 من الاثنين ما يرجع ينختار.</div>
+  </div>
+</details>
+
+<details class="panel">
+  <summary>مكتبة الأكلات والكالوري</summary>
+  <p class="note">الكالوري لحصة معتدلة لشخص بالغ. المقادير في كل وصفة لـ ٤ أشخاص (حصة حمدان المشوية ضمنها).</p>
+  <div class="lib" id="lib"></div>
+</details>
+
+<p class="note">اضغط على اسم أي وجبة تطلع لك المكونات والأدوات وطريقة مختصرة. بعد ما يعجبكم الجدول اضغط "ثبّت الأسبوع" وتطلع قائمة الجمعية مجمّعة لكل الأسبوع.</p>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+// ---------- ingredient shorthand: [name, qty, unit, cat] ----------
+// cat: m=لحوم ودجاج وسمك, v=خضار وفواكه, d=ألبان وبيض, g=بقالة جافة, b=مخبوزات, s=بهارات (مخزن), o=أخرى
+const T={pot:'قدر كبير',pc:'قدر ضغط',grill:'شواية / غريل',oven:'فرن',pan:'مقلاة',wok:'مقلاة عميقة',tray:'صينية فرن',blend:'خلاط',strain:'مصفاة',bowl:'بول كبير',rolling:'نشّابة',pizza:'صينية بيتزا',skew:'أسياخ'};
+const LIB=[
+ // ---------- غدا تقليدي ----------
+ {id:'majboos-chicken',kind:'lunch',name:'مجبوس دجاج',side:'دقوس + سلطة (طماط، خس، جزر)',kcal:700,p:38,c:78,f:24,hamdan:'دجاج مشوي + عيش أبيض',hk:500,
+  ing:[['دجاج كامل',1.5,'كغ','m'],['عيش بسمتي',3,'كوب','g'],['بصل',3,'حبة','v'],['طماط',4,'حبة','v'],['ثوم',6,'فص','v'],['لومي (ليمون أسود)',3,'حبة','s'],['بهارات مجبوس',2,'ملعقة','s'],['زعفران',1,'رشة','s'],['ماء ورد',1,'ملعقة','g'],['زيت',4,'ملعقة','g'],['خس',1,'حبة','v'],['جزر',2,'حبة','v'],['كزبرة خضرا',1,'ربطة','v']],
+  tools:['pot','grill','strain'],steps:'يسلق الدجاج بالبصل والبهارات واللومي، يطلع ويحمّر في الفرن أو الشواية، والعيش ينطبخ في نفس المرق. حصة حمدان: فخذين يتشوون بدون بهار المجبوس + عيش أبيض ينطبخ لحاله.'},
+ {id:'majboos-lamb',kind:'lunch',name:'مجبوس لحم',side:'دقوس + سلطة',kcal:760,p:40,c:78,f:30,hamdan:'لحم مشوي + عيش أبيض',hk:550,
+  ing:[['لحم غنم بالعظم',1.2,'كغ','m'],['عيش بسمتي',3,'كوب','g'],['بصل',3,'حبة','v'],['طماط',4,'حبة','v'],['ثوم',6,'فص','v'],['لومي',3,'حبة','s'],['بهارات مجبوس',2,'ملعقة','s'],['زعفران',1,'رشة','s'],['زيت',4,'ملعقة','g'],['خس',1,'حبة','v'],['طماط للسلطة',2,'حبة','v']],
+  tools:['pc','grill'],steps:'اللحم في قدر الضغط ٤٠ دقيقة مع البصل والبهارات، بعدين العيش في المرق. قطعتين لحم لحمدان تتشوى على الشواية بملح وفلفل بس.'},
+ {id:'majboos-tuna',kind:'lunch',name:'مجبوس تونة',side:'دقوس + ليمون',kcal:650,p:34,c:82,f:18,hamdan:'سمك مشوي + عيش أبيض',hk:450,
+  ing:[['تونة معلبة (كبيرة)',3,'علبة','g'],['فيليه سمك (لحمدان)',200,'غ','m'],['عيش بسمتي',3,'كوب','g'],['بصل',3,'حبة','v'],['طماط',3,'حبة','v'],['فلفل أخضر',1,'حبة','v'],['ثوم',5,'فص','v'],['لومي',2,'حبة','s'],['بهارات مجبوس',1.5,'ملعقة','s'],['كركم',1,'ملعقة صغيرة','s'],['زيت',3,'ملعقة','g'],['ليمون',2,'حبة','v'],['كزبرة خضرا',1,'ربطة','v']],
+  tools:['pot','grill'],steps:'تحمير البصل والطماط والبهارات، تضاف التونة، بعدين العيش والماء. فيليه السمك لحمدان يتشوى بليمون وملح.'},
+ {id:'majboos-shrimp',kind:'lunch',name:'مجبوس روبيان',side:'دقوس + سلطة',kcal:640,p:36,c:80,f:16,hamdan:'روبيان مشوي + عيش أبيض',hk:430,
+  ing:[['روبيان مقشر',1,'كغ','m'],['عيش بسمتي',3,'كوب','g'],['بصل',3,'حبة','v'],['طماط',4,'حبة','v'],['ثوم',6,'فص','v'],['لومي',2,'حبة','s'],['بهارات مجبوس',1.5,'ملعقة','s'],['كركم',1,'ملعقة صغيرة','s'],['زيت',3,'ملعقة','g'],['خس',1,'حبة','v'],['ليمون',2,'حبة','v']],
+  tools:['pot','pan'],steps:'الروبيان يتقلى بسرعة بالثوم والبهار ويطلع، العيش ينطبخ في الصلصة ويرجع الروبيان فوقه. حصة حمدان روبيان مشوي بالزبدة.'},
+ {id:'biryani-lamb',kind:'lunch',name:'برياني لحم',side:'رايتا لبن بالنعناع',kcal:760,p:38,c:80,f:30,hamdan:'لحم مشوي + عيش أبيض',hk:550,
+  ing:[['لحم غنم مكعبات',1,'كغ','m'],['عيش بسمتي',3,'كوب','g'],['بصل',4,'حبة','v'],['طماط',3,'حبة','v'],['زبادي',1,'كوب','d'],['ثوم',6,'فص','v'],['زنجبيل طازج',30,'غ','v'],['بهارات برياني',2,'ملعقة','s'],['كركم',1,'ملعقة صغيرة','s'],['زعفران',1,'رشة','s'],['سمن',3,'ملعقة','d'],['نعناع طازج',1,'ربطة','v'],['كزبرة خضرا',1,'ربطة','v'],['لبن (للرايتا)',1,'كوب','d'],['فلفل أخضر',2,'حبة','v']],
+  tools:['pc','pot','pan'],steps:'اللحم يتبل بالزبادي والبهارات ويطبخ، العيش يسلق نص سلق، ويتطبقون ويتدمّون ٢٠ دقيقة. الرايتا: لبن + نعناع + ملح (بدون خيار).'},
+ {id:'biryani-chicken',kind:'lunch',name:'برياني دياي',side:'رايتا لبن + سلطة',kcal:720,p:38,c:80,f:26,hamdan:'دجاج مشوي + عيش أبيض',hk:500,
+  ing:[['دجاج مقطع',1.5,'كغ','m'],['عيش بسمتي',3,'كوب','g'],['بصل',4,'حبة','v'],['طماط',3,'حبة','v'],['زبادي',1,'كوب','d'],['ثوم',6,'فص','v'],['زنجبيل طازج',30,'غ','v'],['بهارات برياني',2,'ملعقة','s'],['كركم',1,'ملعقة صغيرة','s'],['زعفران',1,'رشة','s'],['سمن',3,'ملعقة','d'],['نعناع طازج',1,'ربطة','v'],['كزبرة خضرا',1,'ربطة','v'],['لبن (للرايتا)',1,'كوب','d']],
+  tools:['pot','pan','grill'],steps:'نفس طريقة برياني اللحم، فخذين لحمدان يتبلون بزبادي وملح بس ويتشوون.'},
+ {id:'maqluba',kind:'lunch',name:'مقلوبة دجاج بالبطاط والزهرة',side:'لبن + سلطة',kcal:650,p:34,c:72,f:24,hamdan:'دجاج مشوي + عيش أبيض',hk:500,excl:[],
+  ing:[['دجاج مقطع',1.5,'كغ','m'],['عيش مصري / قصير',3,'كوب','g'],['بطاط',4,'حبة','v'],['زهرة (قرنبيط)',1,'حبة','v'],['بصل',2,'حبة','v'],['ثوم',4,'فص','v'],['بهارات مشكلة',1.5,'ملعقة','s'],['كركم',1,'ملعقة صغيرة','s'],['قرفة',1,'عود','s'],['زيت للقلي',1,'كوب','g'],['لوز مقشر',50,'غ','g'],['لبن',1,'كوب','d'],['خس',1,'حبة','v'],['طماط',2,'حبة','v']],
+  tools:['pot','pan','tray'],steps:'البطاط والزهرة يتقلون أو يتحمرون في الفرن، الدجاج يسلق، يتطبقون في القدر مع العيش والمرق وتنقلب على الصحن. بدون باذنجان.'},
+ {id:'thareed',kind:'lunch',name:'ثريد لحم',side:'خبز رقاق + مرق خضار',kcal:700,p:36,c:70,f:28,hamdan:'لحم مشوي + عيش أبيض',hk:550,
+  ing:[['لحم غنم بالعظم',1.2,'كغ','m'],['خبز رقاق',1,'كيس','b'],['بطاط',3,'حبة','v'],['جزر',3,'حبة','v'],['بصل',2,'حبة','v'],['طماط',4,'حبة','v'],['معجون طماط',2,'ملعقة','g'],['ثوم',5,'فص','v'],['لومي',2,'حبة','s'],['بهارات مشكلة',1.5,'ملعقة','s'],['كركم',1,'ملعقة صغيرة','s'],['فلفل أخضر',1,'حبة','v'],['عيش أبيض (لحمدان)',1,'كوب','g']],
+  tools:['pc','bowl','grill'],steps:'اللحم والخضار في قدر الضغط، الرقاق يتقطع في صحن التقديم ويصب فوقه المرق واللحم. بدون كوسة. قطع لحم لحمدان تتشوى.'},
+ {id:'harees',kind:'lunch',name:'هريس لحم',side:'سمن قليل + سكر وقرفة اختياري',kcal:620,p:30,c:72,f:22,hamdan:'لحم مشوي + عيش أبيض',hk:550,
+  ing:[['حب هريس',3,'كوب','g'],['لحم غنم بالعظم',1,'كغ','m'],['سمن',3,'ملعقة','d'],['ملح',1,'ملعقة','s'],['قرفة ناعمة',1,'ملعقة صغيرة','s'],['عيش أبيض (لحمدان)',1,'كوب','g']],
+  tools:['pc','pot'],steps:'الحب ينقع من الليل، يطبخ مع اللحم ٣ ساعات (أو ساعة بقدر الضغط) ويضرب لين يصير ناعم. يقدم بالسمن.'},
+ {id:'salona-lamb',kind:'lunch',name:'صالونة لحم بالخضار',side:'عيش أبيض',kcal:680,p:36,c:68,f:28,hamdan:'قطع من نفس اللحم مشوية + عيش أبيض',hk:550,excl:['kousa','eggplant'],
+  ing:[['لحم غنم مكعبات',1,'كغ','m'],['عيش بسمتي',3,'كوب','g'],['بطاط',3,'حبة','v'],['جزر',3,'حبة','v'],['فاصوليا خضرا',200,'غ','v'],['بصل',2,'حبة','v'],['طماط',4,'حبة','v'],['معجون طماط',2,'ملعقة','g'],['ثوم',5,'فص','v'],['لومي',2,'حبة','s'],['بهارات مشكلة',1.5,'ملعقة','s'],['كركم',1,'ملعقة صغيرة','s']],
+  tools:['pc','pot','grill'],steps:'اللحم يتحمر بالبصل، تضاف الطماط والبهارات والماء، بعدين الخضار. العيش الأبيض لحاله يخدم الكل وحمدان.'},
+ {id:'salona-chicken',kind:'lunch',name:'صالونة دجاج',side:'عيش أبيض',kcal:640,p:36,c:68,f:22,hamdan:'دجاج مشوي + عيش أبيض',hk:500,
+  ing:[['دجاج مقطع',1.5,'كغ','m'],['عيش بسمتي',3,'كوب','g'],['بطاط',3,'حبة','v'],['جزر',2,'حبة','v'],['بصل',2,'حبة','v'],['طماط',4,'حبة','v'],['معجون طماط',2,'ملعقة','g'],['ثوم',5,'فص','v'],['لومي',2,'حبة','s'],['بهارات مشكلة',1.5,'ملعقة','s'],['كركم',1,'ملعقة صغيرة','s'],['كزبرة خضرا',1,'ربطة','v']],
+  tools:['pot','grill'],steps:'نفس صالونة اللحم بوقت أقل. فخذين لحمدان يتشوون.'},
+ {id:'madhbi',kind:'lunch',name:'مظبي دجاج',side:'عيش أبيض + دقوس',kcal:640,p:42,c:66,f:20,hamdan:'المظبي نفسه مشوي + عيش',hk:560,
+  ing:[['دجاج كامل مفتوح',1.5,'كغ','m'],['عيش بسمتي',3,'كوب','g'],['ثوم',6,'فص','v'],['زنجبيل طازج',30,'غ','v'],['ليمون',2,'حبة','v'],['بهارات مظبي / مشكلة',2,'ملعقة','s'],['كركم',1,'ملعقة صغيرة','s'],['زيت',3,'ملعقة','g'],['طماط (للدقوس)',4,'حبة','v'],['فلفل أخضر حار',1,'حبة','v'],['كزبرة خضرا',1,'ربطة','v']],
+  tools:['grill','oven','blend'],steps:'الدجاج يتبل من الليل ويتشوى على الحجر أو الغريل. الدقوس: طماط مسلوق مع ثوم وفلفل بالخلاط. أكلة مناسبة للكل ما فيها استثناء.'},
+ {id:'mandi',kind:'lunch',name:'مندي لحم',side:'سلطة + دقوس',kcal:740,p:40,c:76,f:28,hamdan:'لحم مشوي + عيش أبيض',hk:550,
+  ing:[['لحم غنم بالعظم',1.2,'كغ','m'],['عيش بسمتي',3,'كوب','g'],['بصل',2,'حبة','v'],['بهارات مندي',2,'ملعقة','s'],['هيل',6,'حبة','s'],['قرفة',1,'عود','s'],['زعفران',1,'رشة','s'],['سمن',2,'ملعقة','d'],['فحم + قطعة ألمنيوم (للتدخين)',1,'حبة','o'],['خس',1,'حبة','v'],['طماط',4,'حبة','v'],['ليمون',2,'حبة','v']],
+  tools:['pot','oven','strain'],steps:'اللحم يسلق بالبهارات، العيش في المرق، اللحم يتحمر بالفرن، ويتدخّن بقطعة الفحم في القدر المغطى.'},
+ {id:'kabsa-chicken',kind:'lunch',name:'كبسة دجاج',side:'سلطة + دقوس',kcal:700,p:38,c:78,f:24,hamdan:'دجاج مشوي + عيش أبيض',hk:500,
+  ing:[['دجاج مقطع',1.5,'كغ','m'],['عيش بسمتي',3,'كوب','g'],['بصل',3,'حبة','v'],['طماط',3,'حبة','v'],['معجون طماط',2,'ملعقة','g'],['جزر',2,'حبة','v'],['ثوم',5,'فص','v'],['بهارات كبسة',2,'ملعقة','s'],['لومي',2,'حبة','s'],['زبيب',50,'غ','g'],['لوز مقشر',50,'غ','g'],['زيت',3,'ملعقة','g'],['خس',1,'حبة','v']],
+  tools:['pot','oven','pan'],steps:'الدجاج يسلق بالصلصة والبهارات ويتحمر، العيش في المرق، يزين بالزبيب واللوز المحمر.'},
+ {id:'fish-sayadiya',kind:'lunch',name:'صيادية سمك',side:'صوص طحينة خفيف + سلطة',kcal:660,p:36,c:74,f:22,hamdan:'سمك مشوي + عيش أبيض',hk:450,
+  ing:[['فيليه سمك (شعري/هامور)',1.2,'كغ','m'],['عيش بسمتي',3,'كوب','g'],['بصل',4,'حبة','v'],['ثوم',4,'فص','v'],['كمون',1,'ملعقة','s'],['كركم',1,'ملعقة صغيرة','s'],['بهارات سمك',1.5,'ملعقة','s'],['زيت',6,'ملعقة','g'],['طحينة',3,'ملعقة','g'],['ليمون',3,'حبة','v'],['صنوبر أو لوز',40,'غ','g'],['خس',1,'حبة','v'],['طماط',2,'حبة','v']],
+  tools:['pan','pot','grill'],steps:'البصل يتحمر لين يسمر (هو لون الصيادية)، العيش في مرق البصل، السمك يتقلى أو يتشوى. حصة حمدان سمك مشوي بالليمون.'},
+ {id:'butter-chicken',kind:'lunch',name:'بتر تشكن + عيش أبيض',side:'سلطة',kcal:720,p:38,c:70,f:30,hamdan:'دجاج تندوري مشوي + عيش أبيض',hk:480,
+  ing:[['صدور دجاج',1.2,'كغ','m'],['عيش بسمتي',3,'كوب','g'],['زبادي',1,'كوب','d'],['زبدة',60,'غ','d'],['كريمة طبخ',200,'مل','d'],['طماط',5,'حبة','v'],['معجون طماط',2,'ملعقة','g'],['بصل',2,'حبة','v'],['ثوم',5,'فص','v'],['زنجبيل طازج',30,'غ','v'],['بهارات تندوري',2,'ملعقة','s'],['غرام مسالا',1,'ملعقة','s'],['كزبرة خضرا',1,'ربطة','v'],['خس',1,'حبة','v']],
+  tools:['grill','pan','blend'],steps:'الدجاج يتبل بالزبادي والتندوري ويتشوى (هنا تطلع حصة حمدان قبل الصوص)، الصوص طماط مطحونة + زبدة + كريمة.'},
+ {id:'dal-chicken',kind:'lunch',name:'دال + دجاج مشوي',side:'عيش أبيض + مخلل',kcal:640,p:40,c:72,f:18,hamdan:'الدجاج المشوي نفسه + عيش',hk:470,
+  ing:[['عدس أصفر (مسور)',2,'كوب','g'],['صدور / أفخاذ دجاج',1.2,'كغ','m'],['عيش بسمتي',3,'كوب','g'],['بصل',2,'حبة','v'],['طماط',3,'حبة','v'],['ثوم',5,'فص','v'],['زنجبيل طازج',20,'غ','v'],['كركم',1,'ملعقة صغيرة','s'],['كمون',1,'ملعقة','s'],['فلفل أخضر',2,'حبة','v'],['سمن',2,'ملعقة','d'],['كزبرة خضرا',1,'ربطة','v'],['مخلل مشكل',1,'علبة','g']],
+  tools:['pot','grill','pan'],steps:'العدس يسلق بالكركم، تحمير بصل وثوم وكمون بالسمن ويصب فوقه (التدخة). الدجاج مشوي للكل.'},
+ // ---------- عشا عصري ----------
+ {id:'burger',kind:'dinner',type:'burger',name:'برجر لحم بيتي',side:'١٥٠ غ لحم، بريوش، شريحة جبن، خس وطماط + بطاط ودجز بالفرن',kcal:650,p:36,c:52,f:30,hamdan:'القرص نفسه مشوي + عيش أبيض',hk:520,
+  ing:[['لحم بقر مفروم (٢٠٪ دهن)',650,'غ','m'],['خبز برجر بريوش',4,'حبة','b'],['جبن شيدر شرائح',4,'شريحة','d'],['خس',1,'حبة','v'],['طماط',2,'حبة','v'],['بصل',1,'حبة','v'],['بطاط',5,'حبة','v'],['مخلل خيار (اختياري للباقين)',1,'علبة','g'],['كاتشب',1,'علبة','g'],['مايونيز',1,'علبة','g'],['زيت زيتون',2,'ملعقة','g'],['بابريكا',1,'ملعقة صغيرة','s']],
+  tools:['grill','pan','tray'],steps:'اللحم يتشكل أقراص بملح وفلفل بس (بدون بيض ولا بقسماط) ويتشوى ٣–٤ دقايق كل جهة. الودجز بالفرن بزيت وبابريكا ٣٠ دقيقة. قرص حمدان لحاله بدون خبز.'},
+ {id:'chicken-burger',kind:'dinner',type:'burger',name:'برجر دجاج مشوي',side:'صدر دجاج متبل، خبز بريوش، سلطة',kcal:560,p:38,c:50,f:20,hamdan:'الصدر المشوي نفسه + عيش أبيض',hk:450,
+  ing:[['صدور دجاج',700,'غ','m'],['خبز برجر بريوش',4,'حبة','b'],['خس',1,'حبة','v'],['طماط',2,'حبة','v'],['زبادي',0.5,'كوب','d'],['ثوم',3,'فص','v'],['بابريكا',1,'ملعقة','s'],['ليمون',1,'حبة','v'],['مايونيز',1,'علبة','g'],['عيش أبيض (لحمدان)',1,'كوب','g']],
+  tools:['grill','bowl'],steps:'الصدور تتفرد وتتبل بزبادي وثوم وبابريكا ساعة وتتشوى.'},
+ {id:'pasta-chicken',kind:'dinner',type:'pasta',name:'باستا دجاج بالكريمة الخفيفة',side:'كريمة طبخ لايت + سلطة سيزر (بدون خيار)',kcal:600,p:34,c:62,f:22,hamdan:'صدر دجاج مشوي + عيش أبيض',hk:450,
+  ing:[['باستا (بيني أو فيتوتشيني)',400,'غ','g'],['صدور دجاج',700,'غ','m'],['كريمة طبخ لايت',250,'مل','d'],['جبن بارميزان مبشور',60,'غ','d'],['فطر',200,'غ','v'],['ثوم',4,'فص','v'],['بصل',1,'حبة','v'],['زيت زيتون',2,'ملعقة','g'],['خس روماني',1,'حبة','v'],['خبز محمص (كروتون)',1,'كيس','b'],['صوص سيزر',1,'علبة','g'],['عيش أبيض (لحمدان)',1,'كوب','g']],
+  tools:['pot','pan','grill'],steps:'الدجاج يتقطع ويتحمر (صدر لحمدان يتشوى كامل)، الفطر والثوم بالمقلاة، تضاف الكريمة والبارميزان والباستا المسلوقة.'},
+ {id:'pasta-bolognese',kind:'dinner',type:'pasta',name:'باستا بولونيز',side:'لحم مفروم بصلصة طماط + جبن بارميزان قليل',kcal:620,p:34,c:66,f:22,hamdan:'كفتة مشوية + عيش أبيض',hk:500,
+  ing:[['باستا (سباغيتي)',400,'غ','g'],['لحم بقر مفروم',600,'غ','m'],['طماط مقشرة معلبة',1,'علبة','g'],['معجون طماط',2,'ملعقة','g'],['بصل',1,'حبة','v'],['جزر',1,'حبة','v'],['ثوم',4,'فص','v'],['زيت زيتون',2,'ملعقة','g'],['أوريغانو',1,'ملعقة صغيرة','s'],['جبن بارميزان مبشور',50,'غ','d'],['عيش أبيض (لحمدان)',1,'كوب','g']],
+  tools:['pot','pan','grill'],steps:'جزء من المفروم (١٥٠ غ) يتشكل كفتة لحمدان ويتشوى قبل ما تنزل الصلصة. الباقي يتحمر مع البصل والجزر والثوم ويتطبخ بالطماط ٣٠ دقيقة.'},
+ {id:'pasta-shrimp',kind:'dinner',type:'pasta',name:'باستا روبيان بالثوم والليمون',side:'زيت زيتون + سلطة',kcal:560,p:32,c:62,f:18,hamdan:'روبيان مشوي + عيش أبيض',hk:430,
+  ing:[['باستا (لينغويني)',400,'غ','g'],['روبيان مقشر',700,'غ','m'],['ثوم',6,'فص','v'],['ليمون',2,'حبة','v'],['زبدة',40,'غ','d'],['زيت زيتون',3,'ملعقة','g'],['بقدونس',1,'ربطة','v'],['فلفل حار مجروش',1,'ملعقة صغيرة','s'],['خس',1,'حبة','v'],['طماط كرزية',200,'غ','v'],['عيش أبيض (لحمدان)',1,'كوب','g']],
+  tools:['pot','pan'],steps:'الروبيان بالثوم والزبدة دقيقتين كل جهة، يضاف الليمون والبقدونس والباستا المسلوقة مع شوي من ماي السلق.'},
+ {id:'shawarma',kind:'dinner',type:'wrap',name:'شاورما دجاج بيتية',side:'تورتيلا/صاج + ثومية خفيفة + مخلل',kcal:550,p:36,c:48,f:22,hamdan:'شرائح الشاورما مشوية بدون صوص + عيش',hk:460,
+  ing:[['أفخاذ دجاج مسحبة',1,'كغ','m'],['خبز صاج أو تورتيلا',8,'حبة','b'],['زبادي',0.5,'كوب','d'],['ثوم',8,'فص','v'],['ليمون',2,'حبة','v'],['بهارات شاورما',2,'ملعقة','s'],['خل',2,'ملعقة','g'],['زيت',3,'ملعقة','g'],['مخلل مشكل',1,'علبة','g'],['طماط',2,'حبة','v'],['خس',1,'حبة','v'],['بطاط (للقلي)',3,'حبة','v'],['عيش أبيض (لحمدان)',1,'كوب','g']],
+  tools:['pan','oven','blend'],steps:'الدجاج يتبل من الليل ويتحمر بالفرن أو المقلاة على نار عالية. الثومية: ثوم + ليمون + زيت بالخلاط (أو زبادي للخفيفة). حصة حمدان شرائح مشوية بدون ثومية.'},
+ {id:'steak',kind:'dinner',type:'grill',name:'ستيك لحم مشوي',side:'بطاط مهروس + خضار سوتيه (جزر، بروكلي، فاصوليا)',kcal:600,p:42,c:40,f:28,hamdan:'الستيك نفسه + عيش أبيض بدل المهروس',hk:560,
+  ing:[['ستيك بقر (ريب آي / سرلوين)',4,'قطعة','m'],['بطاط',5,'حبة','v'],['حليب',0.5,'كوب','d'],['زبدة',60,'غ','d'],['بروكلي',1,'حبة','v'],['جزر',3,'حبة','v'],['فاصوليا خضرا',200,'غ','v'],['ثوم',4,'فص','v'],['روزماري',2,'عود','v'],['فلفل أسود مجروش',1,'ملعقة','s'],['زيت زيتون',2,'ملعقة','g'],['عيش أبيض (لحمدان)',1,'كوب','g']],
+  tools:['grill','pan','pot'],steps:'الستيك يطلع من الثلاجة قبل نص ساعة، ملح وفلفل، ٣–٤ دقايق كل جهة ويرتاح ٥ دقايق. الخضار سوتيه بالزبدة والثوم.'},
+ {id:'mixed-grill',kind:'dinner',type:'grill',name:'مشاوي بيتية',side:'تكة دجاج + كباب لحم + خبز رقاق + حمص',kcal:620,p:44,c:42,f:30,hamdan:'المشاوي نفسها + عيش أبيض',hk:560,
+  ing:[['صدور دجاج مكعبات',600,'غ','m'],['لحم غنم مفروم',500,'غ','m'],['بصل',2,'حبة','v'],['بقدونس',1,'ربطة','v'],['زبادي',0.5,'كوب','d'],['ثوم',5,'فص','v'],['بهارات مشاوي',2,'ملعقة','s'],['سماق',1,'ملعقة','s'],['خبز رقاق / عربي',1,'كيس','b'],['حمص جاهز',1,'علبة','g'],['طماط',3,'حبة','v'],['فلفل رومي',2,'حبة','v'],['ليمون',2,'حبة','v'],['عيش أبيض (لحمدان)',1,'كوب','g']],
+  tools:['grill','skew','bowl'],steps:'التكة تتبل بزبادي وثوم وبهار، الكباب مفروم + بصل + بقدونس ناعم يلف على الأسياخ. الكل على الغريل.'},
+ {id:'grilled-fish',kind:'dinner',type:'grill',name:'سمك مشوي (شعري أو هامور)',side:'عيش أبيض + سلطة + ليمون',kcal:520,p:40,c:50,f:16,hamdan:'نفس السمك',hk:480,
+  ing:[['سمك شعري أو هامور (مقطع)',1.5,'كغ','m'],['عيش بسمتي',2.5,'كوب','g'],['ثوم',5,'فص','v'],['ليمون',3,'حبة','v'],['بهارات سمك',1.5,'ملعقة','s'],['كركم',1,'ملعقة صغيرة','s'],['زيت زيتون',3,'ملعقة','g'],['خس',1,'حبة','v'],['طماط',3,'حبة','v'],['كزبرة خضرا',1,'ربطة','v']],
+  tools:['grill','oven'],steps:'السمك يتبل بثوم وليمون وبهار ساعة ويتشوى أو بالفرن ٢٠ دقيقة. أخف عشا في الجدول.'},
+ {id:'pizza',kind:'dinner',type:'pizza',name:'بيتزا بيتية رقيقة',side:'دجاج أو لحم مفروم، موزاريلا معتدل — شريحتين كبار',kcal:550,p:28,c:60,f:22,hamdan:'دجاج مشوي + عيش أبيض',hk:450,
+  ing:[['طحين',3,'كوب','g'],['خميرة فورية',1,'ملعقة صغيرة','g'],['زيت زيتون',3,'ملعقة','g'],['صلصة بيتزا',1,'علبة','g'],['جبن موزاريلا',250,'غ','d'],['صدور دجاج (أو لحم مفروم)',400,'غ','m'],['فلفل رومي',1,'حبة','v'],['فطر',150,'غ','v'],['زيتون أسود',1,'علبة','g'],['أوريغانو',1,'ملعقة صغيرة','s'],['صدر دجاج (لحمدان)',200,'غ','m'],['عيش أبيض (لحمدان)',1,'كوب','g']],
+  tools:['bowl','rolling','pizza','oven','grill'],steps:'العجينة تتخمر ساعة، تنفرد رقيقة، صلصة + دجاج مطبوخ + جبن، فرن ٢٥٠ درجة ١٠–١٢ دقيقة. صدر حمدان مشوي لحاله.'},
+ {id:'fajita',kind:'dinner',type:'wrap',name:'فاهيتا دجاج',side:'فلفل وبصل + تورتيلا + صلصة',kcal:560,p:36,c:52,f:20,hamdan:'شرائح الدجاج مشوية + عيش أبيض',hk:450,
+  ing:[['صدور دجاج شرائح',800,'غ','m'],['تورتيلا',8,'حبة','b'],['فلفل رومي ملون',3,'حبة','v'],['بصل',2,'حبة','v'],['بهارات فاهيتا',2,'ملعقة','s'],['ليمون',2,'حبة','v'],['زيت',2,'ملعقة','g'],['صلصة سالسا',1,'علبة','g'],['كريمة حامضة أو زبادي',0.5,'كوب','d'],['جبن شيدر مبشور',100,'غ','d'],['خس',1,'حبة','v'],['عيش أبيض (لحمدان)',1,'كوب','g']],
+  tools:['pan','grill'],steps:'الدجاج يتبل ويتحمر على نار عالية، الفلفل والبصل بعدها. شرائح حمدان تتشوى قبل خلطها بالبهار الحار.'},
+ {id:'chicken-salad',kind:'dinner',type:'salad',name:'سلطة دجاج مشوي',side:'خس، طماط، أفوكادو، ذرة + خبز صغير',kcal:430,p:36,c:30,f:20,hamdan:'الدجاج المشوي نفسه + عيش أبيض',hk:450,
+  ing:[['صدور دجاج',700,'غ','m'],['خس روماني',2,'حبة','v'],['طماط كرزية',250,'غ','v'],['أفوكادو',2,'حبة','v'],['ذرة حلوة معلبة',1,'علبة','g'],['جزر',2,'حبة','v'],['زيت زيتون',3,'ملعقة','g'],['ليمون',2,'حبة','v'],['خردل',1,'ملعقة صغيرة','g'],['خبز عربي صغير',4,'حبة','b'],['عيش أبيض (لحمدان)',1,'كوب','g']],
+  tools:['grill','bowl'],steps:'الدجاج مشوي ويتقطع فوق السلطة. التتبيلة: زيت زيتون + ليمون + خردل + ملح.'},
+ {id:'fried-rice',kind:'dinner',type:'rice',name:'عيش مقلي بالدجاج (صيني)',side:'خضار + بيض + صويا خفيفة',kcal:580,p:32,c:70,f:18,hamdan:'دجاج مشوي + عيش أبيض',hk:450,
+  ing:[['عيش بسمتي أو جاسمين',3,'كوب','g'],['صدور دجاج مكعبات',600,'غ','m'],['بيض',3,'حبة','d'],['جزر',2,'حبة','v'],['بازلاء مجمدة',1,'كوب','v'],['بصل أخضر',1,'ربطة','v'],['ثوم',4,'فص','v'],['زنجبيل طازج',20,'غ','v'],['صوص صويا',4,'ملعقة','g'],['زيت سمسم',1,'ملعقة','g'],['زيت',3,'ملعقة','g']],
+  tools:['wok','grill'],steps:'العيش يكون مطبوخ ومبرد (من الغدا أحسن). حصة حمدان عيش أبيض مطبوخ لحاله قبل ما ينزل الصويا، ودجاجه مشوي.'},
+ {id:'quesadilla',kind:'dinner',type:'wrap',name:'كيساديا دجاج',side:'تورتيلا + جبن + صلصة طماط',kcal:540,p:32,c:48,f:24,hamdan:'دجاج مشوي + عيش أبيض',hk:450,
+  ing:[['تورتيلا كبيرة',8,'حبة','b'],['صدور دجاج',600,'غ','m'],['جبن موزاريلا / شيدر مبشور',250,'غ','d'],['فلفل رومي',1,'حبة','v'],['بصل',1,'حبة','v'],['بهارات تاكو',1,'ملعقة','s'],['صلصة سالسا',1,'علبة','g'],['زبادي',0.5,'كوب','d'],['زيت',2,'ملعقة','g'],['عيش أبيض (لحمدان)',1,'كوب','g']],
+  tools:['pan','grill'],steps:'الدجاج يتحمر بالبهار ويتقطع، تورتيلا + جبن + دجاج + تورتيلا، تتحمص بالمقلاة من الجهتين وتتقطع مثلثات.'},
+];
+const CATS={m:'لحوم ودجاج وسمك',v:'خضار وأعشاب',d:'ألبان وبيض',b:'مخبوزات',g:'بقالة',o:'أخرى'};
+const DTYPES={burger:'برجر',pasta:'معكرونة',grill:'مشاوي',wrap:'لفائف/شاورما',pizza:'بيتزا',salad:'سلطة',rice:'عيش عصري'};
+const EXCL={cucumber:'خيار',kousa:'كوسة',eggplant:'باذنجان'};
+const DAYS=['الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
+const KIDS=['زايد','حمدان'];
+
+// ---------- state ----------
+let plan=[],locks={},votes={},confirmed=false,checked={},open={};
+let dtypesOn=new Set(Object.keys(DTYPES)),exclOn=new Set(['cucumber','kousa','eggplant']);
+try{votes=JSON.parse(localStorage.getItem('mp-votes')||'{}')}catch(e){votes={}}
+try{const s=JSON.parse(localStorage.getItem('mp-plan')||'null');if(s&&s.plan){plan=s.plan;locks=s.locks||{};confirmed=!!s.confirmed;checked=s.checked||{}}}catch(e){}
+try{const s=JSON.parse(localStorage.getItem('mp-settings')||'null');if(s){if(s.dtypes)dtypesOn=new Set(s.dtypes);if(s.excl)exclOn=new Set(s.excl);}}catch(e){}
+const byId=Object.fromEntries(LIB.map(m=>[m.id,m]));
+const $=s=>document.querySelector(s);
+function save(){try{localStorage.setItem('mp-plan',JSON.stringify({plan,locks,confirmed,checked}));localStorage.setItem('mp-votes',JSON.stringify(votes));localStorage.setItem('mp-settings',JSON.stringify({dtypes:[...dtypesOn],excl:[...exclOn]}))}catch(e){}}
+function toast(t){const el=$('#toast');el.textContent=t;el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('show'),1800)}
+function voteScore(id){const v=votes[id]||{};return KIDS.reduce((s,k)=>s+(v[k]==='up'?1:v[k]==='down'?-1:0),0)}
+function bothDown(id){const v=votes[id]||{};return KIDS.every(k=>v[k]==='down')}
+function allowed(m){
+  if(m.excl&&m.excl.some(x=>exclOn.has(x)))return false;
+  if(m.kind==='dinner'&&!dtypesOn.has(m.type))return false;
+  if(bothDown(m.id))return false;
+  return m.kcal<=(m.kind==='lunch'?+$('#maxL').value:+$('#maxD').value);
+}
+function pick(kind,used,prev){
+  let pool=LIB.filter(m=>m.kind===kind&&allowed(m)&&!used.has(m.id));
+  if(kind==='dinner'){const alt=pool.filter(m=>!prev||m.type!==prev.type);if(alt.length)pool=alt}
+  if(!pool.length)pool=LIB.filter(m=>m.kind===kind&&allowed(m));
+  if(!pool.length)pool=LIB.filter(m=>m.kind===kind);
+  const w=pool.map(m=>Math.max(1,2+voteScore(m.id)));
+  let r=Math.random()*w.reduce((a,b)=>a+b,0);
+  for(let i=0;i<pool.length;i++){r-=w[i];if(r<=0)return pool[i].id}
+  return pool[pool.length-1].id;
+}
+function generate(){
+  const n=+$('#ndays').value;const used=new Set();const next=[];
+  for(let d=0;d<n;d++){const old=plan[d]||{};const L=locks[d+'L']&&old.lunch?old.lunch:null,D=locks[d+'D']&&old.dinner?old.dinner:null;if(L)used.add(L);if(D)used.add(D);next.push({lunch:L,dinner:D})}
+  for(let d=0;d<n;d++){
+    if(!next[d].lunch){next[d].lunch=pick('lunch',used);used.add(next[d].lunch)}
+    if(!next[d].dinner){const prev=d>0?byId[next[d-1].dinner]:null;next[d].dinner=pick('dinner',used,prev);used.add(next[d].dinner)}
+  }
+  plan=next;confirmed=false;checked={};save();render();toast('تم توليد أسبوع جديد');
+}
+function swap(d,slot){
+  const used=new Set(plan.flatMap(x=>[x.lunch,x.dinner]));
+  const id=pick(slot==='L'?'lunch':'dinner',used,null);
+  if(slot==='L')plan[d].lunch=id;else plan[d].dinner=id;
+  confirmed=false;save();render();
+}
+function dateFor(d){
+  const start=+$('#start').value;const t=new Date();t.setHours(0,0,0,0);
+  let diff=(start-t.getDay()+7)%7;if(diff===0)diff=7;
+  const x=new Date(t);x.setDate(t.getDate()+diff+d);return x;
+}
+function fmt(x){return x.toLocaleDateString('ar-AE',{day:'numeric',month:'short'})}
+function num(n){return (Math.round(n*100)/100).toLocaleString('ar-EG')}
+
+function ingHtml(m){
+  return `<div class="ing"><h3>المكونات (٤ أشخاص)</h3><ul>${m.ing.map(i=>`<li><span>${i[0]}</span><span>${num(i[1])} ${i[2]}</span></li>`).join('')}</ul>
+   <h3>الأدوات</h3><div class="tools">${m.tools.map(t=>`<span>${T[t]}</span>`).join('')}</div>
+   <h3>الطريقة باختصار</h3><div class="steps">${m.steps}</div></div>`;
+}
+function render(){
+  let tot=0,p=0,c=0,f=0,hk=0;
+  plan.forEach(d=>{const L=byId[d.lunch],D=byId[d.dinner];tot+=L.kcal+D.kcal;p+=L.p+D.p;c+=L.c+D.c;f+=L.f+D.f;hk+=L.hk+D.hk});
+  const n=plan.length||1,avg=Math.round(tot/n),cls=avg>1500?'hot':avg>1400?'warn':'';
+  $('#stats').innerHTML=`
+   <div class="stat"><div class="k">معدل اليوم (غدا + عشا)</div><div class="v">${num(avg)}<span class="u">كالوري</span></div><div class="gauge"><i class="${cls}" style="width:${Math.min(100,avg/16)}%"></i></div></div>
+   <div class="stat"><div class="k">معدل حصة حمدان</div><div class="v">${num(Math.round(hk/n))}<span class="u">كالوري</span></div></div>
+   <div class="stat"><div class="k">بروتين / كارب / دهون (معدل يومي)</div><div class="v" style="font-size:19px">${num(Math.round(p/n))} / ${num(Math.round(c/n))} / ${num(Math.round(f/n))}<span class="u">غ</span></div></div>
+   <div class="stat"><div class="k">الحالة</div><div class="v" style="font-size:17px">${confirmed?'<span class="pill ok">✓ الأسبوع مثبّت</span>':'<span class="pill">مسودة — عدّل ثم ثبّت</span>'}</div></div>`;
+  const s=dateFor(0),e=dateFor(n-1);
+  $('#range').textContent=`${fmt(s)} – ${fmt(e)} · الغدا تقليدي، العشا خفيف وعصري · ٤ أفراد`;
+  $('#week').innerHTML=plan.map((d,i)=>{
+    const dt=dateFor(i);
+    const meal=(m,slot)=>{const v=votes[m.id]||{},k=i+slot,isOpen=!!open[k];
+      return `<div class="meal ${slot==='L'?'lunch':'dinner'}">
+        <div class="tag">${slot==='L'?'الغدا':'العشا'}</div>
+        <button class="name" data-open="${k}" aria-expanded="${isOpen}"><span>${m.name}</span><span class="chev">▼</span></button>
+        <div class="side">${m.side}</div>
+        <div class="kcal"><span><b>${num(m.kcal)}</b> كالوري</span><span>${num(m.p)}غ بروتين</span><span>${num(m.c)}غ كارب</span><span>${num(m.f)}غ دهون</span></div>
+        <div class="hamdan"><span>حمدان:</span> ${m.hamdan} · ${num(m.hk)} كالوري</div>
+        ${isOpen?ingHtml(m):''}
+        <div class="row">
+          <div class="votes">${KIDS.map(x=>`<button class="${v[x]==='up'?'on':''}" data-vote="${m.id}|${x}|up">👍 ${x}</button><button class="${v[x]==='down'?'on':''}" data-vote="${m.id}|${x}|down">👎</button>`).join('')}</div>
+          <div><button class="sm lock ${locks[k]?'on':''}" data-lock="${k}">${locks[k]?'🔒 مثبّت':'🔓'}</button> <button class="sm" data-swap="${i}|${slot}">بدّل</button></div>
+        </div></div>`};
+    const L=byId[d.lunch],D=byId[d.dinner];
+    return `<article class="day"><div class="day-h"><h2>${DAYS[dt.getDay()]}</h2><span class="date">${fmt(dt)}</span></div>${meal(L,'L')}${meal(D,'D')}
+      <div class="day-total"><span>إجمالي اليوم</span><b>${num(L.kcal+D.kcal)} كالوري</b></div></article>`;
+  }).join('');
+  $('#lib').innerHTML=LIB.map(m=>`<div class="it ${allowed(m)?'':'off'}"><b>${m.name}</b><span class="m">${m.kind==='lunch'?'غدا':'عشا · '+DTYPES[m.type]} · ${num(m.kcal)} كالوري · حمدان ${num(m.hk)}</span><span class="m">تصويت: ${voteScore(m.id)>0?'+':''}${num(voteScore(m.id))}</span></div>`).join('');
+  $('#confirm').textContent=confirmed?'✅ الأسبوع مثبّت — عرض قائمة الجمعية':'✅ ثبّت الأسبوع وطلّع قائمة الجمعية';
+  renderShop();
+}
+function shoppingData(){
+  const agg={},spices=new Set(),tools=new Set();
+  plan.forEach(d=>[byId[d.lunch],byId[d.dinner]].forEach(m=>{
+    m.tools.forEach(t=>tools.add(T[t]));
+    m.ing.forEach(([name,q,u,cat])=>{
+      if(cat==='s'){spices.add(name);return}
+      const key=name+'|'+u;
+      agg[key]=agg[key]||{name,u,q:0,cat,dishes:new Set()};
+      agg[key].q+=q;agg[key].dishes.add(m.name);
+    });
+  }));
+  const byCat={};
+  Object.values(agg).forEach(it=>{(byCat[it.cat]=byCat[it.cat]||[]).push(it)});
+  Object.values(byCat).forEach(a=>a.sort((x,y)=>y.q-x.q||x.name.localeCompare(y.name,'ar')));
+  return {byCat,spices:[...spices].sort((a,b)=>a.localeCompare(b,'ar')),tools:[...tools]};
+}
+function renderShop(){
+  const el=$('#shop');
+  if(!confirmed){el.classList.remove('on');el.innerHTML='';return}
+  el.classList.add('on');
+  const {byCat,spices,tools}=shoppingData();
+  const total=Object.values(byCat).reduce((s,a)=>s+a.length,0);
+  const done=Object.values(byCat).reduce((s,a)=>s+a.filter(i=>checked[i.name+'|'+i.u]).length,0);
+  el.innerHTML=`<div class="shop-h"><div><h2>🛒 قائمة الجمعية للأسبوع</h2><p class="note">${num(total)} صنف مجمّعة من ${num(plan.length*2)} وجبات · تم شراء ${num(done)}</p></div>
+    <div class="actions"><button class="sm" id="copyShop">نسخ القائمة (واتساب)</button><button class="sm" id="clearChecks">إلغاء كل العلامات</button><button class="sm" id="unconfirm">فتح الجدول للتعديل</button></div></div>
+   <div class="cats">${['m','v','d','b','g','o'].filter(c=>byCat[c]).map(c=>`<div class="cat"><h3>${CATS[c]}<small>${num(byCat[c].length)}</small></h3><ul>${byCat[c].map(i=>{const k=i.name+'|'+i.u;return `<li class="${checked[k]?'done':''}"><label><input type="checkbox" id="chk-${k.replace(/[^\w؀-ۿ]/g,'_')}" data-chk="${k}" ${checked[k]?'checked':''}><span>${i.name}</span><span class="q">${num(i.q)} ${i.u}</span></label></li>`}).join('')}</ul></div>`).join('')}</div>
+   <div class="pantry"><h3>🧂 بهارات ومخزن — تأكدوا إنها موجودة</h3><div class="chips" style="margin-top:6px">${spices.map(s=>`<span>${s}</span>`).join('')}</div></div>
+   <div class="pantry"><h3>🍳 الأدوات اللي بتحتاجونها هالأسبوع</h3><div class="toolsbox">${tools.map(t=>`<span>${t}</span>`).join('')}</div></div>`;
+}
+function copyText(t,msg){
+  const done=()=>toast(msg);
+  const fb=()=>{const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){toast('ما قدرت أنسخ، حدد النص يدوياً')}ta.remove()};
+  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(done).catch(fb);else fb();
+}
+function copyPlan(){
+  copyText('🍽️ جدول الأسبوع\n'+plan.map((d,i)=>{const dt=dateFor(i),L=byId[d.lunch],D=byId[d.dinner];return `\n${DAYS[dt.getDay()]} ${fmt(dt)}\n  الغدا: ${L.name} (${L.kcal} كالوري) — حمدان: ${L.hamdan}\n  العشا: ${D.name} (${D.kcal} كالوري) — حمدان: ${D.hamdan}`}).join(''),'تم نسخ الجدول');
+}
+function copyShop(){
+  const {byCat,spices}=shoppingData();
+  let t='🛒 قائمة الجمعية للأسبوع\n';
+  ['m','v','d','b','g','o'].filter(c=>byCat[c]).forEach(c=>{t+=`\n*${CATS[c]}*\n`+byCat[c].map(i=>`${checked[i.name+'|'+i.u]?'✅':'▫️'} ${i.name} — ${num(i.q)} ${i.u}`).join('\n')+'\n'});
+  t+='\n*بهارات (تأكدوا موجودة)*: '+spices.join('، ');
+  copyText(t,'تم نسخ القائمة');
+}
+
+document.addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b)return;
+  if(b.dataset.vote){const[id,k,dir]=b.dataset.vote.split('|');votes[id]=votes[id]||{};votes[id][k]=votes[id][k]===dir?null:dir;save();render();return}
+  if(b.dataset.lock){locks[b.dataset.lock]=!locks[b.dataset.lock];save();render();return}
+  if(b.dataset.swap){const[d,s]=b.dataset.swap.split('|');swap(+d,s);return}
+  if(b.dataset.open){open[b.dataset.open]=!open[b.dataset.open];render();return}
+  if(b.id==='copyShop')copyShop();
+  if(b.id==='clearChecks'){checked={};save();renderShop()}
+  if(b.id==='unconfirm'){confirmed=false;save();render()}
+});
+document.addEventListener('change',e=>{
+  if(e.target.dataset.chk){checked[e.target.dataset.chk]=e.target.checked;save();renderShop();return}
+  if(e.target.dataset.dt){e.target.checked?dtypesOn.add(e.target.dataset.dt):dtypesOn.delete(e.target.dataset.dt);save();render()}
+  if(e.target.dataset.ex){e.target.checked?exclOn.add(e.target.dataset.ex):exclOn.delete(e.target.dataset.ex);save();render()}
+  if(['maxL','maxD','start'].includes(e.target.id))render();
+  if(e.target.id==='ndays')generate();
+});
+$('#gen').onclick=generate;
+$('#copy').onclick=copyPlan;
+$('#confirm').onclick=()=>{confirmed=true;save();render();toast('تم تثبيت الأسبوع — قائمة الجمعية جاهزة');$('#shop').scrollIntoView({behavior:'smooth'})};
+$('#reset').onclick=()=>{votes={};save();render();toast('تم تصفير التصويت')};
+
+function renderChips(){
+  $('#dtypes').innerHTML=Object.entries(DTYPES).map(([k,v])=>`<label><input type="checkbox" id="dt-${k}" data-dt="${k}" ${dtypesOn.has(k)?'checked':''}>${v}</label>`).join('');
+  $('#excl').innerHTML=Object.entries(EXCL).map(([k,v])=>`<label><input type="checkbox" id="ex-${k}" data-ex="${k}" ${exclOn.has(k)?'checked':''}>${v}</label>`).join('');
+}
+renderChips();
+if(!plan.length)plan=[{lunch:'majboos-chicken',dinner:'burger'},{lunch:'biryani-lamb',dinner:'pasta-chicken'},{lunch:'maqluba',dinner:'shawarma'},{lunch:'majboos-tuna',dinner:'steak'},{lunch:'thareed',dinner:'pizza'}];
+render();
+</script>
