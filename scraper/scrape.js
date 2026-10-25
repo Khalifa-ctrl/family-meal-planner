@@ -133,7 +133,7 @@ const STORES = { carrefour, noon };
       try {
         const raw = await fn(page, item.q);
         const list = raw.map((p) => enrich(item, p)).filter((p) => p.score > 0)
-          .sort((a, b) => b.score - a.score || (a.unitPrice ?? a.price) - (b.unitPrice ?? b.price));
+          .sort((a, b) => ((a.size && a.size.unit === item.unit) ? 0 : 1) - ((b.size && b.size.unit === item.unit) ? 0 : 1) || b.score - a.score || (a.unitPrice ?? a.price) - (b.unitPrice ?? b.price));
         if (!raw.length && result.items[item.key][store] && result.items[item.key][store].best) { console.log(`${item.key} @${store}: empty — keeping previous`); continue; }
         result.items[item.key][store] = { checked: result.updatedAt, found: raw.length, best: list[0] || null, alt: list.slice(1, 4) };
         result.stores[store].ok++;

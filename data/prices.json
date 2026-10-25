@@ -1,20 +1,22 @@
 {
- "updatedAt": "2026-10-25T11:30:33.661Z",
+ "updatedAt": "2026-10-25T11:35:45.725Z",
  "area": "الرقايب، عجمان",
  "stores": {
   "carrefour": {
-   "ok": 0,
-   "fail": 3
+   "ok": 99,
+   "found": 93,
+   "checked": "2026-10-25T11:35:45.672Z"
   },
   "noon": {
-   "ok": 0,
-   "fail": 0
+   "ok": 99,
+   "found": 66,
+   "checked": "2026-10-25T11:35:45.725Z"
   }
  },
  "items": {
   "lamb-bone": {
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Mutton Curry Cut",
@@ -33,7 +35,7 @@
     "alt": []
    },
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Australian Lamb Leg Slice Import",
@@ -83,7 +85,7 @@
   },
   "lamb-cubes": {
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Lamb Cubes Boneless",
@@ -117,7 +119,7 @@
     ]
    },
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "South African Dorper Lamb Cubes Boneless Import",
@@ -153,13 +155,13 @@
   },
   "chicken-whole": {
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
    },
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Fresh Whole Chicken",
@@ -223,7 +225,7 @@
   },
   "onion": {
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Red Onion",
@@ -271,7 +273,7 @@
     ]
    },
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Red Onion",
@@ -335,7 +337,7 @@
   },
   "lamb-mince": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Australian Lamb Mince Import",
@@ -354,7 +356,7 @@
     "alt": []
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 1,
     "best": {
      "name": "Lamb Mince",
@@ -375,7 +377,7 @@
   },
   "beef-mince": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Australian Lamb Mince Import",
@@ -437,7 +439,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Lamb Mince",
@@ -487,7 +489,7 @@
   },
   "beef-strips": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Brazilian Beef Stroganoff",
@@ -549,7 +551,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 1,
     "best": {
      "name": "Beef Stroganoff",
@@ -570,7 +572,7 @@
   },
   "steak": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Brazilian Beef Striploin Steak",
@@ -632,7 +634,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 1,
     "best": {
      "name": "Beef Ribeye Steak",
@@ -653,7 +655,7 @@
   },
   "chicken-cut": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Saha Fresh Chicken Thighs 500g",
@@ -715,7 +717,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -723,7 +725,7 @@
   },
   "chicken-breast": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Jenan Fresh Chicken Breast, 500g",
@@ -785,7 +787,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 1,
     "best": null,
     "alt": []
@@ -793,7 +795,7 @@
   },
   "fish-fillet": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Hamour Fillet Fresh",
@@ -812,7 +814,7 @@
     "alt": []
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -820,7 +822,7 @@
   },
   "shrimp": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Fresh Shrimps 40/60",
@@ -882,7 +884,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 1,
     "best": null,
     "alt": []
@@ -890,7 +892,7 @@
   },
   "tuna-can": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "California Garden Light Chunk Tuna in Water and Salt, 185g",
@@ -952,7 +954,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Light Canned Tuna Chunks In Sunflower Oil",
@@ -1002,7 +1004,7 @@
   },
   "rice-basmati": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Rozanna Indian Basmati Rice 5kg",
@@ -1064,7 +1066,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Devaaya Basmati Rice",
@@ -1114,7 +1116,7 @@
   },
   "tomato": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Tomato",
@@ -1132,20 +1134,6 @@
     },
     "alt": [
      {
-      "name": "Premium Tomato Bunch",
-      "price": 7,
-      "sizeText": "500g",
-      "oos": false,
-      "url": "https://www.carrefouruae.com/mafuae/en/p/1792194",
-      "size": {
-       "qty": 0.5,
-       "unit": "kg"
-      },
-      "unitPrice": 14,
-      "unitLabel": "د/كغ",
-      "score": 1
-     },
-     {
       "name": "Parmalat Pomi Strained Tomatoes Passata, 500g",
       "price": 7.49,
       "sizeText": "500g",
@@ -1158,25 +1146,11 @@
       "unitPrice": 14.98,
       "unitLabel": "د/كغ",
       "score": 1
-     },
-     {
-      "name": "Pure Harvest Red Cherry Tomato Bunch 290g",
-      "price": 12.99,
-      "sizeText": "290g",
-      "oos": false,
-      "url": "https://www.carrefouruae.com/mafuae/en/p/1576308",
-      "size": {
-       "qty": 0.29,
-       "unit": "kg"
-      },
-      "unitPrice": 44.79,
-      "unitLabel": "د/كغ",
-      "score": 1
      }
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 1,
     "best": {
      "name": "Tomato",
@@ -1197,51 +1171,23 @@
   },
   "garlic": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
-     "name": "Pink Garlic Bag 3 Pieces",
-     "price": 14.69,
-     "sizeText": "",
+     "name": "Garlic",
+     "price": 3.27,
+     "sizeText": "300g",
      "oos": false,
-     "url": "https://www.carrefouruae.com/mafuae/en/p/1012900",
+     "url": "https://www.carrefouruae.com/mafuae/en/p/499952",
      "size": {
-      "qty": 3,
-      "unit": "pc"
+      "qty": 0.3,
+      "unit": "kg"
      },
-     "unitPrice": 4.9,
-     "unitLabel": "د/حبة",
+     "unitPrice": 10.9,
+     "unitLabel": "د/كغ",
      "score": 1
     },
     "alt": [
-     {
-      "name": "Garlic",
-      "price": 3.27,
-      "sizeText": "300g",
-      "oos": false,
-      "url": "https://www.carrefouruae.com/mafuae/en/p/499952",
-      "size": {
-       "qty": 0.3,
-       "unit": "kg"
-      },
-      "unitPrice": 10.9,
-      "unitLabel": "د/كغ",
-      "score": 1
-     },
-     {
-      "name": "Garlic Bag 900g",
-      "price": 16.99,
-      "sizeText": "900g",
-      "oos": false,
-      "url": "https://www.carrefouruae.com/mafuae/en/p/447536",
-      "size": {
-       "qty": 0.9,
-       "unit": "kg"
-      },
-      "unitPrice": 18.88,
-      "unitLabel": "د/كغ",
-      "score": 1
-     },
      {
       "name": "Garlic 450g",
       "price": 8.99,
@@ -1255,11 +1201,39 @@
       "unitPrice": 19.98,
       "unitLabel": "د/كغ",
       "score": 1
+     },
+     {
+      "name": "Barakat Garlic Peeled 250g",
+      "price": 7.19,
+      "sizeText": "250g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/481970",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 28.76,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Barakat Garlic Sliced 250g",
+      "price": 8.29,
+      "sizeText": "250g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/480494",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 33.16,
+      "unitLabel": "د/كغ",
+      "score": 1
      }
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Garlic",
@@ -1295,7 +1269,7 @@
   },
   "lettuce": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Lettuce Iceberg",
@@ -1320,34 +1294,11 @@
       "unitPrice": 8.59,
       "unitLabel": "د/كغ",
       "score": 1
-     },
-     {
-      "name": "Armela Green Butterhead Lettuce 1 Piece",
-      "price": 9.29,
-      "sizeText": "",
-      "oos": false,
-      "url": "https://www.carrefouruae.com/mafuae/en/p/1604771",
-      "size": null,
-      "score": 1
-     },
-     {
-      "name": "Lettuce Mix 125g",
-      "price": 6.99,
-      "sizeText": "125g",
-      "oos": false,
-      "url": "https://www.carrefouruae.com/mafuae/en/p/1836338",
-      "size": {
-       "qty": 0.125,
-       "unit": "kg"
-      },
-      "unitPrice": 55.92,
-      "unitLabel": "د/كغ",
-      "score": 1
      }
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -1355,7 +1306,7 @@
   },
   "carrot": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Carrot Loose",
@@ -1417,7 +1368,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Carrots",
@@ -1453,7 +1404,7 @@
   },
   "potato": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Potato",
@@ -1487,7 +1438,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Potato",
@@ -1523,7 +1474,7 @@
   },
   "sweet-potato": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Sweet Potato",
@@ -1571,7 +1522,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 1,
     "best": {
      "name": "Sweet Potato",
@@ -1592,7 +1543,7 @@
   },
   "cauliflower": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 5,
     "best": {
      "name": "Cauliflower",
@@ -1611,7 +1562,7 @@
     "alt": []
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -1619,7 +1570,7 @@
   },
   "broccoli": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Broccoli Local",
@@ -1681,7 +1632,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 1,
     "best": {
      "name": "Tenderstem Broccoli",
@@ -1702,7 +1653,7 @@
   },
   "green-beans": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Green Beans",
@@ -1764,7 +1715,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -1772,7 +1723,7 @@
   },
   "capsicum": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Green Capsicum",
@@ -1834,7 +1785,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -1842,7 +1793,7 @@
   },
   "green-chilli": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Ripe Organic Green Chillies 250g",
@@ -1904,7 +1855,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": null,
     "alt": []
@@ -1912,7 +1863,7 @@
   },
   "lemon": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Lemon",
@@ -1946,7 +1897,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -1954,7 +1905,7 @@
   },
   "coriander": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Fresh Coriander Bunch",
@@ -1997,7 +1948,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -2005,7 +1956,7 @@
   },
   "parsley": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Fresh Parsley",
@@ -2062,7 +2013,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 1,
     "best": {
      "name": "Parsley",
@@ -2083,7 +2034,7 @@
   },
   "mint": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Fresh Mint (Pudina)",
@@ -2140,7 +2091,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -2148,7 +2099,7 @@
   },
   "basil": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Basil Pot",
@@ -2191,7 +2142,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -2199,7 +2150,7 @@
   },
   "ginger": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Ginger",
@@ -2261,7 +2212,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -2269,13 +2220,13 @@
   },
   "spring-onion": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": null,
     "alt": []
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -2283,51 +2234,23 @@
   },
   "mushroom": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
-     "name": "Carrefour Mushrooms Pieces And Stems In Brine 425g",
-     "price": 4.29,
-     "sizeText": "425g",
+     "name": "Carrefour White Mushrooms",
+     "price": 6.59,
+     "sizeText": "250g",
      "oos": false,
-     "url": "https://www.carrefouruae.com/mafuae/en/p/971368",
+     "url": "https://www.carrefouruae.com/mafuae/en/p/2256900",
      "size": {
-      "qty": 0.425,
+      "qty": 0.25,
       "unit": "kg"
      },
-     "unitPrice": 10.09,
+     "unitPrice": 26.36,
      "unitLabel": "د/كغ",
      "score": 1
     },
     "alt": [
-     {
-      "name": "California Garden Mushroom Pieces & Stems, 425g",
-      "price": 7.49,
-      "sizeText": "425g",
-      "oos": false,
-      "url": "https://www.carrefouruae.com/mafuae/en/p/201154",
-      "size": {
-       "qty": 0.425,
-       "unit": "kg"
-      },
-      "unitPrice": 17.62,
-      "unitLabel": "د/كغ",
-      "score": 1
-     },
-     {
-      "name": "Carrefour White Mushrooms",
-      "price": 6.59,
-      "sizeText": "250g",
-      "oos": false,
-      "url": "https://www.carrefouruae.com/mafuae/en/p/2256900",
-      "size": {
-       "qty": 0.25,
-       "unit": "kg"
-      },
-      "unitPrice": 26.36,
-      "unitLabel": "د/كغ",
-      "score": 1
-     },
      {
       "name": "Mushroom White 250g",
       "price": 9.99,
@@ -2341,11 +2264,39 @@
       "unitPrice": 39.96,
       "unitLabel": "د/كغ",
       "score": 1
+     },
+     {
+      "name": "Mushroom Portobello",
+      "price": 12.07,
+      "sizeText": "250g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/892986",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 48.28,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Mushroom Brown Mushroom Brown 250gr",
+      "price": 13.89,
+      "sizeText": "250g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2134464",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 55.56,
+      "unitLabel": "د/كغ",
+      "score": 1
      }
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 1,
     "best": {
      "name": "Vitamin D White Mushroom Sliced",
@@ -2366,7 +2317,7 @@
   },
   "cabbage": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "White Round Cabbage",
@@ -2414,7 +2365,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -2422,7 +2373,7 @@
   },
   "avocado": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "RTE Avocado Senora Hassita Pack",
@@ -2479,7 +2430,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Avodelight Avocado Hass Ripe (Ready to Eat)",
@@ -2515,7 +2466,7 @@
   },
   "spinach": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Plein Soleil Spinach Leaves 400g",
@@ -2577,7 +2528,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -2585,13 +2536,13 @@
   },
   "bean-sprouts": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 0,
     "best": null,
     "alt": []
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -2599,7 +2550,7 @@
   },
   "pear": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Vermont Beauty Pear",
@@ -2661,7 +2612,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -2669,7 +2620,7 @@
   },
   "rosemary": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Abido Rosemary 50g",
@@ -2703,7 +2654,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 1,
     "best": {
      "name": "Rosemary Whole",
@@ -2724,7 +2675,7 @@
   },
   "yogurt": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Al Rawabi Full Fat Plain Yoghurt, 1kg",
@@ -2786,7 +2737,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Full Fat Fresh Yoghurt",
@@ -2836,7 +2787,7 @@
   },
   "laban": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Almarai Full Fat Fresh Laban, 1L",
@@ -2870,7 +2821,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Fresh Laban Plain Traditional",
@@ -2906,7 +2857,7 @@
   },
   "milk": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Hayatna Full Fat Fresh Milk Rich in Vitamins & Nutrients 2L",
@@ -2968,7 +2919,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Fresh Milk Full Fat",
@@ -3004,7 +2955,7 @@
   },
   "butter": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Ambassador Unsalted Butter, 200g Pack of 2",
@@ -3066,7 +3017,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Butter Block Unsalted 100g",
@@ -3116,7 +3067,7 @@
   },
   "ghee": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Aseel Pure Ghee, 880ml",
@@ -3178,7 +3129,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Pure Cow Ghee",
@@ -3214,7 +3165,7 @@
   },
   "cooking-cream": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Puck Cooking Cream, 500ml",
@@ -3276,7 +3227,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Cooking Cream Full Fat",
@@ -3326,7 +3277,7 @@
   },
   "cheddar-slices": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Almarai Cheddar Cheese Slices, 400g",
@@ -3388,7 +3339,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Cheddar Cheese Slices",
@@ -3424,7 +3375,7 @@
   },
   "mozzarella": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "President Natural Mozzarella Cheese Shredded, 1.1kg",
@@ -3486,7 +3437,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Shredded Mozzarella Cheese",
@@ -3536,7 +3487,7 @@
   },
   "parmesan": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "American Heritage Grated Parmesan Cheese, 227g",
@@ -3598,7 +3549,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Grated Parmesan Cheese",
@@ -3634,7 +3585,7 @@
   },
   "eggs": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 5,
     "best": {
      "name": "Carrefour Fresh Medium White Eggs 30 PCS",
@@ -3696,7 +3647,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Golden Eggs White Medium",
@@ -3746,7 +3697,7 @@
   },
   "burger-buns": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Modern Bakery Brioche Buns, 400g",
@@ -3808,7 +3759,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Burger Bun With Sesame Seeds",
@@ -3844,7 +3795,7 @@
   },
   "tortilla": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Mission Tortilla Wraps Wheat & Corn 378g",
@@ -3906,7 +3857,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Tortilla Wraps",
@@ -3942,7 +3893,7 @@
   },
   "arabic-bread": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Golden Loaf Small Arabic Bread 6 Breads",
@@ -3999,7 +3950,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Medium White Flat Arabic Bread",
@@ -4035,7 +3986,7 @@
   },
   "baguette": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Baguette Tradition 1 Piece",
@@ -4082,7 +4033,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 1,
     "best": {
      "name": "French Baguette",
@@ -4103,7 +4054,7 @@
   },
   "pasta": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Barilla Fusilli Pasta, 500g",
@@ -4165,7 +4116,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Penne Rigate Pasta",
@@ -4201,7 +4152,7 @@
   },
   "noodles": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 5,
     "best": {
      "name": "Carrefour Sensation Chinese Egg Noodles, 250g",
@@ -4263,7 +4214,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 1,
     "best": {
      "name": "Egg Hakka Noodles",
@@ -4284,7 +4235,7 @@
   },
   "tomato-paste": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Al Ain Tomato Paste Tetra Pack, 135g",
@@ -4346,7 +4297,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Tomato Paste",
@@ -4396,7 +4347,7 @@
   },
   "canned-tomato": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Sicam Diced Peeled Tomatoes, 400g",
@@ -4458,7 +4409,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Whole Peeled Tomatoes",
@@ -4494,7 +4445,7 @@
   },
   "oil": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Carrefour Double Refined Sunflower Oil 1.5L",
@@ -4556,7 +4507,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Pure Sunflower Oil",
@@ -4606,7 +4557,7 @@
   },
   "olive-oil": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Elmerro Premium Extra Virgin Olive Oil 750ml",
@@ -4668,7 +4619,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Spanish Extra Virgin Olive Oil",
@@ -4704,7 +4655,7 @@
   },
   "sesame-oil": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 4,
     "best": {
      "name": "KLF Tilnad Sesame Oil, 200ml",
@@ -4752,7 +4703,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Tilnad Sesame Oil",
@@ -4788,7 +4739,7 @@
   },
   "ketchup": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 5,
     "best": {
      "name": "Heinz Tomato Ketchup Top Down Squeezy Bottle 910g",
@@ -4850,7 +4801,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Premium Tomato Ketchup",
@@ -4900,7 +4851,7 @@
   },
   "mayo": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 2,
     "best": {
      "name": "Heinz Creamy Classic Mayonnaise Top Down Squeezy 310ml",
@@ -4934,7 +4885,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Classic Mayonnaise",
@@ -4984,7 +4935,7 @@
   },
   "mustard": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Heinz Yellow Mustard 245g",
@@ -5046,7 +4997,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 1,
     "best": {
      "name": "Mustard Sauce",
@@ -5067,7 +5018,7 @@
   },
   "vinegar": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "American Garden White Vinegar, 1L",
@@ -5129,7 +5080,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "White Vinegar",
@@ -5165,7 +5116,7 @@
   },
   "soy": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Kikkoman Less Salt Soy Sauce, 1L",
@@ -5227,7 +5178,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Soya Sauce",
@@ -5277,7 +5228,7 @@
   },
   "oyster-sauce": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "MyChoice Oyster Sauce, 345g",
@@ -5339,7 +5290,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Oyster Sauce",
@@ -5370,7 +5321,7 @@
   },
   "fish-sauce": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 3,
     "best": {
      "name": "Fiesta Pinoy Patis Fish Sauce 750ml",
@@ -5418,7 +5369,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -5426,7 +5377,7 @@
   },
   "worcester": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 1,
     "best": {
      "name": "Lea And Perrins Worcestershire Sauce 150ml",
@@ -5445,7 +5396,7 @@
     "alt": []
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -5453,7 +5404,7 @@
   },
   "salsa": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Cantina Salsa Mexicana Sauce 210g",
@@ -5515,7 +5466,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Fresh Tomato Salsa Dip UAE",
@@ -5551,7 +5502,7 @@
   },
   "caesar": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 5,
     "best": {
      "name": "Heinz Caesar Salad Dressing Top Down Squeezy Bottle 400ml",
@@ -5613,7 +5564,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Creamy Caesar Salad Dressing Sauce",
@@ -5649,7 +5600,7 @@
   },
   "hummus": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Hummus",
@@ -5711,7 +5662,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Hummus Classic",
@@ -5747,7 +5698,7 @@
   },
   "tahini": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Carrefour Tahina, 500g",
@@ -5809,7 +5760,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Premium Tahina",
@@ -5845,7 +5796,7 @@
   },
   "pickles": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Mixed Pickles (Egypt)",
@@ -5907,7 +5858,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 1,
     "best": {
      "name": "Mixed Pickles",
@@ -5928,7 +5879,7 @@
   },
   "olives": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Acorsa Sliced Black Olives Jar, 950g",
@@ -5990,7 +5941,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Spanish Sliced Black Olives",
@@ -6026,7 +5977,7 @@
   },
   "corn": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "My Choice Whole Kernel Sweet Corn, 340g",
@@ -6088,7 +6039,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Whole Kernel Sweet Corn",
@@ -6124,13 +6075,13 @@
   },
   "black-beans": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 0,
     "best": null,
     "alt": []
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -6138,7 +6089,7 @@
   },
   "peas": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 5,
     "best": {
      "name": "Basma Frozen Garden Green Peas, 400g",
@@ -6200,7 +6151,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -6208,7 +6159,7 @@
   },
   "lentils": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Al Zahraa Red Masoor Dal 1kg",
@@ -6270,7 +6221,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Masoor Dal Split Red Lentil",
@@ -6306,13 +6257,13 @@
   },
   "harees": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 0,
     "best": null,
     "alt": []
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -6320,7 +6271,7 @@
   },
   "flour": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Al Baker All Purpose Flour, 2kg",
@@ -6382,7 +6333,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "All Purpose Flour No 1",
@@ -6432,7 +6383,7 @@
   },
   "breadcrumbs": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 5,
     "best": {
      "name": "Safa Plain Bread Crumbs, 425g",
@@ -6494,7 +6445,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Panko Bread Crumbs",
@@ -6544,7 +6495,7 @@
   },
   "cornstarch": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 5,
     "best": {
      "name": "Los Pinos Cornstarch",
@@ -6563,7 +6514,7 @@
     "alt": []
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 1,
     "best": null,
     "alt": []
@@ -6571,7 +6522,7 @@
   },
   "yeast": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 3,
     "best": {
      "name": "Saf Instant Yeast, 500g",
@@ -6619,7 +6570,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 1,
     "best": {
      "name": "Instant Yeast",
@@ -6640,7 +6591,7 @@
   },
   "sugar": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 5,
     "best": {
      "name": "Mychoice Refined White Sugar 1kg",
@@ -6702,7 +6653,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Fine Grain White Sugar",
@@ -6752,7 +6703,7 @@
   },
   "honey": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 6,
     "best": {
      "name": "Al Shifa Natural Floral Honey, 750g",
@@ -6814,7 +6765,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Pure Honey",
@@ -6864,7 +6815,7 @@
   },
   "almonds": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 5,
     "best": {
      "name": "Los Pinos Blanched Almonds",
@@ -6926,7 +6877,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Raw Almonds",
@@ -6976,7 +6927,7 @@
   },
   "cashew": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 3,
     "best": {
      "name": "Los Pinos Raw Cashews",
@@ -7024,7 +6975,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Raw Cashew",
@@ -7060,7 +7011,7 @@
   },
   "raisins": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 5,
     "best": {
      "name": "Los Pinos Brown Raisins",
@@ -7122,7 +7073,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Raisins Golden",
@@ -7158,7 +7109,7 @@
   },
   "peanuts": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 3,
     "best": {
      "name": "Carrefour Classic Roasted Salted Peanuts, 500g",
@@ -7206,7 +7157,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Peanuts",
@@ -7242,7 +7193,7 @@
   },
   "sesame": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 4,
     "best": {
      "name": "Al Zahraa White Sesame Seeds 100g",
@@ -7304,7 +7255,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "White Till Sesame Seeds",
@@ -7340,7 +7291,7 @@
   },
   "coconut-milk": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 5,
     "best": {
      "name": "Dee Dee Coconut Milk, 400ml",
@@ -7402,7 +7353,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 2,
     "best": {
      "name": "Coconut Milk Can",
@@ -7438,7 +7389,7 @@
   },
   "rose-water": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 5,
     "best": {
      "name": "Rabee Natural Distilled Rose Water, 1L",
@@ -7500,7 +7451,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -7508,7 +7459,7 @@
   },
   "stock": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 4,
     "best": {
      "name": "Knorr Chicken Stock Cubes, 20g",
@@ -7570,7 +7521,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 3,
     "best": {
      "name": "Chicken Stock Bouillon Cubes",
@@ -7606,7 +7557,7 @@
   },
   "pineapple": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 2,
     "best": {
      "name": "California Garden Pineapple Slices, 565g",
@@ -7640,7 +7591,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -7648,7 +7599,7 @@
   },
   "bamboo": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 1,
     "best": {
      "name": "American Classic Bamboo Shoots in Water, 540g",
@@ -7667,7 +7618,7 @@
     "alt": []
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -7675,13 +7626,13 @@
   },
   "curry-cubes": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 0,
     "best": null,
     "alt": []
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -7689,7 +7640,7 @@
   },
   "green-curry": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 3,
     "best": {
      "name": "De Siam Green Curry Paste, 200g",
@@ -7737,7 +7688,7 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -7745,13 +7696,13 @@
   },
   "gochujang": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 0,
     "best": null,
     "alt": []
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
@@ -7759,7 +7710,7 @@
   },
   "charcoal": {
    "carrefour": {
-    "checked": "2026-10-25T11:30:02.747Z",
+    "checked": "2026-10-25T11:35:45.672Z",
     "found": 5,
     "best": {
      "name": "Somagic Premium Charcoal Briquettes, 4kg",
@@ -7816,16 +7767,12 @@
     ]
    },
    "noon": {
-    "checked": "2026-10-25T11:30:02.804Z",
+    "checked": "2026-10-25T11:35:45.725Z",
     "found": 0,
     "best": null,
     "alt": []
    }
   }
  },
- "errors": [
-  "lamb-cubes@carrefour: page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.carrefouruae.com/mafuae/en/search?keyword=",
-  "onion@carrefour: page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.carrefouruae.com/mafuae/en/search?keyword=",
-  "flour@carrefour: page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.carrefouruae.com/mafuae/en/search?keyword="
- ]
+ "errors": []
 }

@@ -400,7 +400,10 @@
     "canned",
     "sun",
     "soup",
-    "seed"
+    "seed",
+    "bunch",
+    "cherry",
+    "candy"
    ],
    "prefer": [
     "local",
@@ -426,7 +429,9 @@
     "sauce",
     "bread",
     "pickled",
-    "minced"
+    "minced",
+    "bag",
+    "pink"
    ],
    "prefer": [],
    "unit": "kg",
@@ -445,7 +450,10 @@
    ],
    "ban": [
     "salad mix",
-    "seed"
+    "seed",
+    "mix",
+    "leaves",
+    "butterhead"
    ],
    "prefer": [
     "local"
@@ -799,7 +807,10 @@
     "canned",
     "soup",
     "dried",
-    "sauce"
+    "sauce",
+    "brine",
+    "stems",
+    "pieces"
    ],
    "prefer": [],
    "unit": "pc",

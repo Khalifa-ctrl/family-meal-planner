@@ -12,7 +12,7 @@ function score(item,p){const n=p.name.toLowerCase();if(item.must.length&&!item.m
 const prev=fs.existsSync(OUT)?JSON.parse(fs.readFileSync(OUT,'utf8')):{items:{}};
 const now=new Date().toISOString();const res={updatedAt:now,area:'الرقايب، عجمان',stores:prev.stores||{},items:prev.items||{},errors:[]};
 let ok=0,found=0;
-for(const item of catalog.items){const list=(raw[item.key]||[]).map(p=>{const size=parseSize(p.name+' '+(p.sizeText||''));p.size=size;if(size&&size.qty>0){p.unitPrice=+(p.price/size.qty).toFixed(2);p.unitLabel=size.unit==='kg'?'د/كغ':size.unit==='l'?'د/لتر':'د/حبة'}p.score=score(item,p);return p}).filter(p=>p.score>0).sort((a,b)=>b.score-a.score||(a.unitPrice??a.price)-(b.unitPrice??b.price));
+for(const item of catalog.items){const list=(raw[item.key]||[]).map(p=>{const size=parseSize(p.name+' '+(p.sizeText||''));p.size=size;if(size&&size.qty>0){p.unitPrice=+(p.price/size.qty).toFixed(2);p.unitLabel=size.unit==='kg'?'د/كغ':size.unit==='l'?'د/لتر':'د/حبة'}p.score=score(item,p);return p}).filter(p=>p.score>0).sort((a,b)=>((a.size&&a.size.unit===item.unit)?0:1)-((b.size&&b.size.unit===item.unit)?0:1)||b.score-a.score||(a.unitPrice??a.price)-(b.unitPrice??b.price));
  res.items[item.key]=res.items[item.key]||{};res.items[item.key][store]={checked:now,found:(raw[item.key]||[]).length,best:list[0]||null,alt:list.slice(1,4)};if(list[0])found++;ok++}
 res.stores[store]={ok,found,checked:now};
 fs.writeFileSync(OUT,JSON.stringify(res,null,1));console.log(store,'keys',ok,'with price',found);

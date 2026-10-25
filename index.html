@@ -616,7 +616,7 @@ async function loadPrices(){
 function keyFor(name){if(!CAT)return null;const n=name.replace(/\s*\(.*?\)\s*/g,'').trim();const hit=CAT.items.find(i=>i.re.test(n))||CAT.items.find(i=>i.re.test(name));return hit?hit.key:null}
 function storeInfo(key){if(!PRICES||!PRICES.items[key])return null;return PRICES.items[key]}
 function bestOf(key){const d=storeInfo(key);if(!d)return null;const opts=Object.entries(d).filter(([s,r])=>r&&r.best).map(([s,r])=>({store:s,p:r.best}));if(!opts.length)return null;
-  const cmp=(a,b)=>((a.p.unitPrice??a.p.price)-(b.p.unitPrice??b.p.price));opts.sort(cmp);return {best:opts[0],all:opts}}
+  const cmp=(a,b)=>(a.p.unitPrice&&b.p.unitPrice&&a.p.unitLabel===b.p.unitLabel)?a.p.unitPrice-b.p.unitPrice:a.p.price-b.p.price;opts.sort(cmp);return {best:opts[0],all:opts}}
 function priceLine(i){
   if(!CAT)return '';const key=keyFor(i.name);if(!key)return '';const b=bestOf(key);
   if(!b)return `<div class="pr"><span class="na">ما لقيته في المتاجر المربوطة</span></div>`;
