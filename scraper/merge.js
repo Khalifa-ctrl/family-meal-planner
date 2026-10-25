@@ -8,7 +8,7 @@ function parseSize(text){const t=text.toLowerCase().replace(/,/g,'');let m;
  if((m=t.match(/(\d+(?:\.\d+)?)\s*(kg|g|gm|gr|ml|l|ltr|litre|liter)\b/)))return normUnit(+m[1],m[2]);
  if((m=t.match(/(\d+)\s*(pcs|pieces|pc|eggs)\b/)))return {qty:+m[1],unit:'pc'};return null}
 function normUnit(v,u){if(u==='kg')return{qty:v,unit:'kg'};if(['g','gm','gr'].includes(u))return{qty:v/1000,unit:'kg'};if(['l','ltr','litre','liter'].includes(u))return{qty:v,unit:'l'};if(u==='ml')return{qty:v/1000,unit:'l'};return null}
-function score(item,p){const n=p.name.toLowerCase();if(item.must.length&&!item.must.some(w=>n.includes(w)))return -1;if(item.ban.some(w=>n.includes(w)))return -1;let s=1;item.prefer.forEach(w=>{if(n.includes(w))s+=1});if(p.oos)s-=5;return s}
+function score(item,p){const n=p.name.toLowerCase();if(item.must.length&&!item.must.some(w=>n.includes(w)))return -1;if(item.ban.some(w=>n.includes(w)))return -1;if(item.need&&!item.need.every(w=>n.includes(w)))return -1;if(item.any&&!item.any.some(w=>n.includes(w)))return -1;let s=1;item.prefer.forEach(w=>{if(n.includes(w))s+=1});if(p.oos)s-=5;return s}
 const prev=fs.existsSync(OUT)?JSON.parse(fs.readFileSync(OUT,'utf8')):{items:{}};
 const now=new Date().toISOString();const res={updatedAt:now,area:'الرقايب، عجمان',stores:prev.stores||{},items:prev.items||{},errors:[]};
 let ok=0,found=0;

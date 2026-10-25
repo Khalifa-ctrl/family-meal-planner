@@ -1,108 +1,1990 @@
 {
-  "note": "key = canonical product. match = regex on Arabic ingredient names (case-insensitive). q = search query per store. must/ban = words the product name must/must not contain. prefer = words that mark a better match (local lamb etc.).",
-  "stores": {
-    "carrefour": {"label": "كارفور", "url": "https://www.carrefouruae.com/mafuae/en/search?keyword={q}", "delivery": "توصيل في عجمان خلال ساعات (حسب الفرع) — الطازج والخضار الأقوى"},
-    "noon": {"label": "نون Minutes", "url": "https://minutes.noon.com/uae-en/search/?q={q}", "delivery": "توصيل سريع ١٥–٦٠ دقيقة إذا منطقتك مغطاة — تأكد من الرقايب في التطبيق"}
+ "note": "key = canonical product. match = regex on Arabic ingredient names (case-insensitive). q = search query per store. must/ban = words the product name must/must not contain. prefer = words that mark a better match (local lamb etc.). need = every listed word must appear; any = at least one must appear.",
+ "stores": {
+  "carrefour": {
+   "label": "كارفور",
+   "url": "https://www.carrefouruae.com/mafuae/en/search?keyword={q}",
+   "delivery": "توصيل في عجمان خلال ساعات (حسب الفرع) — الطازج والخضار الأقوى"
   },
-  "items": [
-    {"key": "lamb-bone", "label": "لحم غنم بالعظم", "cat": "m", "match": "لحم غنم بالعظم|لحم غنم \\(كتف|غنم.*كتف|غنم.*فخذ", "q": "lamb", "must": ["lamb", "mutton"], "ban": ["beef", "dog", "cat ", "pet", "mince", "liver", "kidney", "brain", "trotter"], "prefer": ["local", "emirati", "uae", "arabic", "fresh"], "unit": "kg"},
-    {"key": "lamb-cubes", "label": "لحم غنم مكعبات", "cat": "m", "match": "لحم غنم مكعبات|ريش غنم", "q": "lamb cubes", "must": ["lamb", "mutton"], "ban": ["beef", "dog", "pet", "mince"], "prefer": ["local", "fresh", "boneless"], "unit": "kg"},
-    {"key": "lamb-mince", "label": "لحم غنم مفروم", "cat": "m", "match": "لحم غنم مفروم|لحم غنم أو بقر مفروم", "q": "lamb mince", "must": ["lamb", "mutton"], "ban": ["beef", "dog", "pet"], "prefer": ["local", "fresh"], "unit": "kg"},
-    {"key": "beef-mince", "label": "لحم بقر مفروم (البديل: غنم مفروم)", "cat": "m", "match": "لحم بقر مفروم", "q": "lamb mince", "must": ["lamb", "mutton", "beef"], "ban": ["dog", "pet"], "prefer": ["lamb", "local", "fresh"], "unit": "kg"},
-    {"key": "beef-strips", "label": "لحم شرائح رقيقة", "cat": "m", "match": "لحم بقر شرائح", "q": "beef strips", "must": ["beef", "lamb"], "ban": ["dog", "pet", "jerky"], "prefer": ["fresh"], "unit": "kg"},
-    {"key": "steak", "label": "ستيك", "cat": "m", "match": "ستيك", "q": "ribeye steak", "must": ["steak", "ribeye", "sirloin", "striploin"], "ban": ["sauce", "seasoning", "knife"], "prefer": ["fresh"], "unit": "kg"},
-    {"key": "chicken-whole", "label": "دجاج كامل", "cat": "m", "match": "دجاج كامل", "q": "whole chicken", "must": ["chicken"], "ban": ["breast", "thigh", "wing", "nugget", "stock", "cube", "frozen"], "prefer": ["fresh", "local"], "unit": "kg"},
-    {"key": "chicken-cut", "label": "دجاج مقطع", "cat": "m", "match": "دجاج مقطع|أفخاذ دجاج|صدور / أفخاذ", "q": "chicken thighs", "must": ["chicken"], "ban": ["nugget", "stock", "cube", "seasoning", "frozen"], "prefer": ["fresh", "local"], "unit": "kg"},
-    {"key": "chicken-breast", "label": "صدور دجاج", "cat": "m", "match": "صدور دجاج|صدر دجاج", "q": "chicken breast", "must": ["chicken", "breast"], "ban": ["nugget", "frozen", "seasoning", "cooked", "smoked"], "prefer": ["fresh", "local"], "unit": "kg"},
-    {"key": "fish-fillet", "label": "فيليه سمك", "cat": "m", "match": "فيليه سمك|سمك شعري|سمك هامور|سمك \\(جرجور|هامور أو كنعد", "q": "hammour fillet", "must": ["hammour", "hamour", "sheri", "fish", "kingfish", "fillet"], "ban": ["cat", "dog", "pet", "sauce", "canned", "frozen"], "prefer": ["fresh", "local"], "unit": "kg"},
-    {"key": "shrimp", "label": "روبيان", "cat": "m", "match": "روبيان", "q": "shrimp", "must": ["shrimp", "prawn"], "ban": ["chips", "cracker", "paste", "sauce", "cooked"], "prefer": ["fresh", "peeled"], "unit": "kg"},
-    {"key": "tuna-can", "label": "تونة معلبة", "cat": "g", "match": "تونة معلبة", "q": "tuna can 185g", "must": ["tuna"], "ban": ["cat", "pet", "salad"], "prefer": ["chunk", "185", "170"], "unit": "pc"},
-    {"key": "rice-basmati", "label": "عيش بسمتي", "cat": "g", "match": "عيش بسمتي|عيش أبيض|عيش جاسمين|عيش ياباني|عيش مصري|عيش أربوريو", "q": "basmati rice 5kg", "must": ["rice"], "ban": ["cooker", "flour", "cake", "noodle", "vinegar", "paper"], "prefer": ["5kg", "5 kg", "basmati"], "unit": "kg"},
-    {"key": "onion", "label": "بصل", "cat": "v", "match": "^بصل$|بصل أحمر", "q": "onion", "must": ["onion"], "ban": ["powder", "fried", "rings", "seed", "green", "spring"], "prefer": [], "unit": "kg"},
-    {"key": "tomato", "label": "طماط", "cat": "v", "match": "^طماط|طماط \\(|طماط للسلطة|طماط كرزية", "q": "tomato", "must": ["tomato"], "ban": ["paste", "sauce", "ketchup", "canned", "sun", "soup", "seed"], "prefer": ["local", "uae"], "unit": "kg"},
-    {"key": "garlic", "label": "ثوم", "cat": "v", "match": "^ثوم$", "q": "garlic", "must": ["garlic"], "ban": ["powder", "paste", "sauce", "bread", "pickled", "minced"], "prefer": [], "unit": "kg"},
-    {"key": "lettuce", "label": "خس", "cat": "v", "match": "^خس|خس روماني|روكا", "q": "lettuce", "must": ["lettuce"], "ban": ["salad mix", "seed"], "prefer": ["local"], "unit": "pc"},
-    {"key": "carrot", "label": "جزر", "cat": "v", "match": "^جزر", "q": "carrot", "must": ["carrot"], "ban": ["juice", "baby", "seed", "cake"], "prefer": ["local"], "unit": "kg"},
-    {"key": "potato", "label": "بطاط", "cat": "v", "match": "^بطاط$|بطاط \\(", "q": "potato", "must": ["potato"], "ban": ["chips", "crisps", "sweet", "frozen", "fries", "wedges", "starch", "masher"], "prefer": ["local"], "unit": "kg"},
-    {"key": "sweet-potato", "label": "بطاط حلوة", "cat": "v", "match": "بطاط حلوة", "q": "sweet potato", "must": ["sweet potato"], "ban": ["chips", "fries"], "prefer": [], "unit": "kg"},
-    {"key": "cauliflower", "label": "زهرة (قرنبيط)", "cat": "v", "match": "زهرة", "q": "cauliflower", "must": ["cauliflower"], "ban": ["frozen", "rice"], "prefer": [], "unit": "pc"},
-    {"key": "broccoli", "label": "بروكلي", "cat": "v", "match": "بروكلي", "q": "broccoli", "must": ["broccoli"], "ban": ["frozen", "seed"], "prefer": [], "unit": "pc"},
-    {"key": "green-beans", "label": "فاصوليا خضرا", "cat": "v", "match": "فاصوليا خضرا", "q": "green beans", "must": ["bean"], "ban": ["canned", "frozen", "coffee", "baked"], "prefer": [], "unit": "kg"},
-    {"key": "capsicum", "label": "فلفل رومي", "cat": "v", "match": "فلفل رومي|فلفل أحمر حلو", "q": "capsicum", "must": ["capsicum", "bell pepper", "pepper"], "ban": ["black", "powder", "chilli", "chili", "sauce", "seed"], "prefer": [], "unit": "kg"},
-    {"key": "green-chilli", "label": "فلفل أخضر", "cat": "v", "match": "فلفل أخضر", "q": "green chilli", "must": ["chilli", "chili", "pepper"], "ban": ["powder", "sauce", "flakes", "seed"], "prefer": [], "unit": "kg"},
-    {"key": "lemon", "label": "ليمون", "cat": "v", "match": "^ليمون", "q": "lemon", "must": ["lemon"], "ban": ["juice", "squash", "dried", "black", "zest", "tea", "grass"], "prefer": [], "unit": "kg"},
-    {"key": "coriander", "label": "كزبرة خضرا", "cat": "v", "match": "كزبرة خضرا", "q": "fresh coriander", "must": ["coriander"], "ban": ["powder", "seed", "ground"], "prefer": [], "unit": "pc"},
-    {"key": "parsley", "label": "بقدونس", "cat": "v", "match": "بقدونس", "q": "fresh parsley", "must": ["parsley"], "ban": ["dried"], "prefer": [], "unit": "pc"},
-    {"key": "mint", "label": "نعناع طازج", "cat": "v", "match": "نعناع", "q": "fresh mint", "must": ["mint"], "ban": ["tea", "dried", "sauce", "candy", "gum"], "prefer": [], "unit": "pc"},
-    {"key": "basil", "label": "ريحان", "cat": "v", "match": "ريحان", "q": "fresh basil", "must": ["basil"], "ban": ["dried", "pesto", "seed"], "prefer": [], "unit": "pc"},
-    {"key": "ginger", "label": "زنجبيل طازج", "cat": "v", "match": "زنجبيل", "q": "fresh ginger", "must": ["ginger"], "ban": ["powder", "ale", "tea", "paste", "bread", "biscuit", "candy"], "prefer": [], "unit": "kg"},
-    {"key": "spring-onion", "label": "بصل أخضر", "cat": "v", "match": "بصل أخضر", "q": "spring onion", "must": ["spring onion", "green onion", "scallion"], "ban": [], "prefer": [], "unit": "pc"},
-    {"key": "mushroom", "label": "فطر", "cat": "v", "match": "^فطر", "q": "fresh mushroom", "must": ["mushroom"], "ban": ["canned", "soup", "dried", "sauce"], "prefer": [], "unit": "pc"},
-    {"key": "cabbage", "label": "ملفوف", "cat": "v", "match": "ملفوف", "q": "cabbage", "must": ["cabbage"], "ban": ["red", "pickled"], "prefer": [], "unit": "pc"},
-    {"key": "avocado", "label": "أفوكادو", "cat": "v", "match": "أفوكادو", "q": "avocado", "must": ["avocado"], "ban": ["oil", "dip", "guac"], "prefer": [], "unit": "pc"},
-    {"key": "spinach", "label": "سبانخ", "cat": "v", "match": "سبانخ", "q": "fresh spinach", "must": ["spinach"], "ban": ["frozen", "canned"], "prefer": [], "unit": "pc"},
-    {"key": "bean-sprouts", "label": "براعم فول", "cat": "v", "match": "براعم", "q": "bean sprouts", "must": ["sprout"], "ban": [], "prefer": [], "unit": "pc"},
-    {"key": "pear", "label": "كمثرى", "cat": "v", "match": "كمثرى", "q": "pear", "must": ["pear"], "ban": ["juice", "canned"], "prefer": [], "unit": "kg"},
-    {"key": "rosemary", "label": "روزماري", "cat": "v", "match": "روزماري", "q": "fresh rosemary", "must": ["rosemary"], "ban": ["dried", "oil"], "prefer": [], "unit": "pc"},
-    {"key": "yogurt", "label": "زبادي", "cat": "d", "match": "زبادي|كريمة حامضة", "q": "yogurt 1kg", "must": ["yogurt", "yoghurt"], "ban": ["drink", "flavour", "strawberry", "mango", "greek style 150"], "prefer": ["1kg", "1 kg", "full fat"], "unit": "kg"},
-    {"key": "laban", "label": "لبن", "cat": "d", "match": "^لبن", "q": "laban", "must": ["laban"], "ban": ["up", "flavour"], "prefer": ["1l", "1 l", "fresh"], "unit": "l"},
-    {"key": "milk", "label": "حليب", "cat": "d", "match": "^حليب$", "q": "fresh milk 2l", "must": ["milk"], "ban": ["powder", "condensed", "coconut", "almond", "chocolate", "evaporated"], "prefer": ["full fat", "fresh", "2l"], "unit": "l"},
-    {"key": "butter", "label": "زبدة", "cat": "d", "match": "^زبدة", "q": "butter 200g", "must": ["butter"], "ban": ["peanut", "cocoa", "shea", "cookie", "ghee", "spread"], "prefer": ["unsalted", "200g", "250g"], "unit": "pc"},
-    {"key": "ghee", "label": "سمن", "cat": "d", "match": "^سمن", "q": "ghee", "must": ["ghee"], "ban": ["vegetable"], "prefer": ["pure", "cow"], "unit": "pc"},
-    {"key": "cooking-cream", "label": "كريمة طبخ", "cat": "d", "match": "كريمة طبخ", "q": "cooking cream", "must": ["cream"], "ban": ["ice", "whipping", "face", "hand", "cheese", "sour"], "prefer": ["cooking", "lite", "light"], "unit": "pc"},
-    {"key": "cheddar-slices", "label": "جبن شيدر", "cat": "d", "match": "جبن شيدر", "q": "cheddar cheese slices", "must": ["cheddar"], "ban": ["spread", "powder"], "prefer": ["slices", "shredded"], "unit": "pc"},
-    {"key": "mozzarella", "label": "جبن موزاريلا", "cat": "d", "match": "جبن موزاريلا", "q": "mozzarella", "must": ["mozzarella"], "ban": ["stick", "fresh ball"], "prefer": ["shredded", "block", "200g"], "unit": "pc"},
-    {"key": "parmesan", "label": "جبن بارميزان", "cat": "d", "match": "بارميزان", "q": "parmesan", "must": ["parmesan", "parmigiano"], "ban": [], "prefer": ["grated"], "unit": "pc"},
-    {"key": "eggs", "label": "بيض", "cat": "d", "match": "^بيض$", "q": "eggs 30", "must": ["egg"], "ban": ["noodle", "chocolate", "liquid", "quail", "plant"], "prefer": ["30", "15", "fresh"], "unit": "pc"},
-    {"key": "burger-buns", "label": "خبز برجر بريوش", "cat": "b", "match": "خبز برجر|خبز سلايدر", "q": "brioche burger buns", "must": ["bun"], "ban": [], "prefer": ["brioche"], "unit": "pc"},
-    {"key": "tortilla", "label": "تورتيلا", "cat": "b", "match": "تورتيلا|خبز صاج", "q": "tortilla wraps", "must": ["tortilla", "wrap"], "ban": ["chips"], "prefer": ["8", "10"], "unit": "pc"},
-    {"key": "arabic-bread", "label": "خبز عربي", "cat": "b", "match": "خبز عربي|خبز تنور|خبز رقاق|خبز محمص", "q": "arabic bread", "must": ["bread", "khubz", "pita"], "ban": ["crumb"], "prefer": ["arabic", "white"], "unit": "pc"},
-    {"key": "baguette", "label": "خبز صب / باغيت", "cat": "b", "match": "خبز صب|باغيت", "q": "baguette", "must": ["baguette", "sub"], "ban": [], "prefer": [], "unit": "pc"},
-    {"key": "pasta", "label": "باستا", "cat": "g", "match": "باستا|سباغيتي|مكرونة|لازانيا|شعيرية", "q": "pasta 500g", "must": ["pasta", "spaghetti", "penne", "fusilli", "linguine", "fettuccine", "lasagne", "lasagna"], "ban": ["sauce", "ready", "instant", "cup"], "prefer": ["500g", "barilla"], "unit": "pc"},
-    {"key": "noodles", "label": "نودلز", "cat": "g", "match": "نودلز", "q": "egg noodles", "must": ["noodle"], "ban": ["instant", "cup", "indomie", "maggi"], "prefer": [], "unit": "pc"},
-    {"key": "tomato-paste", "label": "معجون طماط", "cat": "g", "match": "معجون طماط", "q": "tomato paste", "must": ["tomato paste"], "ban": [], "prefer": [], "unit": "pc"},
-    {"key": "canned-tomato", "label": "طماط مقشرة معلبة", "cat": "g", "match": "طماط مقشرة|صلصة طماط|صلصة بيتزا|صلصة إنشيلادا", "q": "peeled tomatoes can", "must": ["tomato"], "ban": ["ketchup", "paste", "fresh"], "prefer": ["peeled", "400g"], "unit": "pc"},
-    {"key": "oil", "label": "زيت", "cat": "g", "match": "^زيت$|زيت للقلي", "q": "sunflower oil 1.8l", "must": ["oil"], "ban": ["olive", "sesame", "coconut", "engine", "hair", "body", "essential"], "prefer": ["sunflower", "1.8", "1.5"], "unit": "l"},
-    {"key": "olive-oil", "label": "زيت زيتون", "cat": "g", "match": "زيت زيتون", "q": "extra virgin olive oil", "must": ["olive oil"], "ban": ["spray", "soap"], "prefer": ["extra virgin", "500ml", "750ml"], "unit": "l"},
-    {"key": "sesame-oil", "label": "زيت سمسم", "cat": "g", "match": "زيت سمسم", "q": "sesame oil", "must": ["sesame oil"], "ban": [], "prefer": [], "unit": "pc"},
-    {"key": "ketchup", "label": "كاتشب", "cat": "g", "match": "كاتشب", "q": "ketchup", "must": ["ketchup"], "ban": [], "prefer": ["heinz"], "unit": "pc"},
-    {"key": "mayo", "label": "مايونيز", "cat": "g", "match": "مايونيز", "q": "mayonnaise", "must": ["mayo"], "ban": [], "prefer": [], "unit": "pc"},
-    {"key": "mustard", "label": "خردل", "cat": "g", "match": "خردل", "q": "mustard", "must": ["mustard"], "ban": ["seed", "powder", "oil"], "prefer": [], "unit": "pc"},
-    {"key": "vinegar", "label": "خل", "cat": "g", "match": "^خل$", "q": "white vinegar", "must": ["vinegar"], "ban": ["apple", "balsamic", "cleaning"], "prefer": [], "unit": "pc"},
-    {"key": "soy", "label": "صوص صويا", "cat": "g", "match": "صوص صويا", "q": "soy sauce", "must": ["soy"], "ban": ["milk", "bean"], "prefer": ["kikkoman", "lee kum"], "unit": "pc"},
-    {"key": "oyster-sauce", "label": "صوص محار", "cat": "g", "match": "صوص محار", "q": "oyster sauce", "must": ["oyster"], "ban": [], "prefer": [], "unit": "pc"},
-    {"key": "fish-sauce", "label": "صوص سمك", "cat": "g", "match": "صوص سمك", "q": "fish sauce", "must": ["fish sauce"], "ban": [], "prefer": [], "unit": "pc"},
-    {"key": "worcester", "label": "صوص ورشستر", "cat": "g", "match": "ورشستر", "q": "worcestershire sauce", "must": ["worcester"], "ban": [], "prefer": [], "unit": "pc"},
-    {"key": "salsa", "label": "صلصة سالسا", "cat": "g", "match": "سالسا", "q": "salsa", "must": ["salsa"], "ban": ["chips"], "prefer": [], "unit": "pc"},
-    {"key": "caesar", "label": "صوص سيزر", "cat": "g", "match": "صوص سيزر", "q": "caesar dressing", "must": ["caesar"], "ban": [], "prefer": [], "unit": "pc"},
-    {"key": "hummus", "label": "حمص جاهز", "cat": "g", "match": "حمص جاهز", "q": "hummus", "must": ["hummus", "hommos"], "ban": ["chips"], "prefer": [], "unit": "pc"},
-    {"key": "tahini", "label": "طحينة", "cat": "g", "match": "طحينة", "q": "tahini", "must": ["tahin"], "ban": [], "prefer": [], "unit": "pc"},
-    {"key": "pickles", "label": "مخلل مشكل", "cat": "g", "match": "مخلل", "q": "mixed pickles", "must": ["pickle"], "ban": ["cucumber"], "prefer": ["mixed"], "unit": "pc"},
-    {"key": "olives", "label": "زيتون أسود", "cat": "g", "match": "زيتون", "q": "black olives sliced", "must": ["olive"], "ban": ["oil"], "prefer": ["sliced", "black"], "unit": "pc"},
-    {"key": "corn", "label": "ذرة حلوة معلبة", "cat": "g", "match": "ذرة حلوة", "q": "sweet corn can", "must": ["corn"], "ban": ["flakes", "flour", "starch", "popcorn", "oil"], "prefer": [], "unit": "pc"},
-    {"key": "black-beans", "label": "فاصوليا سودا", "cat": "g", "match": "فاصوليا سودا", "q": "black beans can", "must": ["black bean"], "ban": [], "prefer": [], "unit": "pc"},
-    {"key": "peas", "label": "بازلاء مجمدة", "cat": "g", "match": "بازلاء", "q": "frozen peas", "must": ["peas"], "ban": ["chick"], "prefer": [], "unit": "pc"},
-    {"key": "lentils", "label": "عدس أصفر", "cat": "g", "match": "عدس", "q": "masoor dal", "must": ["dal", "lentil", "masoor"], "ban": [], "prefer": [], "unit": "kg"},
-    {"key": "harees", "label": "حب هريس", "cat": "g", "match": "حب هريس", "q": "harees wheat", "must": ["harees", "hareesa", "wheat"], "ban": ["flour", "bread"], "prefer": [], "unit": "kg"},
-    {"key": "flour", "label": "طحين", "cat": "g", "match": "^طحين", "q": "all purpose flour", "must": ["flour"], "ban": ["corn", "rice", "chickpea", "almond"], "prefer": ["all purpose", "2kg"], "unit": "kg"},
-    {"key": "breadcrumbs", "label": "بقسماط", "cat": "g", "match": "بقسماط", "q": "breadcrumbs", "must": ["crumb", "panko"], "ban": [], "prefer": ["panko"], "unit": "pc"},
-    {"key": "cornstarch", "label": "نشا ذرة", "cat": "g", "match": "نشا", "q": "corn starch", "must": ["starch", "cornflour"], "ban": [], "prefer": [], "unit": "pc"},
-    {"key": "yeast", "label": "خميرة فورية", "cat": "g", "match": "خميرة", "q": "instant yeast", "must": ["yeast"], "ban": [], "prefer": [], "unit": "pc"},
-    {"key": "sugar", "label": "سكر", "cat": "g", "match": "^سكر$|سكر بني", "q": "sugar 1kg", "must": ["sugar"], "ban": ["free", "icing", "cube"], "prefer": [], "unit": "kg"},
-    {"key": "honey", "label": "عسل", "cat": "g", "match": "عسل|ميرين", "q": "honey", "must": ["honey"], "ban": ["cereal", "nut"], "prefer": [], "unit": "pc"},
-    {"key": "almonds", "label": "لوز", "cat": "g", "match": "لوز|صنوبر", "q": "blanched almonds", "must": ["almond"], "ban": ["milk", "oil", "butter", "chocolate"], "prefer": ["blanched", "slivered"], "unit": "pc"},
-    {"key": "cashew", "label": "كاجو", "cat": "g", "match": "كاجو", "q": "cashew", "must": ["cashew"], "ban": ["chocolate", "butter"], "prefer": [], "unit": "pc"},
-    {"key": "raisins", "label": "زبيب", "cat": "g", "match": "زبيب", "q": "raisins", "must": ["raisin"], "ban": ["chocolate"], "prefer": [], "unit": "pc"},
-    {"key": "peanuts", "label": "فول سوداني محمص", "cat": "g", "match": "فول سوداني", "q": "roasted peanuts", "must": ["peanut"], "ban": ["butter", "oil"], "prefer": ["roasted", "unsalted"], "unit": "pc"},
-    {"key": "sesame", "label": "سمسم محمص", "cat": "g", "match": "^سمسم", "q": "sesame seeds", "must": ["sesame"], "ban": ["oil", "paste"], "prefer": [], "unit": "pc"},
-    {"key": "coconut-milk", "label": "حليب جوز هند", "cat": "g", "match": "جوز هند", "q": "coconut milk", "must": ["coconut milk"], "ban": ["powder"], "prefer": ["400"], "unit": "pc"},
-    {"key": "rose-water", "label": "ماء ورد", "cat": "g", "match": "ماء ورد", "q": "rose water", "must": ["rose water"], "ban": ["toner", "spray"], "prefer": [], "unit": "pc"},
-    {"key": "stock", "label": "مرق دجاج", "cat": "g", "match": "مرق دجاج", "q": "chicken stock", "must": ["stock", "broth"], "ban": [], "prefer": [], "unit": "pc"},
-    {"key": "pineapple", "label": "أناناس معلب", "cat": "g", "match": "أناناس", "q": "pineapple slices can", "must": ["pineapple"], "ban": ["juice", "fresh"], "prefer": [], "unit": "pc"},
-    {"key": "bamboo", "label": "بامبو معلب", "cat": "g", "match": "بامبو", "q": "bamboo shoots", "must": ["bamboo"], "ban": [], "prefer": [], "unit": "pc"},
-    {"key": "curry-cubes", "label": "مكعبات كاري ياباني", "cat": "g", "match": "كاري ياباني", "q": "japanese curry", "must": ["curry"], "ban": ["powder"], "prefer": ["golden", "s&b", "vermont"], "unit": "pc"},
-    {"key": "green-curry", "label": "معجون كاري أخضر", "cat": "g", "match": "كاري أخضر", "q": "green curry paste", "must": ["green curry"], "ban": [], "prefer": [], "unit": "pc"},
-    {"key": "gochujang", "label": "غوتشوجانغ", "cat": "g", "match": "غوتشوجانغ", "q": "gochujang", "must": ["gochujang"], "ban": [], "prefer": [], "unit": "pc"},
-    {"key": "charcoal", "label": "فحم", "cat": "o", "match": "فحم", "q": "charcoal", "must": ["charcoal"], "ban": ["toothpaste", "mask", "filter"], "prefer": [], "unit": "pc"}
-  ]
+  "noon": {
+   "label": "نون Minutes",
+   "url": "https://minutes.noon.com/uae-en/search/?q={q}",
+   "delivery": "توصيل سريع ١٥–٦٠ دقيقة إذا منطقتك مغطاة — تأكد من الرقايب في التطبيق"
+  }
+ },
+ "items": [
+  {
+   "key": "lamb-bone",
+   "label": "لحم غنم بالعظم",
+   "cat": "m",
+   "match": "لحم غنم بالعظم|لحم غنم \\(كتف|غنم.*كتف|غنم.*فخذ",
+   "q": "lamb",
+   "must": [
+    "lamb",
+    "mutton"
+   ],
+   "ban": [
+    "beef",
+    "dog",
+    "cat ",
+    "pet",
+    "mince",
+    "liver",
+    "kidney",
+    "brain",
+    "trotter",
+    "mince",
+    "cube",
+    "rack",
+    "shank"
+   ],
+   "prefer": [
+    "local",
+    "emirati",
+    "uae",
+    "arabic",
+    "fresh",
+    "shoulder",
+    "leg",
+    "forequarter"
+   ],
+   "unit": "kg"
+  },
+  {
+   "key": "lamb-cubes",
+   "label": "لحم غنم مكعبات",
+   "cat": "m",
+   "match": "لحم غنم مكعبات|ريش غنم",
+   "q": "lamb cubes",
+   "must": [
+    "lamb",
+    "mutton"
+   ],
+   "ban": [
+    "beef",
+    "dog",
+    "pet",
+    "mince"
+   ],
+   "prefer": [
+    "local",
+    "fresh",
+    "boneless"
+   ],
+   "unit": "kg",
+   "need": [
+    "cube"
+   ]
+  },
+  {
+   "key": "lamb-mince",
+   "label": "لحم غنم مفروم",
+   "cat": "m",
+   "match": "لحم غنم مفروم|لحم غنم أو بقر مفروم",
+   "q": "lamb mince",
+   "must": [
+    "lamb",
+    "mutton"
+   ],
+   "ban": [
+    "beef",
+    "dog",
+    "pet"
+   ],
+   "prefer": [
+    "local",
+    "fresh"
+   ],
+   "unit": "kg",
+   "need": [
+    "mince"
+   ]
+  },
+  {
+   "key": "beef-mince",
+   "label": "لحم بقر مفروم (البديل: غنم مفروم)",
+   "cat": "m",
+   "match": "لحم بقر مفروم",
+   "q": "lamb mince",
+   "must": [
+    "lamb",
+    "mutton",
+    "beef"
+   ],
+   "ban": [
+    "dog",
+    "pet"
+   ],
+   "prefer": [
+    "lamb",
+    "local",
+    "fresh"
+   ],
+   "unit": "kg",
+   "need": [
+    "mince"
+   ]
+  },
+  {
+   "key": "beef-strips",
+   "label": "لحم شرائح رقيقة",
+   "cat": "m",
+   "match": "لحم بقر شرائح",
+   "q": "beef strips",
+   "must": [
+    "beef",
+    "lamb"
+   ],
+   "ban": [
+    "dog",
+    "pet",
+    "jerky"
+   ],
+   "prefer": [
+    "fresh"
+   ],
+   "unit": "kg",
+   "need": null,
+   "any": [
+    "strip",
+    "stroganoff"
+   ]
+  },
+  {
+   "key": "steak",
+   "label": "ستيك",
+   "cat": "m",
+   "match": "ستيك",
+   "q": "ribeye steak",
+   "must": [
+    "steak",
+    "ribeye",
+    "sirloin",
+    "striploin"
+   ],
+   "ban": [
+    "sauce",
+    "seasoning",
+    "knife"
+   ],
+   "prefer": [
+    "fresh"
+   ],
+   "unit": "kg",
+   "need": [
+    "steak"
+   ]
+  },
+  {
+   "key": "chicken-whole",
+   "label": "دجاج كامل",
+   "cat": "m",
+   "match": "دجاج كامل",
+   "q": "whole chicken",
+   "must": [
+    "chicken"
+   ],
+   "ban": [
+    "breast",
+    "thigh",
+    "wing",
+    "nugget",
+    "stock",
+    "cube",
+    "frozen"
+   ],
+   "prefer": [
+    "fresh",
+    "local"
+   ],
+   "unit": "kg",
+   "need": [
+    "whole"
+   ]
+  },
+  {
+   "key": "chicken-cut",
+   "label": "دجاج مقطع",
+   "cat": "m",
+   "match": "دجاج مقطع|أفخاذ دجاج|صدور / أفخاذ",
+   "q": "chicken thighs",
+   "must": [
+    "chicken"
+   ],
+   "ban": [
+    "nugget",
+    "stock",
+    "cube",
+    "seasoning",
+    "frozen"
+   ],
+   "prefer": [
+    "fresh",
+    "local"
+   ],
+   "unit": "kg",
+   "need": [
+    "thigh"
+   ]
+  },
+  {
+   "key": "chicken-breast",
+   "label": "صدور دجاج",
+   "cat": "m",
+   "match": "صدور دجاج|صدر دجاج",
+   "q": "chicken breast",
+   "must": [
+    "chicken",
+    "breast"
+   ],
+   "ban": [
+    "nugget",
+    "frozen",
+    "seasoning",
+    "cooked",
+    "smoked"
+   ],
+   "prefer": [
+    "fresh",
+    "local"
+   ],
+   "unit": "kg",
+   "need": [
+    "breast"
+   ]
+  },
+  {
+   "key": "fish-fillet",
+   "label": "فيليه سمك",
+   "cat": "m",
+   "match": "فيليه سمك|سمك شعري|سمك هامور|سمك \\(جرجور|هامور أو كنعد",
+   "q": "hammour fillet",
+   "must": [
+    "hammour",
+    "hamour",
+    "sheri",
+    "fish",
+    "kingfish",
+    "fillet"
+   ],
+   "ban": [
+    "cat",
+    "dog",
+    "pet",
+    "sauce",
+    "canned",
+    "frozen"
+   ],
+   "prefer": [
+    "fresh",
+    "local"
+   ],
+   "unit": "kg",
+   "need": [
+    "fillet"
+   ]
+  },
+  {
+   "key": "shrimp",
+   "label": "روبيان",
+   "cat": "m",
+   "match": "روبيان",
+   "q": "shrimp",
+   "must": [
+    "shrimp",
+    "prawn"
+   ],
+   "ban": [
+    "chips",
+    "cracker",
+    "paste",
+    "sauce",
+    "cooked"
+   ],
+   "prefer": [
+    "fresh",
+    "peeled"
+   ],
+   "unit": "kg",
+   "need": [
+    "shrimp"
+   ]
+  },
+  {
+   "key": "tuna-can",
+   "label": "تونة معلبة",
+   "cat": "g",
+   "match": "تونة معلبة",
+   "q": "tuna can 185g",
+   "must": [
+    "tuna"
+   ],
+   "ban": [
+    "cat",
+    "pet",
+    "salad"
+   ],
+   "prefer": [
+    "chunk",
+    "185",
+    "170"
+   ],
+   "unit": "pc",
+   "need": [
+    "tuna"
+   ]
+  },
+  {
+   "key": "rice-basmati",
+   "label": "عيش بسمتي",
+   "cat": "g",
+   "match": "عيش بسمتي|عيش أبيض|عيش جاسمين|عيش ياباني|عيش مصري|عيش أربوريو",
+   "q": "basmati rice 5kg",
+   "must": [
+    "rice"
+   ],
+   "ban": [
+    "cooker",
+    "flour",
+    "cake",
+    "noodle",
+    "vinegar",
+    "paper"
+   ],
+   "prefer": [
+    "5kg",
+    "5 kg",
+    "basmati"
+   ],
+   "unit": "kg",
+   "need": [
+    "basmati"
+   ]
+  },
+  {
+   "key": "onion",
+   "label": "بصل",
+   "cat": "v",
+   "match": "^بصل$|بصل أحمر",
+   "q": "onion",
+   "must": [
+    "onion"
+   ],
+   "ban": [
+    "powder",
+    "fried",
+    "rings",
+    "seed",
+    "green",
+    "spring"
+   ],
+   "prefer": [],
+   "unit": "kg",
+   "need": [
+    "onion"
+   ]
+  },
+  {
+   "key": "tomato",
+   "label": "طماط",
+   "cat": "v",
+   "match": "^طماط|طماط \\(|طماط للسلطة|طماط كرزية",
+   "q": "tomato",
+   "must": [
+    "tomato"
+   ],
+   "ban": [
+    "paste",
+    "sauce",
+    "ketchup",
+    "canned",
+    "sun",
+    "soup",
+    "seed"
+   ],
+   "prefer": [
+    "local",
+    "uae"
+   ],
+   "unit": "kg",
+   "need": [
+    "tomato"
+   ]
+  },
+  {
+   "key": "garlic",
+   "label": "ثوم",
+   "cat": "v",
+   "match": "^ثوم$",
+   "q": "garlic",
+   "must": [
+    "garlic"
+   ],
+   "ban": [
+    "powder",
+    "paste",
+    "sauce",
+    "bread",
+    "pickled",
+    "minced"
+   ],
+   "prefer": [],
+   "unit": "kg",
+   "need": [
+    "garlic"
+   ]
+  },
+  {
+   "key": "lettuce",
+   "label": "خس",
+   "cat": "v",
+   "match": "^خس|خس روماني|روكا",
+   "q": "lettuce",
+   "must": [
+    "lettuce"
+   ],
+   "ban": [
+    "salad mix",
+    "seed"
+   ],
+   "prefer": [
+    "local"
+   ],
+   "unit": "pc",
+   "need": [
+    "lettuce"
+   ]
+  },
+  {
+   "key": "carrot",
+   "label": "جزر",
+   "cat": "v",
+   "match": "^جزر",
+   "q": "carrot",
+   "must": [
+    "carrot"
+   ],
+   "ban": [
+    "juice",
+    "baby",
+    "seed",
+    "cake"
+   ],
+   "prefer": [
+    "local"
+   ],
+   "unit": "kg",
+   "need": [
+    "carrot"
+   ]
+  },
+  {
+   "key": "potato",
+   "label": "بطاط",
+   "cat": "v",
+   "match": "^بطاط$|بطاط \\(",
+   "q": "potato",
+   "must": [
+    "potato"
+   ],
+   "ban": [
+    "chips",
+    "crisps",
+    "sweet",
+    "frozen",
+    "fries",
+    "wedges",
+    "starch",
+    "masher",
+    "sweet",
+    "medley",
+    "red",
+    "dutch"
+   ],
+   "prefer": [
+    "local"
+   ],
+   "unit": "kg",
+   "need": [
+    "potato"
+   ]
+  },
+  {
+   "key": "sweet-potato",
+   "label": "بطاط حلوة",
+   "cat": "v",
+   "match": "بطاط حلوة",
+   "q": "sweet potato",
+   "must": [
+    "sweet potato"
+   ],
+   "ban": [
+    "chips",
+    "fries"
+   ],
+   "prefer": [],
+   "unit": "kg",
+   "need": [
+    "sweet"
+   ]
+  },
+  {
+   "key": "cauliflower",
+   "label": "زهرة (قرنبيط)",
+   "cat": "v",
+   "match": "زهرة",
+   "q": "cauliflower",
+   "must": [
+    "cauliflower"
+   ],
+   "ban": [
+    "frozen",
+    "rice"
+   ],
+   "prefer": [],
+   "unit": "pc",
+   "need": [
+    "cauliflower"
+   ]
+  },
+  {
+   "key": "broccoli",
+   "label": "بروكلي",
+   "cat": "v",
+   "match": "بروكلي",
+   "q": "broccoli",
+   "must": [
+    "broccoli"
+   ],
+   "ban": [
+    "frozen",
+    "seed"
+   ],
+   "prefer": [],
+   "unit": "pc",
+   "need": [
+    "broccoli"
+   ]
+  },
+  {
+   "key": "green-beans",
+   "label": "فاصوليا خضرا",
+   "cat": "v",
+   "match": "فاصوليا خضرا",
+   "q": "green beans",
+   "must": [
+    "bean"
+   ],
+   "ban": [
+    "canned",
+    "frozen",
+    "coffee",
+    "baked"
+   ],
+   "prefer": [],
+   "unit": "kg",
+   "need": [
+    "green bean"
+   ]
+  },
+  {
+   "key": "capsicum",
+   "label": "فلفل رومي",
+   "cat": "v",
+   "match": "فلفل رومي|فلفل أحمر حلو",
+   "q": "capsicum",
+   "must": [
+    "capsicum",
+    "bell pepper",
+    "pepper"
+   ],
+   "ban": [
+    "black",
+    "powder",
+    "chilli",
+    "chili",
+    "sauce",
+    "seed"
+   ],
+   "prefer": [],
+   "unit": "kg",
+   "need": [
+    "capsicum"
+   ]
+  },
+  {
+   "key": "green-chilli",
+   "label": "فلفل أخضر",
+   "cat": "v",
+   "match": "فلفل أخضر",
+   "q": "green chilli",
+   "must": [
+    "chilli",
+    "chili",
+    "pepper"
+   ],
+   "ban": [
+    "powder",
+    "sauce",
+    "flakes",
+    "seed"
+   ],
+   "prefer": [],
+   "unit": "kg",
+   "need": [
+    "chil"
+   ]
+  },
+  {
+   "key": "lemon",
+   "label": "ليمون",
+   "cat": "v",
+   "match": "^ليمون",
+   "q": "lemon",
+   "must": [
+    "lemon"
+   ],
+   "ban": [
+    "juice",
+    "squash",
+    "dried",
+    "black",
+    "zest",
+    "tea",
+    "grass"
+   ],
+   "prefer": [],
+   "unit": "kg",
+   "need": [
+    "lemon"
+   ]
+  },
+  {
+   "key": "coriander",
+   "label": "كزبرة خضرا",
+   "cat": "v",
+   "match": "كزبرة خضرا",
+   "q": "fresh coriander",
+   "must": [
+    "coriander"
+   ],
+   "ban": [
+    "powder",
+    "seed",
+    "ground"
+   ],
+   "prefer": [],
+   "unit": "pc",
+   "need": [
+    "coriander"
+   ]
+  },
+  {
+   "key": "parsley",
+   "label": "بقدونس",
+   "cat": "v",
+   "match": "بقدونس",
+   "q": "fresh parsley",
+   "must": [
+    "parsley"
+   ],
+   "ban": [
+    "dried"
+   ],
+   "prefer": [],
+   "unit": "pc",
+   "need": [
+    "parsley"
+   ]
+  },
+  {
+   "key": "mint",
+   "label": "نعناع طازج",
+   "cat": "v",
+   "match": "نعناع",
+   "q": "fresh mint",
+   "must": [
+    "mint"
+   ],
+   "ban": [
+    "tea",
+    "dried",
+    "sauce",
+    "candy",
+    "gum"
+   ],
+   "prefer": [],
+   "unit": "pc",
+   "need": [
+    "mint"
+   ]
+  },
+  {
+   "key": "basil",
+   "label": "ريحان",
+   "cat": "v",
+   "match": "ريحان",
+   "q": "fresh basil",
+   "must": [
+    "basil"
+   ],
+   "ban": [
+    "dried",
+    "pesto",
+    "seed",
+    "sauce",
+    "dried",
+    "100ml",
+    "17g",
+    "200g"
+   ],
+   "prefer": [],
+   "unit": "pc",
+   "need": [
+    "basil"
+   ]
+  },
+  {
+   "key": "ginger",
+   "label": "زنجبيل طازج",
+   "cat": "v",
+   "match": "زنجبيل",
+   "q": "fresh ginger",
+   "must": [
+    "ginger"
+   ],
+   "ban": [
+    "powder",
+    "ale",
+    "tea",
+    "paste",
+    "bread",
+    "biscuit",
+    "candy"
+   ],
+   "prefer": [],
+   "unit": "kg",
+   "need": [
+    "ginger"
+   ]
+  },
+  {
+   "key": "spring-onion",
+   "label": "بصل أخضر",
+   "cat": "v",
+   "match": "بصل أخضر",
+   "q": "spring onion",
+   "must": [
+    "spring onion",
+    "green onion",
+    "scallion"
+   ],
+   "ban": [],
+   "prefer": [],
+   "unit": "pc",
+   "need": [
+    "onion"
+   ]
+  },
+  {
+   "key": "mushroom",
+   "label": "فطر",
+   "cat": "v",
+   "match": "^فطر",
+   "q": "fresh mushroom",
+   "must": [
+    "mushroom"
+   ],
+   "ban": [
+    "canned",
+    "soup",
+    "dried",
+    "sauce"
+   ],
+   "prefer": [],
+   "unit": "pc",
+   "need": [
+    "mushroom"
+   ]
+  },
+  {
+   "key": "cabbage",
+   "label": "ملفوف",
+   "cat": "v",
+   "match": "ملفوف",
+   "q": "cabbage",
+   "must": [
+    "cabbage"
+   ],
+   "ban": [
+    "red",
+    "pickled"
+   ],
+   "prefer": [],
+   "unit": "pc",
+   "need": [
+    "cabbage"
+   ]
+  },
+  {
+   "key": "avocado",
+   "label": "أفوكادو",
+   "cat": "v",
+   "match": "أفوكادو",
+   "q": "avocado",
+   "must": [
+    "avocado"
+   ],
+   "ban": [
+    "oil",
+    "dip",
+    "guac"
+   ],
+   "prefer": [],
+   "unit": "pc",
+   "need": [
+    "avocado"
+   ]
+  },
+  {
+   "key": "spinach",
+   "label": "سبانخ",
+   "cat": "v",
+   "match": "سبانخ",
+   "q": "fresh spinach",
+   "must": [
+    "spinach"
+   ],
+   "ban": [
+    "frozen",
+    "canned"
+   ],
+   "prefer": [],
+   "unit": "pc",
+   "need": [
+    "spinach"
+   ]
+  },
+  {
+   "key": "bean-sprouts",
+   "label": "براعم فول",
+   "cat": "v",
+   "match": "براعم",
+   "q": "bean sprouts",
+   "must": [
+    "sprout"
+   ],
+   "ban": [],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "pear",
+   "label": "كمثرى",
+   "cat": "v",
+   "match": "كمثرى",
+   "q": "pear",
+   "must": [
+    "pear"
+   ],
+   "ban": [
+    "juice",
+    "canned"
+   ],
+   "prefer": [],
+   "unit": "kg",
+   "need": [
+    "pear"
+   ]
+  },
+  {
+   "key": "rosemary",
+   "label": "روزماري",
+   "cat": "v",
+   "match": "روزماري",
+   "q": "fresh rosemary",
+   "must": [
+    "rosemary"
+   ],
+   "ban": [
+    "dried",
+    "oil"
+   ],
+   "prefer": [],
+   "unit": "pc",
+   "need": [
+    "rosemary"
+   ]
+  },
+  {
+   "key": "yogurt",
+   "label": "زبادي",
+   "cat": "d",
+   "match": "زبادي|كريمة حامضة",
+   "q": "yogurt 1kg",
+   "must": [
+    "yogurt",
+    "yoghurt"
+   ],
+   "ban": [
+    "drink",
+    "flavour",
+    "strawberry",
+    "mango",
+    "greek style 150"
+   ],
+   "prefer": [
+    "1kg",
+    "1 kg",
+    "full fat"
+   ],
+   "unit": "kg"
+  },
+  {
+   "key": "laban",
+   "label": "لبن",
+   "cat": "d",
+   "match": "^لبن",
+   "q": "laban",
+   "must": [
+    "laban"
+   ],
+   "ban": [
+    "up",
+    "flavour",
+    "up",
+    "flavoured",
+    "180ml",
+    "200ml"
+   ],
+   "prefer": [
+    "1l",
+    "1 l",
+    "fresh"
+   ],
+   "unit": "l",
+   "need": [
+    "laban"
+   ]
+  },
+  {
+   "key": "milk",
+   "label": "حليب",
+   "cat": "d",
+   "match": "^حليب$",
+   "q": "fresh milk 2l",
+   "must": [
+    "milk"
+   ],
+   "ban": [
+    "powder",
+    "condensed",
+    "coconut",
+    "almond",
+    "chocolate",
+    "evaporated"
+   ],
+   "prefer": [
+    "full fat",
+    "fresh",
+    "2l"
+   ],
+   "unit": "l"
+  },
+  {
+   "key": "butter",
+   "label": "زبدة",
+   "cat": "d",
+   "match": "^زبدة",
+   "q": "butter 200g",
+   "must": [
+    "butter"
+   ],
+   "ban": [
+    "peanut",
+    "cocoa",
+    "shea",
+    "cookie",
+    "ghee",
+    "spread"
+   ],
+   "prefer": [
+    "unsalted",
+    "200g",
+    "250g"
+   ],
+   "unit": "pc"
+  },
+  {
+   "key": "ghee",
+   "label": "سمن",
+   "cat": "d",
+   "match": "^سمن",
+   "q": "ghee",
+   "must": [
+    "ghee"
+   ],
+   "ban": [
+    "vegetable"
+   ],
+   "prefer": [
+    "pure",
+    "cow"
+   ],
+   "unit": "pc",
+   "need": [
+    "ghee"
+   ]
+  },
+  {
+   "key": "cooking-cream",
+   "label": "كريمة طبخ",
+   "cat": "d",
+   "match": "كريمة طبخ",
+   "q": "cooking cream",
+   "must": [
+    "cream"
+   ],
+   "ban": [
+    "ice",
+    "whipping",
+    "face",
+    "hand",
+    "cheese",
+    "sour"
+   ],
+   "prefer": [
+    "cooking",
+    "lite",
+    "light"
+   ],
+   "unit": "pc",
+   "need": [
+    "cooking"
+   ]
+  },
+  {
+   "key": "cheddar-slices",
+   "label": "جبن شيدر",
+   "cat": "d",
+   "match": "جبن شيدر",
+   "q": "cheddar cheese slices",
+   "must": [
+    "cheddar"
+   ],
+   "ban": [
+    "spread",
+    "powder"
+   ],
+   "prefer": [
+    "slices",
+    "shredded"
+   ],
+   "unit": "pc",
+   "need": [
+    "cheddar"
+   ]
+  },
+  {
+   "key": "mozzarella",
+   "label": "جبن موزاريلا",
+   "cat": "d",
+   "match": "جبن موزاريلا",
+   "q": "mozzarella",
+   "must": [
+    "mozzarella"
+   ],
+   "ban": [
+    "stick",
+    "fresh ball",
+    "ball",
+    "slices"
+   ],
+   "prefer": [
+    "shredded",
+    "block",
+    "200g"
+   ],
+   "unit": "pc"
+  },
+  {
+   "key": "parmesan",
+   "label": "جبن بارميزان",
+   "cat": "d",
+   "match": "بارميزان",
+   "q": "parmesan",
+   "must": [
+    "parmesan",
+    "parmigiano"
+   ],
+   "ban": [],
+   "prefer": [
+    "grated"
+   ],
+   "unit": "pc"
+  },
+  {
+   "key": "eggs",
+   "label": "بيض",
+   "cat": "d",
+   "match": "^بيض$",
+   "q": "eggs 30",
+   "must": [
+    "egg"
+   ],
+   "ban": [
+    "noodle",
+    "chocolate",
+    "liquid",
+    "quail",
+    "plant"
+   ],
+   "prefer": [
+    "30",
+    "15",
+    "fresh"
+   ],
+   "unit": "pc",
+   "need": [
+    "egg"
+   ]
+  },
+  {
+   "key": "burger-buns",
+   "label": "خبز برجر بريوش",
+   "cat": "b",
+   "match": "خبز برجر|خبز سلايدر",
+   "q": "brioche burger buns",
+   "must": [
+    "bun"
+   ],
+   "ban": [],
+   "prefer": [
+    "brioche"
+   ],
+   "unit": "pc",
+   "need": [
+    "bun"
+   ]
+  },
+  {
+   "key": "tortilla",
+   "label": "تورتيلا",
+   "cat": "b",
+   "match": "تورتيلا|خبز صاج",
+   "q": "tortilla wraps",
+   "must": [
+    "tortilla",
+    "wrap"
+   ],
+   "ban": [
+    "chips"
+   ],
+   "prefer": [
+    "8",
+    "10"
+   ],
+   "unit": "pc"
+  },
+  {
+   "key": "arabic-bread",
+   "label": "خبز عربي",
+   "cat": "b",
+   "match": "خبز عربي|خبز تنور|خبز رقاق|خبز محمص",
+   "q": "arabic bread",
+   "must": [
+    "bread",
+    "khubz",
+    "pita"
+   ],
+   "ban": [
+    "crumb"
+   ],
+   "prefer": [
+    "arabic",
+    "white"
+   ],
+   "unit": "pc"
+  },
+  {
+   "key": "baguette",
+   "label": "خبز صب / باغيت",
+   "cat": "b",
+   "match": "خبز صب|باغيت",
+   "q": "baguette",
+   "must": [
+    "baguette",
+    "sub"
+   ],
+   "ban": [],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "pasta",
+   "label": "باستا",
+   "cat": "g",
+   "match": "باستا|سباغيتي|مكرونة|لازانيا|شعيرية",
+   "q": "pasta 500g",
+   "must": [
+    "pasta",
+    "spaghetti",
+    "penne",
+    "fusilli",
+    "linguine",
+    "fettuccine",
+    "lasagne",
+    "lasagna"
+   ],
+   "ban": [
+    "sauce",
+    "ready",
+    "instant",
+    "cup"
+   ],
+   "prefer": [
+    "500g",
+    "barilla"
+   ],
+   "unit": "pc"
+  },
+  {
+   "key": "noodles",
+   "label": "نودلز",
+   "cat": "g",
+   "match": "نودلز",
+   "q": "egg noodles",
+   "must": [
+    "noodle"
+   ],
+   "ban": [
+    "instant",
+    "cup",
+    "indomie",
+    "maggi"
+   ],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "tomato-paste",
+   "label": "معجون طماط",
+   "cat": "g",
+   "match": "معجون طماط",
+   "q": "tomato paste",
+   "must": [
+    "tomato paste"
+   ],
+   "ban": [],
+   "prefer": [],
+   "unit": "pc",
+   "need": [
+    "paste"
+   ]
+  },
+  {
+   "key": "canned-tomato",
+   "label": "طماط مقشرة معلبة",
+   "cat": "g",
+   "match": "طماط مقشرة|صلصة طماط|صلصة بيتزا|صلصة إنشيلادا",
+   "q": "peeled tomatoes can",
+   "must": [
+    "tomato"
+   ],
+   "ban": [
+    "ketchup",
+    "paste",
+    "fresh"
+   ],
+   "prefer": [
+    "peeled",
+    "400g"
+   ],
+   "unit": "pc"
+  },
+  {
+   "key": "oil",
+   "label": "زيت",
+   "cat": "g",
+   "match": "^زيت$|زيت للقلي",
+   "q": "sunflower oil 1.8l",
+   "must": [
+    "oil"
+   ],
+   "ban": [
+    "olive",
+    "sesame",
+    "coconut",
+    "engine",
+    "hair",
+    "body",
+    "essential"
+   ],
+   "prefer": [
+    "sunflower",
+    "1.8",
+    "1.5"
+   ],
+   "unit": "l"
+  },
+  {
+   "key": "olive-oil",
+   "label": "زيت زيتون",
+   "cat": "g",
+   "match": "زيت زيتون",
+   "q": "extra virgin olive oil",
+   "must": [
+    "olive oil"
+   ],
+   "ban": [
+    "spray",
+    "soap"
+   ],
+   "prefer": [
+    "extra virgin",
+    "500ml",
+    "750ml"
+   ],
+   "unit": "l",
+   "need": [
+    "olive"
+   ]
+  },
+  {
+   "key": "sesame-oil",
+   "label": "زيت سمسم",
+   "cat": "g",
+   "match": "زيت سمسم",
+   "q": "sesame oil",
+   "must": [
+    "sesame oil"
+   ],
+   "ban": [],
+   "prefer": [],
+   "unit": "pc",
+   "need": [
+    "sesame"
+   ]
+  },
+  {
+   "key": "ketchup",
+   "label": "كاتشب",
+   "cat": "g",
+   "match": "كاتشب",
+   "q": "ketchup",
+   "must": [
+    "ketchup"
+   ],
+   "ban": [],
+   "prefer": [
+    "heinz"
+   ],
+   "unit": "pc"
+  },
+  {
+   "key": "mayo",
+   "label": "مايونيز",
+   "cat": "g",
+   "match": "مايونيز",
+   "q": "mayonnaise",
+   "must": [
+    "mayo"
+   ],
+   "ban": [],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "mustard",
+   "label": "خردل",
+   "cat": "g",
+   "match": "خردل",
+   "q": "mustard",
+   "must": [
+    "mustard"
+   ],
+   "ban": [
+    "seed",
+    "powder",
+    "oil"
+   ],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "vinegar",
+   "label": "خل",
+   "cat": "g",
+   "match": "^خل$",
+   "q": "white vinegar",
+   "must": [
+    "vinegar"
+   ],
+   "ban": [
+    "apple",
+    "balsamic",
+    "cleaning"
+   ],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "soy",
+   "label": "صوص صويا",
+   "cat": "g",
+   "match": "صوص صويا",
+   "q": "soy sauce",
+   "must": [
+    "soy"
+   ],
+   "ban": [
+    "milk",
+    "bean"
+   ],
+   "prefer": [
+    "kikkoman",
+    "lee kum"
+   ],
+   "unit": "pc"
+  },
+  {
+   "key": "oyster-sauce",
+   "label": "صوص محار",
+   "cat": "g",
+   "match": "صوص محار",
+   "q": "oyster sauce",
+   "must": [
+    "oyster"
+   ],
+   "ban": [],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "fish-sauce",
+   "label": "صوص سمك",
+   "cat": "g",
+   "match": "صوص سمك",
+   "q": "fish sauce",
+   "must": [
+    "fish sauce"
+   ],
+   "ban": [],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "worcester",
+   "label": "صوص ورشستر",
+   "cat": "g",
+   "match": "ورشستر",
+   "q": "worcestershire sauce",
+   "must": [
+    "worcester"
+   ],
+   "ban": [],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "salsa",
+   "label": "صلصة سالسا",
+   "cat": "g",
+   "match": "سالسا",
+   "q": "salsa",
+   "must": [
+    "salsa"
+   ],
+   "ban": [
+    "chips"
+   ],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "caesar",
+   "label": "صوص سيزر",
+   "cat": "g",
+   "match": "صوص سيزر",
+   "q": "caesar dressing",
+   "must": [
+    "caesar"
+   ],
+   "ban": [],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "hummus",
+   "label": "حمص جاهز",
+   "cat": "g",
+   "match": "حمص جاهز",
+   "q": "hummus",
+   "must": [
+    "hummus",
+    "hommos"
+   ],
+   "ban": [
+    "chips"
+   ],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "tahini",
+   "label": "طحينة",
+   "cat": "g",
+   "match": "طحينة",
+   "q": "tahini",
+   "must": [
+    "tahin"
+   ],
+   "ban": [],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "pickles",
+   "label": "مخلل مشكل",
+   "cat": "g",
+   "match": "مخلل",
+   "q": "mixed pickles",
+   "must": [
+    "pickle"
+   ],
+   "ban": [
+    "cucumber"
+   ],
+   "prefer": [
+    "mixed"
+   ],
+   "unit": "pc"
+  },
+  {
+   "key": "olives",
+   "label": "زيتون أسود",
+   "cat": "g",
+   "match": "زيتون",
+   "q": "black olives sliced",
+   "must": [
+    "olive"
+   ],
+   "ban": [
+    "oil"
+   ],
+   "prefer": [
+    "sliced",
+    "black"
+   ],
+   "unit": "pc"
+  },
+  {
+   "key": "corn",
+   "label": "ذرة حلوة معلبة",
+   "cat": "g",
+   "match": "ذرة حلوة",
+   "q": "sweet corn can",
+   "must": [
+    "corn"
+   ],
+   "ban": [
+    "flakes",
+    "flour",
+    "starch",
+    "popcorn",
+    "oil"
+   ],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "black-beans",
+   "label": "فاصوليا سودا",
+   "cat": "g",
+   "match": "فاصوليا سودا",
+   "q": "black beans can",
+   "must": [
+    "black bean"
+   ],
+   "ban": [],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "peas",
+   "label": "بازلاء مجمدة",
+   "cat": "g",
+   "match": "بازلاء",
+   "q": "frozen peas",
+   "must": [
+    "peas"
+   ],
+   "ban": [
+    "chick"
+   ],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "lentils",
+   "label": "عدس أصفر",
+   "cat": "g",
+   "match": "عدس",
+   "q": "masoor dal",
+   "must": [
+    "dal",
+    "lentil",
+    "masoor"
+   ],
+   "ban": [],
+   "prefer": [],
+   "unit": "kg"
+  },
+  {
+   "key": "harees",
+   "label": "حب هريس",
+   "cat": "g",
+   "match": "حب هريس",
+   "q": "harees wheat",
+   "must": [
+    "harees",
+    "hareesa",
+    "wheat"
+   ],
+   "ban": [
+    "flour",
+    "bread"
+   ],
+   "prefer": [],
+   "unit": "kg"
+  },
+  {
+   "key": "flour",
+   "label": "طحين",
+   "cat": "g",
+   "match": "^طحين",
+   "q": "all purpose flour",
+   "must": [
+    "flour"
+   ],
+   "ban": [
+    "corn",
+    "rice",
+    "chickpea",
+    "almond"
+   ],
+   "prefer": [
+    "all purpose",
+    "2kg"
+   ],
+   "unit": "kg"
+  },
+  {
+   "key": "breadcrumbs",
+   "label": "بقسماط",
+   "cat": "g",
+   "match": "بقسماط",
+   "q": "breadcrumbs",
+   "must": [
+    "crumb",
+    "panko"
+   ],
+   "ban": [],
+   "prefer": [
+    "panko"
+   ],
+   "unit": "pc"
+  },
+  {
+   "key": "cornstarch",
+   "label": "نشا ذرة",
+   "cat": "g",
+   "match": "نشا",
+   "q": "corn starch",
+   "must": [
+    "starch",
+    "cornflour"
+   ],
+   "ban": [],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "yeast",
+   "label": "خميرة فورية",
+   "cat": "g",
+   "match": "خميرة",
+   "q": "instant yeast",
+   "must": [
+    "yeast"
+   ],
+   "ban": [],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "sugar",
+   "label": "سكر",
+   "cat": "g",
+   "match": "^سكر$|سكر بني",
+   "q": "sugar 1kg",
+   "must": [
+    "sugar"
+   ],
+   "ban": [
+    "free",
+    "icing",
+    "cube"
+   ],
+   "prefer": [],
+   "unit": "kg"
+  },
+  {
+   "key": "honey",
+   "label": "عسل",
+   "cat": "g",
+   "match": "عسل|ميرين",
+   "q": "honey",
+   "must": [
+    "honey"
+   ],
+   "ban": [
+    "cereal",
+    "nut"
+   ],
+   "prefer": [],
+   "unit": "pc",
+   "need": [
+    "honey"
+   ]
+  },
+  {
+   "key": "almonds",
+   "label": "لوز",
+   "cat": "g",
+   "match": "لوز|صنوبر",
+   "q": "blanched almonds",
+   "must": [
+    "almond"
+   ],
+   "ban": [
+    "milk",
+    "oil",
+    "butter",
+    "chocolate"
+   ],
+   "prefer": [
+    "blanched",
+    "slivered"
+   ],
+   "unit": "pc"
+  },
+  {
+   "key": "cashew",
+   "label": "كاجو",
+   "cat": "g",
+   "match": "كاجو",
+   "q": "cashew",
+   "must": [
+    "cashew"
+   ],
+   "ban": [
+    "chocolate",
+    "butter"
+   ],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "raisins",
+   "label": "زبيب",
+   "cat": "g",
+   "match": "زبيب",
+   "q": "raisins",
+   "must": [
+    "raisin"
+   ],
+   "ban": [
+    "chocolate"
+   ],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "peanuts",
+   "label": "فول سوداني محمص",
+   "cat": "g",
+   "match": "فول سوداني",
+   "q": "roasted peanuts",
+   "must": [
+    "peanut"
+   ],
+   "ban": [
+    "butter",
+    "oil"
+   ],
+   "prefer": [
+    "roasted",
+    "unsalted"
+   ],
+   "unit": "pc"
+  },
+  {
+   "key": "sesame",
+   "label": "سمسم محمص",
+   "cat": "g",
+   "match": "^سمسم",
+   "q": "sesame seeds",
+   "must": [
+    "sesame"
+   ],
+   "ban": [
+    "oil",
+    "paste"
+   ],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "coconut-milk",
+   "label": "حليب جوز هند",
+   "cat": "g",
+   "match": "جوز هند",
+   "q": "coconut milk",
+   "must": [
+    "coconut milk"
+   ],
+   "ban": [
+    "powder"
+   ],
+   "prefer": [
+    "400"
+   ],
+   "unit": "pc",
+   "need": [
+    "coconut"
+   ]
+  },
+  {
+   "key": "rose-water",
+   "label": "ماء ورد",
+   "cat": "g",
+   "match": "ماء ورد",
+   "q": "rose water",
+   "must": [
+    "rose water"
+   ],
+   "ban": [
+    "toner",
+    "spray"
+   ],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "stock",
+   "label": "مرق دجاج",
+   "cat": "g",
+   "match": "مرق دجاج",
+   "q": "chicken stock",
+   "must": [
+    "stock",
+    "broth"
+   ],
+   "ban": [],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "pineapple",
+   "label": "أناناس معلب",
+   "cat": "g",
+   "match": "أناناس",
+   "q": "pineapple slices can",
+   "must": [
+    "pineapple"
+   ],
+   "ban": [
+    "juice",
+    "fresh"
+   ],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "bamboo",
+   "label": "بامبو معلب",
+   "cat": "g",
+   "match": "بامبو",
+   "q": "bamboo shoots",
+   "must": [
+    "bamboo"
+   ],
+   "ban": [],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "curry-cubes",
+   "label": "مكعبات كاري ياباني",
+   "cat": "g",
+   "match": "كاري ياباني",
+   "q": "japanese curry",
+   "must": [
+    "curry"
+   ],
+   "ban": [
+    "powder"
+   ],
+   "prefer": [
+    "golden",
+    "s&b",
+    "vermont"
+   ],
+   "unit": "pc"
+  },
+  {
+   "key": "green-curry",
+   "label": "معجون كاري أخضر",
+   "cat": "g",
+   "match": "كاري أخضر",
+   "q": "green curry paste",
+   "must": [
+    "green curry"
+   ],
+   "ban": [],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "gochujang",
+   "label": "غوتشوجانغ",
+   "cat": "g",
+   "match": "غوتشوجانغ",
+   "q": "gochujang",
+   "must": [
+    "gochujang"
+   ],
+   "ban": [],
+   "prefer": [],
+   "unit": "pc"
+  },
+  {
+   "key": "charcoal",
+   "label": "فحم",
+   "cat": "o",
+   "match": "فحم",
+   "q": "charcoal",
+   "must": [
+    "charcoal"
+   ],
+   "ban": [
+    "toothpaste",
+    "mask",
+    "filter"
+   ],
+   "prefer": [],
+   "unit": "pc"
+  }
+ ]
 }

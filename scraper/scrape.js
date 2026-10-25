@@ -10,6 +10,7 @@ const OUT = path.join(ROOT, 'data/prices.json');
 const LIMIT = process.env.LIMIT ? +process.env.LIMIT : Infinity; // for quick test runs
 const ONLY = process.env.ONLY ? process.env.ONLY.split(',') : null;
 
+const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 // ---------- unit parsing → price per base unit ----------
@@ -36,6 +37,8 @@ function score(item, p) {
   const n = p.name.toLowerCase();
   if (item.must.length && !item.must.some((w) => n.includes(w))) return -1;
   if (item.ban.some((w) => n.includes(w))) return -1;
+  if (item.need && !item.need.every((w) => n.includes(w))) return -1;
+  if (item.any && !item.any.some((w) => n.includes(w))) return -1;
   let s = 1;
   item.prefer.forEach((w) => { if (n.includes(w)) s += 1; });
   if (p.oos) s -= 5;
@@ -74,6 +77,22 @@ async function carrefour(page, q) {
   });
 }
 async function noon(page, q) {
+  // noon Minutes renders search results server-side; parse the serialized product data
+  const res = await fetch(`https://minutes.noon.com/uae-en/search/?q=${encodeURIComponent(q)}`, { headers: { 'user-agent': UA, 'accept-language': 'en-AE,en;q=0.9' } });
+  const html = await res.text();
+  const out = [], seen = new Set();
+  const re = /offer_price:([\d.]+|null),[^{}]*?price:([\d.]+)[\s\S]{0,1500}?sizeInfo:"([^"]*)"[\s\S]{0,400}?sku:"([^"]+)"[\s\S]{0,300}?title:"([^"]+)"/g;
+  let m;
+  while ((m = re.exec(html))) {
+    const sku = m[4]; if (seen.has(sku)) continue; seen.add(sku);
+    const op = m[1] === 'null' ? null : +m[1]; const price = op && op < +m[2] ? op : +m[2];
+    const seg = html.slice(m.index, m.index + 3000);
+    const oos = /is_buyable:!1|isBuyable:!1|showBackInStockNotification:!0/.test(seg) && !/is_buyable:!0/.test(seg);
+    out.push({ name: m[5].replace(/\\x3C.*?>/g, ''), price, sizeText: m[3].replace(/^Single x /i, ''), oos, url: 'https://minutes.noon.com/uae-en/now-product/' + sku + '/' });
+  }
+  return out.slice(0, 24);
+}
+async function noonLegacy(page, q) {
   await page.goto(`https://minutes.noon.com/uae-en/search/?q=${encodeURIComponent(q)}`, { waitUntil: 'domcontentloaded', timeout: 60000 });
   await sleep(5000);
   return page.evaluate(() => {
@@ -97,9 +116,9 @@ async function noon(page, q) {
 const STORES = { carrefour, noon };
 
 (async () => {
-  const browser = await chromium.launch();
+  const browser = await chromium.launch({ args: ['--disable-http2'] });
   const ctx = await browser.newContext({ locale: 'en-AE', timezoneId: 'Asia/Dubai', viewport: { width: 1280, height: 900 },
-    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36' });
+    userAgent: UA });
   const page = await ctx.newPage();
   const prev = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : { items: {} };
   const result = { updatedAt: new Date().toISOString(), area: 'الرقايب، عجمان', stores: {}, items: prev.items || {}, errors: [] };
@@ -115,6 +134,7 @@ const STORES = { carrefour, noon };
         const raw = await fn(page, item.q);
         const list = raw.map((p) => enrich(item, p)).filter((p) => p.score > 0)
           .sort((a, b) => b.score - a.score || (a.unitPrice ?? a.price) - (b.unitPrice ?? b.price));
+        if (!raw.length && result.items[item.key][store] && result.items[item.key][store].best) { console.log(`${item.key} @${store}: empty — keeping previous`); continue; }
         result.items[item.key][store] = { checked: result.updatedAt, found: raw.length, best: list[0] || null, alt: list.slice(1, 4) };
         result.stores[store].ok++;
         console.log(`${item.key} @${store}: ${raw.length} raw → ${list.length} ok → ${list[0] ? list[0].name + ' ' + list[0].price : '—'}`);

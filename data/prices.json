@@ -1,54 +1,7829 @@
 {
- "updatedAt": "2026-10-25T10:23:39.097Z",
+ "updatedAt": "2026-10-25T11:30:02.804Z",
  "area": "الرقايب، عجمان",
  "stores": {
   "carrefour": {
-   "ok": 0,
-   "fail": 4
+   "ok": 99,
+   "found": 93,
+   "checked": "2026-10-25T11:30:02.747Z"
   },
   "noon": {
-   "ok": 4,
-   "fail": 0
+   "ok": 99,
+   "found": 66,
+   "checked": "2026-10-25T11:30:02.804Z"
   }
  },
  "items": {
   "lamb-bone": {
    "noon": {
-    "checked": "2026-10-25T10:23:39.097Z",
-    "found": 0,
-    "best": null,
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Mutton Curry Cut",
+     "price": 35.85,
+     "sizeText": "450g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/ZE0BB7E2AB8E089ADB869Z-1/",
+     "size": {
+      "qty": 0.45,
+      "unit": "kg"
+     },
+     "unitPrice": 79.67,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
     "alt": []
+   },
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Australian Lamb Leg Slice Import",
+     "price": 34,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/2258148",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 68,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Australian Lamb Leg Deboned Import",
+      "price": 35,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2288955",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 70,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Australian Lamb Ribs Import",
+      "price": 40,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2258095",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 80,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
    }
   },
   "lamb-cubes": {
    "noon": {
-    "checked": "2026-10-25T10:23:39.097Z",
-    "found": 0,
-    "best": null,
-    "alt": []
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Lamb Cubes Boneless",
+     "price": 28.95,
+     "sizeText": "250g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/ZEFD9EC660681BA185B52Z-1/",
+     "size": {
+      "qty": 0.25,
+      "unit": "kg"
+     },
+     "unitPrice": 115.8,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Lamb Cubes Bone-In",
+      "price": 17.95,
+      "sizeText": "250g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZDE0C0D507012A4285982Z-1/",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 71.8,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "South African Dorper Lamb Cubes Boneless Import",
+     "price": 33,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/2288954",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 66,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Australian Lamb Cube Boneless Import",
+      "price": 43.5,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2288872",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 87,
+      "unitLabel": "د/كغ",
+      "score": 2
+     }
+    ]
    }
   },
   "chicken-whole": {
    "noon": {
-    "checked": "2026-10-25T10:23:39.097Z",
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   },
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Fresh Whole Chicken",
+     "price": 19.99,
+     "sizeText": "1KG",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1593951",
+     "size": {
+      "qty": 1,
+      "unit": "kg"
+     },
+     "unitPrice": 19.99,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Fresh Whole Chicken 1.2Kg (UAE)",
+      "price": 23.99,
+      "sizeText": "1.2Kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1593950",
+      "size": {
+       "qty": 1.2,
+       "unit": "kg"
+      },
+      "unitPrice": 19.99,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Saha Fresh Chicken Whole Legs 500g",
+      "price": 10.29,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1795213",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 20.58,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Al Khazna, Chicken, Fresh Whole Chicken Bag, 1 kg",
+      "price": 21.79,
+      "sizeText": "1 kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/331506",
+      "size": {
+       "qty": 1,
+       "unit": "kg"
+      },
+      "unitPrice": 21.79,
+      "unitLabel": "د/كغ",
+      "score": 2
+     }
+    ]
+   }
+  },
+  "onion": {
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Red Onion",
+     "price": 5.4,
+     "sizeText": "0.9-1kg",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z7C2D55AED56DC2348FDFZ-1/",
+     "size": {
+      "qty": 1,
+      "unit": "kg"
+     },
+     "unitPrice": 5.4,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Red Onion",
+      "price": 7.65,
+      "sizeText": "0.9-1kg",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZBC8465A6DCB491A213B8Z-1/",
+      "size": {
+       "qty": 1,
+       "unit": "kg"
+      },
+      "unitPrice": 7.65,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Brown Onion",
+      "price": 14.7,
+      "sizeText": "0.9-1kg",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z2C0AFE9B0B24DBD479D2Z-1/",
+      "size": {
+       "qty": 1,
+       "unit": "kg"
+      },
+      "unitPrice": 14.7,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Red Onion",
+     "price": 2.1,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/447550",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 4.2,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Red Onion",
+      "price": 4.69,
+      "sizeText": "1KG",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/447549",
+      "size": {
+       "qty": 1,
+       "unit": "kg"
+      },
+      "unitPrice": 4.69,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Red Onions 3Kg",
+      "price": 15.69,
+      "sizeText": "3Kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/638671",
+      "size": {
+       "qty": 3,
+       "unit": "kg"
+      },
+      "unitPrice": 5.23,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "White Onion",
+      "price": 4,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/447552",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 8,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "lamb-mince": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Australian Lamb Mince Import",
+     "price": 35,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/2258105",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 70,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": []
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 1,
+    "best": {
+     "name": "Lamb Mince",
+     "price": 21.95,
+     "sizeText": "250g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z12121C9054762CA9AA15Z-1/",
+     "size": {
+      "qty": 0.25,
+      "unit": "kg"
+     },
+     "unitPrice": 87.8,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": []
+   }
+  },
+  "beef-mince": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Australian Lamb Mince Import",
+     "price": 35,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/2258105",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 70,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Australian Beef Mince",
+      "price": 35.5,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/909566",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 71,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Australian Angus Beef Mince",
+      "price": 43,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1025564",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 86,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Australian Low Fat Beef Mince",
+      "price": 49,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/909568",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 98,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Lamb Mince",
+     "price": 21.95,
+     "sizeText": "250g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z12121C9054762CA9AA15Z-1/",
+     "size": {
+      "qty": 0.25,
+      "unit": "kg"
+     },
+     "unitPrice": 87.8,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Beef Mince",
+      "price": 17.65,
+      "sizeText": "300g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z871D9B22C88DB0EAF938Z-1/",
+      "size": {
+       "qty": 0.3,
+       "unit": "kg"
+      },
+      "unitPrice": 58.83,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Beef Mince",
+      "price": 18.65,
+      "sizeText": "250g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z5BC8072191A58185D212Z-1/",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 74.6,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "beef-strips": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Brazilian Beef Stroganoff",
+     "price": 36,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/733481",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 72,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Bavaria Smoked Beef Strips",
+      "price": 14.64,
+      "sizeText": "150g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1871981",
+      "size": {
+       "qty": 0.15,
+       "unit": "kg"
+      },
+      "unitPrice": 97.6,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Prime Beef Strips Sliced, 200g",
+      "price": 19.79,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2278483",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 98.95,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Australian Stroganoff Beef",
+      "price": 49.5,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/264677",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 99,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 1,
+    "best": {
+     "name": "Beef Stroganoff",
+     "price": 16.95,
+     "sizeText": "250g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z0F733380F6219415D371Z-1/",
+     "size": {
+      "qty": 0.25,
+      "unit": "kg"
+     },
+     "unitPrice": 67.8,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": []
+   }
+  },
+  "steak": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Brazilian Beef Striploin Steak",
+     "price": 30.5,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/399008",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 61,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Australian Beef Topside Steak",
+      "price": 47.5,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/264653",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 95,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Australian Beef Striploin Steak",
+      "price": 42,
+      "sizeText": "400g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/264648",
+      "size": {
+       "qty": 0.4,
+       "unit": "kg"
+      },
+      "unitPrice": 105,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Australian Beef Ribeye Steak",
+      "price": 59.5,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/264650",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 119,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 1,
+    "best": {
+     "name": "Beef Ribeye Steak",
+     "price": 21.95,
+     "sizeText": "250g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/ZB43B0364088E72792069Z-1/",
+     "size": {
+      "qty": 0.25,
+      "unit": "kg"
+     },
+     "unitPrice": 87.8,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": []
+   }
+  },
+  "chicken-cut": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Saha Fresh Chicken Thighs 500g",
+     "price": 10.29,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1795216",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 20.58,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Al Khazna, Chicken, Fresh Chicken Thighs, 500g",
+      "price": 14.99,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/331538",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 29.98,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Fresh Chicken Thighs (UAE)",
+      "price": 15,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1593957",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 30,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Jenan Fresh Chicken Thigh Fillet, 500g",
+      "price": 22.49,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2293018",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 44.98,
+      "unitLabel": "د/كغ",
+      "score": 2
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
     "found": 0,
     "best": null,
     "alt": []
    }
   },
-  "onion": {
+  "chicken-breast": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Jenan Fresh Chicken Breast, 500g",
+     "price": 25.99,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/2293008",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 51.98,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Saha Fresh Chicken Breast Fillet 450g",
+      "price": 23.79,
+      "sizeText": "450g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1795215",
+      "size": {
+       "qty": 0.45,
+       "unit": "kg"
+      },
+      "unitPrice": 52.87,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Fresh Chicken Breast",
+      "price": 26.45,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1593954",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 52.9,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Al Khazna, Chicken, Fresh Skinless Chicken Breast, 1 kg",
+      "price": 54.99,
+      "sizeText": "1 kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/331524",
+      "size": {
+       "qty": 1,
+       "unit": "kg"
+      },
+      "unitPrice": 54.99,
+      "unitLabel": "د/كغ",
+      "score": 2
+     }
+    ]
+   },
    "noon": {
-    "checked": "2026-10-25T10:23:39.097Z",
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 1,
+    "best": null,
+    "alt": []
+   }
+  },
+  "fish-fillet": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Hamour Fillet Fresh",
+     "price": 72.5,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/72855",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 145,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": []
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "shrimp": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Fresh Shrimps 40/60",
+     "price": 10,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1730628",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 20,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Fresh Shrimps 20/30",
+      "price": 20,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/73218",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 40,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Fresh Shrimps 30/40",
+      "price": 22,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/978511",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 44,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Fresh Shrimps 10/20",
+      "price": 41.85,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1788899",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 83.7,
+      "unitLabel": "د/كغ",
+      "score": 2
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 1,
+    "best": null,
+    "alt": []
+   }
+  },
+  "tuna-can": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "California Garden Light Chunk Tuna in Water and Salt, 185g",
+     "price": 10.79,
+     "sizeText": "185g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/116189",
+     "size": {
+      "qty": 0.185,
+      "unit": "kg"
+     },
+     "unitPrice": 58.32,
+     "unitLabel": "د/كغ",
+     "score": 3
+    },
+    "alt": [
+     {
+      "name": "Carrefour Skipjack Tuna Chunk In Water 170g Pack of 3",
+      "price": 14.79,
+      "sizeText": "170g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1808613",
+      "size": {
+       "qty": 0.17,
+       "unit": "kg"
+      },
+      "unitPrice": 87,
+      "unitLabel": "د/كغ",
+      "score": 3
+     },
+     {
+      "name": "PP Blanc Plain Thon Tuna 185g",
+      "price": 6.79,
+      "sizeText": "185g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1914314",
+      "size": {
+       "qty": 0.185,
+       "unit": "kg"
+      },
+      "unitPrice": 36.7,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "California Garden White Solid Tuna In Water and Salt, 185g",
+      "price": 10.79,
+      "sizeText": "185g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1013081",
+      "size": {
+       "qty": 0.185,
+       "unit": "kg"
+      },
+      "unitPrice": 58.32,
+      "unitLabel": "د/كغ",
+      "score": 2
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Light Canned Tuna Chunks In Sunflower Oil",
+     "price": 24.4,
+     "sizeText": "4 x 170g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z84350C9D3E88D62DFD0BZ-1/",
+     "size": {
+      "qty": 0.68,
+      "unit": "kg"
+     },
+     "unitPrice": 35.88,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Light Tuna In Water",
+      "price": 16.25,
+      "sizeText": "3 x 160g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZAA560E9D3279D38FED7FZ-1/",
+      "size": {
+       "qty": 0.48,
+       "unit": "kg"
+      },
+      "unitPrice": 33.85,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Tuna Sandwhich In Sunflower Oil",
+      "price": 16.95,
+      "sizeText": "3 x 160g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z389A23E8083D4D303DA1Z-1/",
+      "size": {
+       "qty": 0.48,
+       "unit": "kg"
+      },
+      "unitPrice": 35.31,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "rice-basmati": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Rozanna Indian Basmati Rice 5kg",
+     "price": 28.29,
+     "sizeText": "5kg",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1679446",
+     "size": {
+      "qty": 5,
+      "unit": "kg"
+     },
+     "unitPrice": 5.66,
+     "unitLabel": "د/كغ",
+     "score": 3
+    },
+    "alt": [
+     {
+      "name": "Sinnara Basmati Rice, 5kg",
+      "price": 29.99,
+      "sizeText": "5kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/242325",
+      "size": {
+       "qty": 5,
+       "unit": "kg"
+      },
+      "unitPrice": 6,
+      "unitLabel": "د/كغ",
+      "score": 3
+     },
+     {
+      "name": "Tilda Pure Original Basmati Rice 5kg",
+      "price": 32.99,
+      "sizeText": "5kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1261979",
+      "size": {
+       "qty": 5,
+       "unit": "kg"
+      },
+      "unitPrice": 6.6,
+      "unitLabel": "د/كغ",
+      "score": 3
+     },
+     {
+      "name": "Sunwhite Classic 1121 Basmati Rice, Extra Long Grain, 5kg",
+      "price": 43.29,
+      "sizeText": "5kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2298816",
+      "size": {
+       "qty": 5,
+       "unit": "kg"
+      },
+      "unitPrice": 8.66,
+      "unitLabel": "د/كغ",
+      "score": 3
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Devaaya Basmati Rice",
+     "price": 28.5,
+     "sizeText": "5Kg",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z3F4EDC5CD32165B026B9Z-1/",
+     "size": {
+      "qty": 5,
+      "unit": "kg"
+     },
+     "unitPrice": 5.7,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Traditional White Indian Basmati Rice",
+      "price": 32.6,
+      "sizeText": "5Kg",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z744C1763225BEB1C46BFZ-1/",
+      "size": {
+       "qty": 5,
+       "unit": "kg"
+      },
+      "unitPrice": 6.52,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Everyday Basmati Rice (Long Grain Rice)",
+      "price": 37.55,
+      "sizeText": "5kg",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z107D3DE536FD027C781FZ-1/",
+      "size": {
+       "qty": 5,
+       "unit": "kg"
+      },
+      "unitPrice": 7.51,
+      "unitLabel": "د/كغ",
+      "score": 2
+     }
+    ]
+   }
+  },
+  "tomato": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Tomato",
+     "price": 2.95,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1767482",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 5.9,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Premium Tomato Bunch",
+      "price": 7,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1792194",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 14,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Parmalat Pomi Strained Tomatoes Passata, 500g",
+      "price": 7.49,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/8823",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 14.98,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Pure Harvest Red Cherry Tomato Bunch 290g",
+      "price": 12.99,
+      "sizeText": "290g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1576308",
+      "size": {
+       "qty": 0.29,
+       "unit": "kg"
+      },
+      "unitPrice": 44.79,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 1,
+    "best": {
+     "name": "Tomato",
+     "price": 8.25,
+     "sizeText": "450-500g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/ZD9341B3438D23DB7AAFEZ-1/",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 16.5,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": []
+   }
+  },
+  "garlic": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Pink Garlic Bag 3 Pieces",
+     "price": 14.69,
+     "sizeText": "",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1012900",
+     "size": {
+      "qty": 3,
+      "unit": "pc"
+     },
+     "unitPrice": 4.9,
+     "unitLabel": "د/حبة",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Garlic",
+      "price": 3.27,
+      "sizeText": "300g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/499952",
+      "size": {
+       "qty": 0.3,
+       "unit": "kg"
+      },
+      "unitPrice": 10.9,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Garlic Bag 900g",
+      "price": 16.99,
+      "sizeText": "900g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/447536",
+      "size": {
+       "qty": 0.9,
+       "unit": "kg"
+      },
+      "unitPrice": 18.88,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Garlic 450g",
+      "price": 8.99,
+      "sizeText": "450g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/447541",
+      "size": {
+       "qty": 0.45,
+       "unit": "kg"
+      },
+      "unitPrice": 19.98,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Garlic",
+     "price": 9.45,
+     "sizeText": "220-250g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z82DF9F5B91FAB579AE92Z-1/",
+     "size": {
+      "qty": 0.25,
+      "unit": "kg"
+     },
+     "unitPrice": 37.8,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Garlic",
+      "price": 16.75,
+      "sizeText": "220-250g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZF1861C9EA902793E4A13Z-1/",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 67,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "lettuce": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Lettuce Iceberg",
+     "price": 6.49,
+     "sizeText": "",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/941194",
+     "size": null,
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Romaine Lettuce",
+      "price": 6.44,
+      "sizeText": "750g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/449348",
+      "size": {
+       "qty": 0.75,
+       "unit": "kg"
+      },
+      "unitPrice": 8.59,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Armela Green Butterhead Lettuce 1 Piece",
+      "price": 9.29,
+      "sizeText": "",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1604771",
+      "size": null,
+      "score": 1
+     },
+     {
+      "name": "Lettuce Mix 125g",
+      "price": 6.99,
+      "sizeText": "125g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1836338",
+      "size": {
+       "qty": 0.125,
+       "unit": "kg"
+      },
+      "unitPrice": 55.92,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "carrot": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Carrot Loose",
+     "price": 3.95,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1078651",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 7.9,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Carrot",
+      "price": 4.8,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/70968",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 9.6,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Carrots Red",
+      "price": 9.95,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/447559",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 19.9,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Carrot Strips 150g",
+      "price": 3.39,
+      "sizeText": "150g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1797753",
+      "size": {
+       "qty": 0.15,
+       "unit": "kg"
+      },
+      "unitPrice": 22.6,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Carrots",
+     "price": 5.25,
+     "sizeText": "400-500g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z21EC1F2D34C68850E556Z-1/",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 10.5,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Carrots",
+      "price": 15.15,
+      "sizeText": "450-500g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZD72440E7A87E9C5F5C04Z-1/",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 30.3,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "potato": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Potato",
+     "price": 2.5,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1552234",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 5,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "White Baby Potato",
+      "price": 5,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/71595",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 10,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Potato",
+     "price": 18.1,
+     "sizeText": "2.8-3kg",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z553DD734F3B6E197FEF9Z-1/",
+     "size": {
+      "qty": 3,
+      "unit": "kg"
+     },
+     "unitPrice": 6.03,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Baby Potato",
+      "price": 6.25,
+      "sizeText": "220-250g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z29CA13E2970E11154F46Z-1/",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 25,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "sweet-potato": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Sweet Potato",
+     "price": 3.74,
+     "sizeText": "750g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/447485",
+     "size": {
+      "qty": 0.75,
+      "unit": "kg"
+     },
+     "unitPrice": 4.99,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Organic Sweet Potatoes 500g",
+      "price": 20.99,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1305132",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 41.98,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Ripe Organic Sweet Potatoes 550g",
+      "price": 24.19,
+      "sizeText": "550g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1441063",
+      "size": {
+       "qty": 0.55,
+       "unit": "kg"
+      },
+      "unitPrice": 43.98,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 1,
+    "best": {
+     "name": "Sweet Potato",
+     "price": 14.7,
+     "sizeText": "450-500g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z6047FA72A1267F94EEC2Z-1/",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 29.4,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": []
+   }
+  },
+  "cauliflower": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 5,
+    "best": {
+     "name": "Cauliflower",
+     "price": 4.5,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/490043",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 9,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": []
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "broccoli": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Broccoli Local",
+     "price": 4.95,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1908208",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 9.9,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Hortex Broccoli Mix 400g",
+      "price": 9.49,
+      "sizeText": "400g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1719770",
+      "size": {
+       "qty": 0.4,
+       "unit": "kg"
+      },
+      "unitPrice": 23.72,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Plein Soleil Broccoli 900g",
+      "price": 26.79,
+      "sizeText": "900g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2133399",
+      "size": {
+       "qty": 0.9,
+       "unit": "kg"
+      },
+      "unitPrice": 29.77,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Bimi Broccoli 200g",
+      "price": 7.89,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1809185",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 39.45,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 1,
+    "best": {
+     "name": "Tenderstem Broccoli",
+     "price": 8.25,
+     "sizeText": "200g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z45166B69CC547EA0489DZ-1/",
+     "size": {
+      "qty": 0.2,
+      "unit": "kg"
+     },
+     "unitPrice": 41.25,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": []
+   }
+  },
+  "green-beans": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Green Beans",
+     "price": 6,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/449353",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 12,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Al Ain Green Beans, 400g",
+      "price": 10.29,
+      "sizeText": "400g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1191085",
+      "size": {
+       "qty": 0.4,
+       "unit": "kg"
+      },
+      "unitPrice": 25.72,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Carrefour Extra Extra Fine Green Beans with Pearl Onions, 400g",
+      "price": 14.49,
+      "sizeText": "400g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1658043",
+      "size": {
+       "qty": 0.4,
+       "unit": "kg"
+      },
+      "unitPrice": 36.23,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Green Beans Cut 150g",
+      "price": 7.19,
+      "sizeText": "150g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1797752",
+      "size": {
+       "qty": 0.15,
+       "unit": "kg"
+      },
+      "unitPrice": 47.93,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "capsicum": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Green Capsicum",
+     "price": 4.5,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/489966",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 9,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Red Capsicum",
+      "price": 8,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/490008",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 16,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Yellow Capsicum",
+      "price": 9,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/490015",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 18,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Mixed Capsicums 400g",
+      "price": 8.89,
+      "sizeText": "400g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/499954",
+      "size": {
+       "qty": 0.4,
+       "unit": "kg"
+      },
+      "unitPrice": 22.23,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "green-chilli": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Ripe Organic Green Chillies 250g",
+     "price": 2.5,
+     "sizeText": "250g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1441024",
+     "size": {
+      "qty": 0.25,
+      "unit": "kg"
+     },
+     "unitPrice": 10,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Green Bird's Eye Chillies",
+      "price": 2.2,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/327895",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 11,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Chili Green Local",
+      "price": 2.48,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/447558",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 12.4,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Chili Green Sweet Long",
+      "price": 3.8,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/449340",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 19,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": null,
+    "alt": []
+   }
+  },
+  "lemon": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Lemon",
+     "price": 2.87,
+     "sizeText": "600g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/446434",
+     "size": {
+      "qty": 0.6,
+      "unit": "kg"
+     },
+     "unitPrice": 4.78,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Carrefour Lemons 2Kg",
+      "price": 13.29,
+      "sizeText": "2Kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2175743",
+      "size": {
+       "qty": 2,
+       "unit": "kg"
+      },
+      "unitPrice": 6.64,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "coriander": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Fresh Coriander Bunch",
+     "price": 0.49,
+     "sizeText": "",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1264804",
+     "size": null,
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Premium Coriander Herbs (Dhaniya)",
+      "price": 2.89,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1207518",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 14.45,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Bayara Whole Coriander, 200g",
+      "price": 7.39,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/69319",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 36.95,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "parsley": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Fresh Parsley",
+     "price": 0.99,
+     "sizeText": "",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1710997",
+     "size": null,
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Premium Parsley 200g",
+      "price": 3.49,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1207520",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 17.45,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Barakat Fresh Chopped Parsley 250g",
+      "price": 11.99,
+      "sizeText": "250g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/481972",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 47.96,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Barakat Parsley Chopped 150g",
+      "price": 9.29,
+      "sizeText": "150g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2234088",
+      "size": {
+       "qty": 0.15,
+       "unit": "kg"
+      },
+      "unitPrice": 61.93,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 1,
+    "best": {
+     "name": "Parsley",
+     "price": 8.55,
+     "sizeText": "7g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/ZEF233CE492EB42312C0AZ-1/",
+     "size": {
+      "qty": 0.007,
+      "unit": "kg"
+     },
+     "unitPrice": 1221.43,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": []
+   }
+  },
+  "mint": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Fresh Mint (Pudina)",
+     "price": 0.99,
+     "sizeText": "",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1710998",
+     "size": null,
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Premium Mint (Pudina)",
+      "price": 3.49,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1207519",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 17.45,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Barakat Fresh Mint Lemonade 1L",
+      "price": 20.59,
+      "sizeText": "1L",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/930468",
+      "size": {
+       "qty": 1,
+       "unit": "l"
+      },
+      "unitPrice": 20.59,
+      "unitLabel": "د/لتر",
+      "score": 1
+     },
+     {
+      "name": "Barakat Fresh Mint Lemon Juice 500ml",
+      "price": 12.39,
+      "sizeText": "500ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/586771",
+      "size": {
+       "qty": 0.5,
+       "unit": "l"
+      },
+      "unitPrice": 24.78,
+      "unitLabel": "د/لتر",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "basil": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Basil Pot",
+     "price": 3.99,
+     "sizeText": "",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/71100",
+     "size": null,
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Los Pinos Basil",
+      "price": 13.4,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1778406",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 67,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Basil Punnet (Tulsi)",
+      "price": 3.99,
+      "sizeText": "20g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/948112",
+      "size": {
+       "qty": 0.02,
+       "unit": "kg"
+      },
+      "unitPrice": 199.5,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "ginger": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Ginger",
+     "price": 3.87,
+     "sizeText": "300g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/70854",
+     "size": {
+      "qty": 0.3,
+      "unit": "kg"
+     },
+     "unitPrice": 12.9,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Ginger",
+      "price": 4.5,
+      "sizeText": "300g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1140969",
+      "size": {
+       "qty": 0.3,
+       "unit": "kg"
+      },
+      "unitPrice": 15,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Organic Gingers 250g",
+      "price": 10.49,
+      "sizeText": "250g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1274412",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 41.96,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Plein Soleil White Sushi Ginger, 240g",
+      "price": 12.09,
+      "sizeText": "240g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2268384",
+      "size": {
+       "qty": 0.24,
+       "unit": "kg"
+      },
+      "unitPrice": 50.38,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "spring-onion": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": null,
+    "alt": []
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "mushroom": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Carrefour Mushrooms Pieces And Stems In Brine 425g",
+     "price": 4.29,
+     "sizeText": "425g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/971368",
+     "size": {
+      "qty": 0.425,
+      "unit": "kg"
+     },
+     "unitPrice": 10.09,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "California Garden Mushroom Pieces & Stems, 425g",
+      "price": 7.49,
+      "sizeText": "425g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/201154",
+      "size": {
+       "qty": 0.425,
+       "unit": "kg"
+      },
+      "unitPrice": 17.62,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Carrefour White Mushrooms",
+      "price": 6.59,
+      "sizeText": "250g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2256900",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 26.36,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Mushroom White 250g",
+      "price": 9.99,
+      "sizeText": "250g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2134463",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 39.96,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 1,
+    "best": {
+     "name": "Vitamin D White Mushroom Sliced",
+     "price": 9.45,
+     "sizeText": "200g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z6F78BDD522026C038641Z-1/",
+     "size": {
+      "qty": 0.2,
+      "unit": "kg"
+     },
+     "unitPrice": 47.25,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": []
+   }
+  },
+  "cabbage": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "White Round Cabbage",
+     "price": 1.25,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/70727",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 2.5,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Cabbage White Flat",
+      "price": 3.75,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/472448",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 7.5,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Chinese Cabbage",
+      "price": 7.75,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/447435",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 15.5,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "avocado": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "RTE Avocado Senora Hassita Pack",
+     "price": 13.39,
+     "sizeText": "1 Pack",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1306725",
+     "size": null,
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Carrefour Avocado Ettinger",
+      "price": 8.5,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2263595",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 17,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Carrefour Ready-to-Eat Hass Avocados 2-Piece Pack",
+      "price": 9.99,
+      "sizeText": "350g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1085159",
+      "size": {
+       "qty": 0.35,
+       "unit": "kg"
+      },
+      "unitPrice": 28.54,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Ripe Organic Avocados 550g",
+      "price": 19.24,
+      "sizeText": "550g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1441001",
+      "size": {
+       "qty": 0.55,
+       "unit": "kg"
+      },
+      "unitPrice": 34.98,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Avodelight Avocado Hass Ripe (Ready to Eat)",
+     "price": 18.85,
+     "sizeText": "2 Piece (300-500g)",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z17533201DDE2A2B5F9A6Z-1/",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 37.7,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Avodelight Avocado Hass Ripe (Ready to Eat)",
+      "price": 12.75,
+      "sizeText": "1 Piece (200-250g)",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZACA7280675BEC42DB21BZ-1/",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 51,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "spinach": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Plein Soleil Spinach Leaves 400g",
+     "price": 8.49,
+     "sizeText": "400g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1928823",
+     "size": {
+      "qty": 0.4,
+      "unit": "kg"
+     },
+     "unitPrice": 21.22,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Al Ain Finely Chopped Spinach, 400g",
+      "price": 8.69,
+      "sizeText": "400g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1068501",
+      "size": {
+       "qty": 0.4,
+       "unit": "kg"
+      },
+      "unitPrice": 21.72,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Plein Soleil Chopped Spinach 400g",
+      "price": 10.79,
+      "sizeText": "400g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1928824",
+      "size": {
+       "qty": 0.4,
+       "unit": "kg"
+      },
+      "unitPrice": 26.97,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Barakat Baby Spinach 175g",
+      "price": 9.89,
+      "sizeText": "175g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1817901",
+      "size": {
+       "qty": 0.175,
+       "unit": "kg"
+      },
+      "unitPrice": 56.51,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "bean-sprouts": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "pear": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Vermont Beauty Pear",
+     "price": 6.95,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/71628",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 13.9,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Pear Forelle",
+      "price": 7.25,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/71048",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 14.5,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Rosemary Pear",
+      "price": 7.45,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/446274",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 14.9,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Prickly Pear",
+      "price": 8,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/446981",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 16,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "rosemary": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Abido Rosemary 50g",
+     "price": 6.2,
+     "sizeText": "50g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/2233943",
+     "size": {
+      "qty": 0.05,
+      "unit": "kg"
+     },
+     "unitPrice": 124,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Fresh Rosemary Ponet 20g",
+      "price": 3.99,
+      "sizeText": "20g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/948110",
+      "size": {
+       "qty": 0.02,
+       "unit": "kg"
+      },
+      "unitPrice": 199.5,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 1,
+    "best": {
+     "name": "Rosemary Whole",
+     "price": 3.55,
+     "sizeText": "50g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/ZD96C9C6BB06E3A88FD97Z-1/",
+     "size": {
+      "qty": 0.05,
+      "unit": "kg"
+     },
+     "unitPrice": 71,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": []
+   }
+  },
+  "yogurt": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Al Rawabi Full Fat Plain Yoghurt, 1kg",
+     "price": 6.39,
+     "sizeText": "1kg",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/538356",
+     "size": {
+      "qty": 1,
+      "unit": "kg"
+     },
+     "unitPrice": 6.39,
+     "unitLabel": "د/كغ",
+     "score": 3
+    },
+    "alt": [
+     {
+      "name": "Carrefour Full Fat Fresh Yogurt, 1kg",
+      "price": 6.39,
+      "sizeText": "1kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1812637",
+      "size": {
+       "qty": 1,
+       "unit": "kg"
+      },
+      "unitPrice": 6.39,
+      "unitLabel": "د/كغ",
+      "score": 3
+     },
+     {
+      "name": "Almarai Full Fat Fresh Yoghurt, 1kg",
+      "price": 7.89,
+      "sizeText": "1kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/783920",
+      "size": {
+       "qty": 1,
+       "unit": "kg"
+      },
+      "unitPrice": 7.89,
+      "unitLabel": "د/كغ",
+      "score": 3
+     },
+     {
+      "name": "Al Ain Farms Low Fat Fresh Yoghurt, 1kg",
+      "price": 7.19,
+      "sizeText": "1kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1012576",
+      "size": {
+       "qty": 1,
+       "unit": "kg"
+      },
+      "unitPrice": 7.19,
+      "unitLabel": "د/كغ",
+      "score": 2
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Full Fat Fresh Yoghurt",
+     "price": 7.85,
+     "sizeText": "1Kg",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/ZB27386FAFDFE65D28284Z-1/",
+     "size": {
+      "qty": 1,
+      "unit": "kg"
+     },
+     "unitPrice": 7.85,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Full Cream Fresh Yoghurt",
+      "price": 6.85,
+      "sizeText": "1kg",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z0C70B98591EC9040BED6Z-1/",
+      "size": {
+       "qty": 1,
+       "unit": "kg"
+      },
+      "unitPrice": 6.85,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Full Cream Yoghurt",
+      "price": 7.75,
+      "sizeText": "1kg",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZEE3BC5C26ADF81FF8898Z-1/",
+      "size": {
+       "qty": 1,
+       "unit": "kg"
+      },
+      "unitPrice": 7.75,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "laban": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Almarai Full Fat Fresh Laban, 1L",
+     "price": 7.49,
+     "sizeText": "1L",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/11305",
+     "size": {
+      "qty": 1,
+      "unit": "l"
+     },
+     "unitPrice": 7.49,
+     "unitLabel": "د/لتر",
+     "score": 3
+    },
+    "alt": [
+     {
+      "name": "Almarai Full Fat Fresh Laban, 2L",
+      "price": 13.49,
+      "sizeText": "2L",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/11303",
+      "size": {
+       "qty": 2,
+       "unit": "l"
+      },
+      "unitPrice": 6.75,
+      "unitLabel": "د/لتر",
+      "score": 2
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Fresh Laban Plain Traditional",
+     "price": 12.45,
+     "sizeText": "2L",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z96DC9CA11A53AC24F994Z-1/",
+     "size": {
+      "qty": 2,
+      "unit": "l"
+     },
+     "unitPrice": 6.22,
+     "unitLabel": "د/لتر",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Fresh Laban Plain Full Fat",
+      "price": 7.35,
+      "sizeText": "1L",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZB347F9AA17F29BADE1D7Z-1/",
+      "size": {
+       "qty": 1,
+       "unit": "l"
+      },
+      "unitPrice": 7.35,
+      "unitLabel": "د/لتر",
+      "score": 2
+     }
+    ]
+   }
+  },
+  "milk": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Hayatna Full Fat Fresh Milk Rich in Vitamins & Nutrients 2L",
+     "price": 9.99,
+     "sizeText": "2L",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1887862",
+     "size": {
+      "qty": 2,
+      "unit": "l"
+     },
+     "unitPrice": 5,
+     "unitLabel": "د/لتر",
+     "score": 4
+    },
+    "alt": [
+     {
+      "name": "Carrefour Full Fat Fresh Milk, 2L",
+      "price": 10.79,
+      "sizeText": "2L",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1902801",
+      "size": {
+       "qty": 2,
+       "unit": "l"
+      },
+      "unitPrice": 5.39,
+      "unitLabel": "د/لتر",
+      "score": 4
+     },
+     {
+      "name": "Almarai Full Fat Fresh Milk, 2L",
+      "price": 12.29,
+      "sizeText": "2L",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/11530",
+      "size": {
+       "qty": 2,
+       "unit": "l"
+      },
+      "unitPrice": 6.14,
+      "unitLabel": "د/لتر",
+      "score": 4
+     },
+     {
+      "name": "Marmum Fresh Cow Milk Full Cream 100 Percent Fresh, 2L",
+      "price": 11.99,
+      "sizeText": "2L",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/11536",
+      "size": {
+       "qty": 2,
+       "unit": "l"
+      },
+      "unitPrice": 6,
+      "unitLabel": "د/لتر",
+      "score": 3
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Fresh Milk Full Fat",
+     "price": 11.15,
+     "sizeText": "2L",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z58D9C49983B85F7F83D2Z-1/",
+     "size": {
+      "qty": 2,
+      "unit": "l"
+     },
+     "unitPrice": 5.58,
+     "unitLabel": "د/لتر",
+     "score": 3
+    },
+    "alt": [
+     {
+      "name": "Fresh Milk Full Fat",
+      "price": 12,
+      "sizeText": "2L",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZCBB8D7AC7FCFB8587A00Z-1/",
+      "size": {
+       "qty": 2,
+       "unit": "l"
+      },
+      "unitPrice": 6,
+      "unitLabel": "د/لتر",
+      "score": 3
+     }
+    ]
+   }
+  },
+  "butter": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Ambassador Unsalted Butter, 200g Pack of 2",
+     "price": 10.49,
+     "sizeText": "200g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/2191847",
+     "size": {
+      "qty": 0.2,
+      "unit": "kg"
+     },
+     "unitPrice": 52.45,
+     "unitLabel": "د/كغ",
+     "score": 3
+    },
+    "alt": [
+     {
+      "name": "Almarai Unsalted Natural Butter, 200g",
+      "price": 13.29,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/76730",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 66.45,
+      "unitLabel": "د/كغ",
+      "score": 3
+     },
+     {
+      "name": "Lurpak Unsalted Soft Butter, 200g",
+      "price": 13.79,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/76527",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 68.95,
+      "unitLabel": "د/كغ",
+      "score": 3
+     },
+     {
+      "name": "Elle & Vire Gourmet Unsalted Butter, 200g",
+      "price": 17.99,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/269786",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 89.95,
+      "unitLabel": "د/كغ",
+      "score": 3
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Butter Block Unsalted 100g",
+     "price": 8.8,
+     "sizeText": "100g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z17A6056893EAE5DC2112Z-1/",
+     "size": {
+      "qty": 0.1,
+      "unit": "kg"
+     },
+     "unitPrice": 88,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Pasteurised Butter",
+      "price": 4.75,
+      "sizeText": "100g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZE00FFAAA7161D6E67F0EZ-1/",
+      "size": {
+       "qty": 0.1,
+       "unit": "kg"
+      },
+      "unitPrice": 47.5,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Pasteurised Butter",
+      "price": 23.95,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z38C3A25BCE0599D30B99Z-1/",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 47.9,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "ghee": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Aseel Pure Ghee, 880ml",
+     "price": 27.99,
+     "sizeText": "880ml",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1707506",
+     "size": {
+      "qty": 0.88,
+      "unit": "l"
+     },
+     "unitPrice": 31.81,
+     "unitLabel": "د/لتر",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Amul Pure Ghee, 1L",
+      "price": 36.99,
+      "sizeText": "1L",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/10142",
+      "size": {
+       "qty": 1,
+       "unit": "l"
+      },
+      "unitPrice": 36.99,
+      "unitLabel": "د/لتر",
+      "score": 2
+     },
+     {
+      "name": "Almarai Pure Butter Ghee, 800g",
+      "price": 47.79,
+      "sizeText": "800g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/951613",
+      "size": {
+       "qty": 0.8,
+       "unit": "kg"
+      },
+      "unitPrice": 59.74,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Aseel Pure Ghee, 400ml",
+      "price": 23.99,
+      "sizeText": "400ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1549286",
+      "size": {
+       "qty": 0.4,
+       "unit": "l"
+      },
+      "unitPrice": 59.97,
+      "unitLabel": "د/لتر",
+      "score": 2
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Pure Cow Ghee",
+     "price": 31.5,
+     "sizeText": "500ml",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z100F3E5B09CC50A1A9EEZ-1/",
+     "size": {
+      "qty": 0.5,
+      "unit": "l"
+     },
+     "unitPrice": 63,
+     "unitLabel": "د/لتر",
+     "score": 3
+    },
+    "alt": [
+     {
+      "name": "Pure Ghee",
+      "price": 39.95,
+      "sizeText": "1L",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZCCFA44944FD036E96831Z-1/",
+      "size": {
+       "qty": 1,
+       "unit": "l"
+      },
+      "unitPrice": 39.95,
+      "unitLabel": "د/لتر",
+      "score": 2
+     }
+    ]
+   }
+  },
+  "cooking-cream": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Puck Cooking Cream, 500ml",
+     "price": 10.79,
+     "sizeText": "500ml",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1084479",
+     "size": {
+      "qty": 0.5,
+      "unit": "l"
+     },
+     "unitPrice": 21.58,
+     "unitLabel": "د/لتر",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Puck Low Fat Cooking Cream, 500ml",
+      "price": 10.79,
+      "sizeText": "500ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1267443",
+      "size": {
+       "qty": 0.5,
+       "unit": "l"
+      },
+      "unitPrice": 21.58,
+      "unitLabel": "د/لتر",
+      "score": 2
+     },
+     {
+      "name": "Puck Cooking Cream, 1L",
+      "price": 21.59,
+      "sizeText": "1L",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1125443",
+      "size": {
+       "qty": 1,
+       "unit": "l"
+      },
+      "unitPrice": 21.59,
+      "unitLabel": "د/لتر",
+      "score": 2
+     },
+     {
+      "name": "Puck Cooking Cream, 200ml",
+      "price": 6.79,
+      "sizeText": "200ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1240819",
+      "size": {
+       "qty": 0.2,
+       "unit": "l"
+      },
+      "unitPrice": 33.95,
+      "unitLabel": "د/لتر",
+      "score": 2
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Cooking Cream Full Fat",
+     "price": 29,
+     "sizeText": "1L",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z8B115EC23DE442F8113FZ-1/",
+     "size": {
+      "qty": 1,
+      "unit": "l"
+     },
+     "unitPrice": 29,
+     "unitLabel": "د/لتر",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Cooking Cream",
+      "price": 7.5,
+      "sizeText": "250ml",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z449F214BC125FD2AD618Z-1/",
+      "size": {
+       "qty": 0.25,
+       "unit": "l"
+      },
+      "unitPrice": 30,
+      "unitLabel": "د/لتر",
+      "score": 2
+     },
+     {
+      "name": "Cooking Cream Full Fat",
+      "price": 15.95,
+      "sizeText": "500ml",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZAD222D5291DE7895EA1FZ-1/",
+      "size": {
+       "qty": 0.5,
+       "unit": "l"
+      },
+      "unitPrice": 31.9,
+      "unitLabel": "د/لتر",
+      "score": 2
+     }
+    ]
+   }
+  },
+  "cheddar-slices": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Almarai Cheddar Cheese Slices, 400g",
+     "price": 12.29,
+     "sizeText": "400g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1201866",
+     "size": {
+      "qty": 0.4,
+      "unit": "kg"
+     },
+     "unitPrice": 30.72,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Kerrygold Irish Cheddar Slices 150g",
+      "price": 13.49,
+      "sizeText": "150g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1054980",
+      "size": {
+       "qty": 0.15,
+       "unit": "kg"
+      },
+      "unitPrice": 89.93,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Almarai Cheddar Cheese Slice, 200g",
+      "price": 7.29,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1132018",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 36.45,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Balade Irish Red Cheddar",
+      "price": 13.74,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2166030",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 68.7,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Cheddar Cheese Slices",
+     "price": 7.45,
+     "sizeText": "200g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/ZE352AC023D72730A4E89Z-1/",
+     "size": {
+      "qty": 0.2,
+      "unit": "kg"
+     },
+     "unitPrice": 37.25,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Cheddar Natural Cheese Slices",
+      "price": 14.75,
+      "sizeText": "150g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z4205A1C635A193D7A87AZ-1/",
+      "size": {
+       "qty": 0.15,
+       "unit": "kg"
+      },
+      "unitPrice": 98.33,
+      "unitLabel": "د/كغ",
+      "score": 2
+     }
+    ]
+   }
+  },
+  "mozzarella": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "President Natural Mozzarella Cheese Shredded, 1.1kg",
+     "price": 42.93,
+     "sizeText": "1.1kg",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/871986",
+     "size": {
+      "qty": 1.1,
+      "unit": "kg"
+     },
+     "unitPrice": 39.03,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "The Three Cows Mozzarella Pizza Cheese, 200g",
+      "price": 10.49,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/82524",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 52.45,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Mozzarella",
+      "price": 10.85,
+      "sizeText": "250g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/175020",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 43.4,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Maria's Mozzarella",
+      "price": 12.5,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/870575",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 62.5,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Shredded Mozzarella Cheese",
+     "price": 15.8,
+     "sizeText": "2x200g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/ZF21060F2C686B8D98141Z-1/",
+     "size": {
+      "qty": 0.4,
+      "unit": "kg"
+     },
+     "unitPrice": 39.5,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Shredded Mozzarella Cheese",
+      "price": 9.9,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZA2329940B88235F10CE2Z-1/",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 49.5,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Mozzarella Cheese",
+      "price": 14.95,
+      "sizeText": "2x200g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z3C486EEAEAFCD34CC2F6Z-1/",
+      "size": {
+       "qty": 0.4,
+       "unit": "kg"
+      },
+      "unitPrice": 37.37,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "parmesan": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "American Heritage Grated Parmesan Cheese, 227g",
+     "price": 32.49,
+     "sizeText": "227g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1411690",
+     "size": {
+      "qty": 0.227,
+      "unit": "kg"
+     },
+     "unitPrice": 143.13,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "American Heritage Grated Parmesan Cheese, 85g",
+      "price": 12.99,
+      "sizeText": "85g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1411691",
+      "size": {
+       "qty": 0.085,
+       "unit": "kg"
+      },
+      "unitPrice": 152.82,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Parmigiano Reggiano 12 Months 1/8",
+      "price": 21,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1887436",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 105,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Parmigiano Reggiano 12M 200g",
+      "price": 33.99,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2178333",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 169.95,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Grated Parmesan Cheese",
+     "price": 13.75,
+     "sizeText": "85g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z0A4A72F65F32ABF9B09CZ-1/",
+     "size": {
+      "qty": 0.085,
+      "unit": "kg"
+     },
+     "unitPrice": 161.76,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Grated Parmigiano Reggiano Cheese",
+      "price": 13.4,
+      "sizeText": "60g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZDE7C7C86F823DE0A1F35Z-1/",
+      "size": {
+       "qty": 0.06,
+       "unit": "kg"
+      },
+      "unitPrice": 223.33,
+      "unitLabel": "د/كغ",
+      "score": 2
+     }
+    ]
+   }
+  },
+  "eggs": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 5,
+    "best": {
+     "name": "Carrefour Fresh Medium White Eggs 30 PCS",
+     "price": 21.29,
+     "sizeText": "30 PCS",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/search?keyword=Carrefour%20Fresh%20Medium%20White%20Eggs%2030%20PCS",
+     "size": {
+      "qty": 30,
+      "unit": "pc"
+     },
+     "unitPrice": 0.71,
+     "unitLabel": "د/حبة",
+     "score": 3
+    },
+    "alt": [
+     {
+      "name": "Al Ain Farms Fresh Medium White Eggs 30 PCS",
+      "price": 21.99,
+      "sizeText": "30 PCS",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/search?keyword=Al%20Ain%20Farms%20Fresh%20Medium%20White%20Eggs%2030%20PCS",
+      "size": {
+       "qty": 30,
+       "unit": "pc"
+      },
+      "unitPrice": 0.73,
+      "unitLabel": "د/حبة",
+      "score": 3
+     },
+     {
+      "name": "Carrefour Fresh Medium White Eggs 15 PCS",
+      "price": 11.49,
+      "sizeText": "15 PCS",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/search?keyword=Carrefour%20Fresh%20Medium%20White%20Eggs%2015%20PCS",
+      "size": {
+       "qty": 15,
+       "unit": "pc"
+      },
+      "unitPrice": 0.77,
+      "unitLabel": "د/حبة",
+      "score": 3
+     },
+     {
+      "name": "Khaleej, Eggs, White Medium, Pack of 30 Eggs",
+      "price": 21.99,
+      "sizeText": "30 PCS",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/search?keyword=Khaleej%2C%20Eggs%2C%20White%20Medium%2C%20Pack%20of%2030%20Eggs",
+      "size": {
+       "qty": 30,
+       "unit": "pc"
+      },
+      "unitPrice": 0.73,
+      "unitLabel": "د/حبة",
+      "score": 2
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Golden Eggs White Medium",
+     "price": 23.65,
+     "sizeText": "30 Pieces",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z7339D47BC259B160C535Z-1/",
+     "size": {
+      "qty": 30,
+      "unit": "pc"
+     },
+     "unitPrice": 0.79,
+     "unitLabel": "د/حبة",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "White Medium Eggs",
+      "price": 23.95,
+      "sizeText": "30 Pieces",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z4A7C4C0748E69F2058F0Z-1/",
+      "size": {
+       "qty": 30,
+       "unit": "pc"
+      },
+      "unitPrice": 0.8,
+      "unitLabel": "د/حبة",
+      "score": 1
+     },
+     {
+      "name": "White Large Eggs",
+      "price": 13.6,
+      "sizeText": "15 Pieces",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZFEB80F096CA7DB11FA4FZ-1/",
+      "size": {
+       "qty": 15,
+       "unit": "pc"
+      },
+      "unitPrice": 0.91,
+      "unitLabel": "د/حبة",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "burger-buns": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Modern Bakery Brioche Buns, 400g",
+     "price": 9.49,
+     "sizeText": "400g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1500860",
+     "size": {
+      "qty": 0.4,
+      "unit": "kg"
+     },
+     "unitPrice": 23.72,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Carrefour Plain Burger Buns, 300g",
+      "price": 2.89,
+      "sizeText": "300g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1449509",
+      "size": {
+       "qty": 0.3,
+       "unit": "kg"
+      },
+      "unitPrice": 9.63,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Carrefour Sesame Burger Buns, 360g",
+      "price": 3.49,
+      "sizeText": "360g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1449510",
+      "size": {
+       "qty": 0.36,
+       "unit": "kg"
+      },
+      "unitPrice": 9.69,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "l'usine Plain Burger Buns, 402g",
+      "price": 4.39,
+      "sizeText": "402g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1552276",
+      "size": {
+       "qty": 0.402,
+       "unit": "kg"
+      },
+      "unitPrice": 10.92,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Burger Bun With Sesame Seeds",
+     "price": 4.95,
+     "sizeText": "6x66g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z2C42036C4C2A77263006Z-1/",
+     "size": {
+      "qty": 0.396,
+      "unit": "kg"
+     },
+     "unitPrice": 12.5,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Plain Burger Buns",
+      "price": 4.95,
+      "sizeText": "6x55g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z959C9B52E22A40F16F8FZ-1/",
+      "size": {
+       "qty": 0.33,
+       "unit": "kg"
+      },
+      "unitPrice": 15,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "tortilla": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Mission Tortilla Wraps Wheat & Corn 378g",
+     "price": 11.99,
+     "sizeText": "378g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1795404",
+     "size": {
+      "qty": 0.378,
+      "unit": "kg"
+     },
+     "unitPrice": 31.72,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Wrap Master Original Flour Tortillas, 15cm, 250g, 10 Wraps",
+      "price": 10.79,
+      "sizeText": "250g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2290334",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 43.16,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Old El Paso Regular Flour Tortillas 8 Tortillas, 326g",
+      "price": 15.49,
+      "sizeText": "326g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1118352",
+      "size": {
+       "qty": 0.326,
+       "unit": "kg"
+      },
+      "unitPrice": 47.52,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "L'usine Plain Tortilla Wrap, 240g",
+      "price": 9.99,
+      "sizeText": "240g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2226796",
+      "size": {
+       "qty": 0.24,
+       "unit": "kg"
+      },
+      "unitPrice": 41.63,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Tortilla Wraps",
+     "price": 8.85,
+     "sizeText": "6x65g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z893F827454E4D49ABF13Z-1/",
+     "size": {
+      "qty": 0.39,
+      "unit": "kg"
+     },
+     "unitPrice": 22.69,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Wheat Flour Tortilla",
+      "price": 8.75,
+      "sizeText": "340g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZB710E8F9EBC1AB45F109Z-1/",
+      "size": {
+       "qty": 0.34,
+       "unit": "kg"
+      },
+      "unitPrice": 25.74,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "arabic-bread": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Golden Loaf Small Arabic Bread 6 Breads",
+     "price": 2.19,
+     "sizeText": "6 PCS",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/6089",
+     "size": {
+      "qty": 6,
+      "unit": "pc"
+     },
+     "unitPrice": 0.36,
+     "unitLabel": "د/حبة",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Arabic Bread Medium 4-Piece Pack",
+      "price": 0.99,
+      "sizeText": "",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/391742",
+      "size": null,
+      "score": 2
+     },
+     {
+      "name": "Al Arz Automatic Bakery Arabic Large Bread, 540g",
+      "price": 3.49,
+      "sizeText": "540g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/893481",
+      "size": {
+       "qty": 0.54,
+       "unit": "kg"
+      },
+      "unitPrice": 6.46,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Al Arz Automatic Bakery Arabic Bread Medium 200g",
+      "price": 1.89,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/893483",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 9.45,
+      "unitLabel": "د/كغ",
+      "score": 2
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Medium White Flat Arabic Bread",
+     "price": 2.95,
+     "sizeText": "300g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/ZCC8F20663D5C5CA898E9Z-1/",
+     "size": {
+      "qty": 0.3,
+      "unit": "kg"
+     },
+     "unitPrice": 9.83,
+     "unitLabel": "د/كغ",
+     "score": 3
+    },
+    "alt": [
+     {
+      "name": "Big White Flat Lebanese Bread",
+      "price": 3.55,
+      "sizeText": "600g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z91FBDE4638E31A4FF721Z-1/",
+      "size": {
+       "qty": 0.6,
+       "unit": "kg"
+      },
+      "unitPrice": 5.92,
+      "unitLabel": "د/كغ",
+      "score": 2
+     }
+    ]
+   }
+  },
+  "baguette": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Baguette Tradition 1 Piece",
+     "price": 4.39,
+     "sizeText": "",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/65857",
+     "size": null,
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Baguette Wholemeal",
+      "price": 5.19,
+      "sizeText": "",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/928949",
+      "size": null,
+      "score": 1
+     },
+     {
+      "name": "White Sourdough Baguette",
+      "price": 5.79,
+      "sizeText": "1 Pack",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1885816",
+      "size": null,
+      "score": 1
+     },
+     {
+      "name": "Baguette 250g",
+      "price": 1.49,
+      "sizeText": "250g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/65852",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 5.96,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 1,
+    "best": {
+     "name": "French Baguette",
+     "price": 4.75,
+     "sizeText": "300g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z38AEDA7F32C894970A0BZ-1/",
+     "size": {
+      "qty": 0.3,
+      "unit": "kg"
+     },
+     "unitPrice": 15.83,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": []
+   }
+  },
+  "pasta": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Barilla Fusilli Pasta, 500g",
+     "price": 14.29,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/8856",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 28.58,
+     "unitLabel": "د/كغ",
+     "score": 3
+    },
+    "alt": [
+     {
+      "name": "Barilla Penne Rigate Pasta, 500g",
+      "price": 14.29,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/8854",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 28.58,
+      "unitLabel": "د/كغ",
+      "score": 3
+     },
+     {
+      "name": "Carrefour Classic Egg Free Lasagna Pasta, 500g",
+      "price": 7.99,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/902367",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 15.98,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Carrefour Original Bronze-Cut Tortiglioni Pasta, 500g",
+      "price": 7.99,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2184314",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 15.98,
+      "unitLabel": "د/كغ",
+      "score": 2
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Penne Rigate Pasta",
+     "price": 3.45,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z336593070E94730DAA00Z-1/",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 6.9,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Spaghetti No.5",
+      "price": 13,
+      "sizeText": "2 x 500g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z8D00457EFA889FD80FBDZ-1/",
+      "size": {
+       "qty": 1,
+       "unit": "kg"
+      },
+      "unitPrice": 13,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "noodles": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 5,
+    "best": {
+     "name": "Carrefour Sensation Chinese Egg Noodles, 250g",
+     "price": 4.59,
+     "sizeText": "250g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1137982",
+     "size": {
+      "qty": 0.25,
+      "unit": "kg"
+     },
+     "unitPrice": 18.36,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Ching's Secret Egg Hakka Noodles, 150g",
+      "price": 4.89,
+      "sizeText": "150g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1059084",
+      "size": {
+       "qty": 0.15,
+       "unit": "kg"
+      },
+      "unitPrice": 32.6,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Organic Larder Organic Brown Rice Noodles, 220g",
+      "price": 23.49,
+      "sizeText": "220g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1420577",
+      "size": {
+       "qty": 0.22,
+       "unit": "kg"
+      },
+      "unitPrice": 106.77,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Clearspring Brown Rice Noodles 200g",
+      "price": 29.99,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1301111",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 149.95,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 1,
+    "best": {
+     "name": "Egg Hakka Noodles",
+     "price": 4.5,
+     "sizeText": "150g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z0299EF16CF4F698ABAFAZ-1/",
+     "size": {
+      "qty": 0.15,
+      "unit": "kg"
+     },
+     "unitPrice": 30,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": []
+   }
+  },
+  "tomato-paste": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Al Ain Tomato Paste Tetra Pack, 135g",
+     "price": 1.69,
+     "sizeText": "135g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/862843",
+     "size": {
+      "qty": 0.135,
+      "unit": "kg"
+     },
+     "unitPrice": 12.52,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Al Ain Tomato Paste Jar, 200g",
+      "price": 3.49,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1042794",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 17.45,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Al Alali Tomato Paste, 130g",
+      "price": 2.89,
+      "sizeText": "130g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/830822",
+      "size": {
+       "qty": 0.13,
+       "unit": "kg"
+      },
+      "unitPrice": 22.23,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Pomi Tomato Paste Tube, 200g",
+      "price": 6.59,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1872607",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 32.95,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Tomato Paste",
+     "price": 5.15,
+     "sizeText": "370g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/ZA8C66B451B6E357D7710Z-1/",
+     "size": {
+      "qty": 0.37,
+      "unit": "kg"
+     },
+     "unitPrice": 13.92,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Tomato Paste",
+      "price": 4.2,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZA8FD5C0D2808F938B461Z-1/",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 21,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Tomato Paste",
+      "price": 2.9,
+      "sizeText": "135g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z3065A9E04A2C5EBA486DZ-1/",
+      "size": {
+       "qty": 0.135,
+       "unit": "kg"
+      },
+      "unitPrice": 21.48,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "canned-tomato": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Sicam Diced Peeled Tomatoes, 400g",
+     "price": 6.19,
+     "sizeText": "400g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1543342",
+     "size": {
+      "qty": 0.4,
+      "unit": "kg"
+     },
+     "unitPrice": 15.47,
+     "unitLabel": "د/كغ",
+     "score": 3
+    },
+    "alt": [
+     {
+      "name": "Sicam Whole Peeled Tomatoes, 400g",
+      "price": 6.69,
+      "sizeText": "400g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1644988",
+      "size": {
+       "qty": 0.4,
+       "unit": "kg"
+      },
+      "unitPrice": 16.73,
+      "unitLabel": "د/كغ",
+      "score": 3
+     },
+     {
+      "name": "Casinetto Peeled Tomatoes in Can, 400g",
+      "price": 7.19,
+      "sizeText": "400g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1725887",
+      "size": {
+       "qty": 0.4,
+       "unit": "kg"
+      },
+      "unitPrice": 17.98,
+      "unitLabel": "د/كغ",
+      "score": 3
+     },
+     {
+      "name": "Organic Larder Peeled Tomatoes, 400g",
+      "price": 12.99,
+      "sizeText": "400g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1737688",
+      "size": {
+       "qty": 0.4,
+       "unit": "kg"
+      },
+      "unitPrice": 32.48,
+      "unitLabel": "د/كغ",
+      "score": 3
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Whole Peeled Tomatoes",
+     "price": 8.55,
+     "sizeText": "400g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z6F57D67CABD7457C4AB8Z-1/",
+     "size": {
+      "qty": 0.4,
+      "unit": "kg"
+     },
+     "unitPrice": 21.38,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Chopped Tomatoes",
+      "price": 7.95,
+      "sizeText": "400g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z56E00DCC8F1509F8BCEAZ-1/",
+      "size": {
+       "qty": 0.4,
+       "unit": "kg"
+      },
+      "unitPrice": 19.88,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "oil": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Carrefour Double Refined Sunflower Oil 1.5L",
+     "price": 21.29,
+     "sizeText": "1.5L",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1848018",
+     "size": {
+      "qty": 1.5,
+      "unit": "l"
+     },
+     "unitPrice": 14.19,
+     "unitLabel": "د/لتر",
+     "score": 3
+    },
+    "alt": [
+     {
+      "name": "Jenan Sunflower Oil, 1.5L",
+      "price": 23.49,
+      "sizeText": "1.5L",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2150945",
+      "size": {
+       "qty": 1.5,
+       "unit": "l"
+      },
+      "unitPrice": 15.66,
+      "unitLabel": "د/لتر",
+      "score": 3
+     },
+     {
+      "name": "Sunflow, Sunflower Oil, 1.5L Pack of 2",
+      "price": 26.29,
+      "sizeText": "1.5L",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1723008",
+      "size": {
+       "qty": 1.5,
+       "unit": "l"
+      },
+      "unitPrice": 17.53,
+      "unitLabel": "د/لتر",
+      "score": 3
+     },
+     {
+      "name": "Carrefour Double Refined Sunflower Oil 1.5L Pack of 2",
+      "price": 40.99,
+      "sizeText": "1.5L",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1848022",
+      "size": {
+       "qty": 1.5,
+       "unit": "l"
+      },
+      "unitPrice": 27.33,
+      "unitLabel": "د/لتر",
+      "score": 3
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Pure Sunflower Oil",
+     "price": 15.75,
+     "sizeText": "1.5L",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z735494D29834D6B5A086Z-1/",
+     "size": {
+      "qty": 1.5,
+      "unit": "l"
+     },
+     "unitPrice": 10.5,
+     "unitLabel": "د/لتر",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Sunflower Oil",
+      "price": 10.95,
+      "sizeText": "750ml",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z16F76B3A135657B50754Z-1/",
+      "size": {
+       "qty": 0.75,
+       "unit": "l"
+      },
+      "unitPrice": 14.6,
+      "unitLabel": "د/لتر",
+      "score": 2
+     },
+     {
+      "name": "Sunflower Oil",
+      "price": 22.95,
+      "sizeText": "1.5L",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z8C92F715425768618C51Z-1/",
+      "size": {
+       "qty": 1.5,
+       "unit": "l"
+      },
+      "unitPrice": 15.3,
+      "unitLabel": "د/لتر",
+      "score": 2
+     }
+    ]
+   }
+  },
+  "olive-oil": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Elmerro Premium Extra Virgin Olive Oil 750ml",
+     "price": 36.79,
+     "sizeText": "750ml",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1926670",
+     "size": {
+      "qty": 0.75,
+      "unit": "l"
+     },
+     "unitPrice": 49.05,
+     "unitLabel": "د/لتر",
+     "score": 3
+    },
+    "alt": [
+     {
+      "name": "Nayar Syria Extra Virgin Olive Oil 500ml",
+      "price": 25.29,
+      "sizeText": "500ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1926677",
+      "size": {
+       "qty": 0.5,
+       "unit": "l"
+      },
+      "unitPrice": 50.58,
+      "unitLabel": "د/لتر",
+      "score": 3
+     },
+     {
+      "name": "Carrefour Bio Organic Extra Virgin Olive Oil, 500ml",
+      "price": 25.79,
+      "sizeText": "500ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1388306",
+      "size": {
+       "qty": 0.5,
+       "unit": "l"
+      },
+      "unitPrice": 51.58,
+      "unitLabel": "د/لتر",
+      "score": 3
+     },
+     {
+      "name": "Al Jazira Extra Virgin Olive Oil First Cold Pressed, 500ml, Pack of 2",
+      "price": 39.49,
+      "sizeText": "500ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1945083",
+      "size": {
+       "qty": 0.5,
+       "unit": "l"
+      },
+      "unitPrice": 78.98,
+      "unitLabel": "د/لتر",
+      "score": 3
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Spanish Extra Virgin Olive Oil",
+     "price": 48.3,
+     "sizeText": "1L",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z8552D20EA7679F3B2DDBZ-1/",
+     "size": {
+      "qty": 1,
+      "unit": "l"
+     },
+     "unitPrice": 48.3,
+     "unitLabel": "د/لتر",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Spanish Extra Virgin Olive Oil",
+      "price": 24.45,
+      "sizeText": "500ml",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZAA074AC53BEE9DE283E2Z-1/",
+      "size": {
+       "qty": 0.5,
+       "unit": "l"
+      },
+      "unitPrice": 48.9,
+      "unitLabel": "د/لتر",
+      "score": 2
+     }
+    ]
+   }
+  },
+  "sesame-oil": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 4,
+    "best": {
+     "name": "KLF Tilnad Sesame Oil, 200ml",
+     "price": 5.99,
+     "sizeText": "200ml",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1494562",
+     "size": {
+      "qty": 0.2,
+      "unit": "l"
+     },
+     "unitPrice": 29.95,
+     "unitLabel": "د/لتر",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Plein Soleil Sesame Oil, 320ml",
+      "price": 28.99,
+      "sizeText": "320ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2268385",
+      "size": {
+       "qty": 0.32,
+       "unit": "l"
+      },
+      "unitPrice": 90.59,
+      "unitLabel": "د/لتر",
+      "score": 1
+     },
+     {
+      "name": "Plein Soleil Sesame Oil, 160ml",
+      "price": 14.59,
+      "sizeText": "160ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2268374",
+      "size": {
+       "qty": 0.16,
+       "unit": "l"
+      },
+      "unitPrice": 91.19,
+      "unitLabel": "د/لتر",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Tilnad Sesame Oil",
+     "price": 6.75,
+     "sizeText": "200ml",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/ZB6234274093A4B4541F1Z-1/",
+     "size": {
+      "qty": 0.2,
+      "unit": "l"
+     },
+     "unitPrice": 33.75,
+     "unitLabel": "د/لتر",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Sesame Oil",
+      "price": 22.55,
+      "sizeText": "500ml",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z11440A423D4CE136E067Z-1/",
+      "size": {
+       "qty": 0.5,
+       "unit": "l"
+      },
+      "unitPrice": 45.1,
+      "unitLabel": "د/لتر",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "ketchup": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 5,
+    "best": {
+     "name": "Heinz Tomato Ketchup Top Down Squeezy Bottle 910g",
+     "price": 25.49,
+     "sizeText": "910g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/491425",
+     "size": {
+      "qty": 0.91,
+      "unit": "kg"
+     },
+     "unitPrice": 28.01,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Heinz Tomato Ketchup Pet bottle 460g",
+      "price": 14.79,
+      "sizeText": "460g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/774530",
+      "size": {
+       "qty": 0.46,
+       "unit": "kg"
+      },
+      "unitPrice": 32.15,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Heinz Tomato Ketchup 50% Less Sugar & Salt 435g",
+      "price": 18.79,
+      "sizeText": "435g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1500916",
+      "size": {
+       "qty": 0.435,
+       "unit": "kg"
+      },
+      "unitPrice": 43.2,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Tiffany Tomato Ketchup, 340g",
+      "price": 5.89,
+      "sizeText": "340g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/764239",
+      "size": {
+       "qty": 0.34,
+       "unit": "kg"
+      },
+      "unitPrice": 17.32,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Premium Tomato Ketchup",
+     "price": 5.25,
+     "sizeText": "340g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z7EADACFF2DC2AA143A59Z-1/",
+     "size": {
+      "qty": 0.34,
+      "unit": "kg"
+     },
+     "unitPrice": 15.44,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Ketchup",
+      "price": 11.4,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZA2D8584CC9D296806A86Z-1/",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 22.8,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Tomato Ketchup",
+      "price": 20.95,
+      "sizeText": "910g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z675F9E069A7B3237AC13Z-1/",
+      "size": {
+       "qty": 0.91,
+       "unit": "kg"
+      },
+      "unitPrice": 23.02,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "mayo": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 2,
+    "best": {
+     "name": "Heinz Creamy Classic Mayonnaise Top Down Squeezy 310ml",
+     "price": 10,
+     "sizeText": "310ml",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/2134054",
+     "size": {
+      "qty": 0.31,
+      "unit": "l"
+     },
+     "unitPrice": 32.26,
+     "unitLabel": "د/لتر",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Heinz Incredibly Light Mayonnaise Lite 310ml",
+      "price": 15,
+      "sizeText": "310ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2128450",
+      "size": {
+       "qty": 0.31,
+       "unit": "l"
+      },
+      "unitPrice": 48.39,
+      "unitLabel": "د/لتر",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Classic Mayonnaise",
+     "price": 11.1,
+     "sizeText": "946ml",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z90EF7E2DB602CB834C7BZ-1/",
+     "size": {
+      "qty": 0.946,
+      "unit": "l"
+     },
+     "unitPrice": 11.73,
+     "unitLabel": "د/لتر",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Classic Mayonnaise Top Down Squeezy Bottle",
+      "price": 6.2,
+      "sizeText": "300ml",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZF1A3F98BA9513B6E93E3Z-1/",
+      "size": {
+       "qty": 0.3,
+       "unit": "l"
+      },
+      "unitPrice": 20.67,
+      "unitLabel": "د/لتر",
+      "score": 1
+     },
+     {
+      "name": "Real Mayonnaise",
+      "price": 16.3,
+      "sizeText": "410g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZDDA23B56E43A2867626BZ-1/",
+      "size": {
+       "qty": 0.41,
+       "unit": "kg"
+      },
+      "unitPrice": 39.76,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "mustard": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Heinz Yellow Mustard 245g",
+     "price": 4.49,
+     "sizeText": "245g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1501713",
+     "size": {
+      "qty": 0.245,
+      "unit": "kg"
+     },
+     "unitPrice": 18.33,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "American Garden Yellow Mustard U.S. Classic, 397g",
+      "price": 13.29,
+      "sizeText": "397g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/618010",
+      "size": {
+       "qty": 0.397,
+       "unit": "kg"
+      },
+      "unitPrice": 33.48,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "American Garden Vegan Gluten-Free Original US Mustard, 227g",
+      "price": 8.89,
+      "sizeText": "227g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/9318",
+      "size": {
+       "qty": 0.227,
+       "unit": "kg"
+      },
+      "unitPrice": 39.16,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Veres Hot Mustard 190g",
+      "price": 8.59,
+      "sizeText": "190g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1515918",
+      "size": {
+       "qty": 0.19,
+       "unit": "kg"
+      },
+      "unitPrice": 45.21,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 1,
+    "best": {
+     "name": "Mustard Sauce",
+     "price": 12.45,
+     "sizeText": "250g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/ZAE69E5916336E54DE8C3Z-1/",
+     "size": {
+      "qty": 0.25,
+      "unit": "kg"
+     },
+     "unitPrice": 49.8,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": []
+   }
+  },
+  "vinegar": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "American Garden White Vinegar, 1L",
+     "price": 10.79,
+     "sizeText": "1L",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/830340",
+     "size": {
+      "qty": 1,
+      "unit": "l"
+     },
+     "unitPrice": 10.79,
+     "unitLabel": "د/لتر",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "American Garden Natural Distilled White Vinegar 5% Acidity, 500ml",
+      "price": 6.79,
+      "sizeText": "500ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/830339",
+      "size": {
+       "qty": 0.5,
+       "unit": "l"
+      },
+      "unitPrice": 13.58,
+      "unitLabel": "د/لتر",
+      "score": 1
+     },
+     {
+      "name": "Heinz White Vinegar 946ml",
+      "price": 14.99,
+      "sizeText": "946ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/107892",
+      "size": {
+       "qty": 0.946,
+       "unit": "l"
+      },
+      "unitPrice": 15.85,
+      "unitLabel": "د/لتر",
+      "score": 1
+     },
+     {
+      "name": "Jade Bridge White Rice Vinegar 500ml",
+      "price": 9.49,
+      "sizeText": "500ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1929414",
+      "size": {
+       "qty": 0.5,
+       "unit": "l"
+      },
+      "unitPrice": 18.98,
+      "unitLabel": "د/لتر",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "White Vinegar",
+     "price": 2.2,
+     "sizeText": "473ml",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/ZB19576EB388CC9EFCFB6Z-1/",
+     "size": {
+      "qty": 0.473,
+      "unit": "l"
+     },
+     "unitPrice": 4.65,
+     "unitLabel": "د/لتر",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "White Vinegar",
+      "price": 7.6,
+      "sizeText": "946ml",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z0FF1F27FDDCA356EA814Z-1/",
+      "size": {
+       "qty": 0.946,
+       "unit": "l"
+      },
+      "unitPrice": 8.03,
+      "unitLabel": "د/لتر",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "soy": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Kikkoman Less Salt Soy Sauce, 1L",
+     "price": 35.79,
+     "sizeText": "1L",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1637798",
+     "size": {
+      "qty": 1,
+      "unit": "l"
+     },
+     "unitPrice": 35.79,
+     "unitLabel": "د/لتر",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Kikkoman Naturally Brewed Soy Sauce, 600ml",
+      "price": 28.49,
+      "sizeText": "600ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/8557",
+      "size": {
+       "qty": 0.6,
+       "unit": "l"
+      },
+      "unitPrice": 47.48,
+      "unitLabel": "د/لتر",
+      "score": 2
+     },
+     {
+      "name": "Kikkoman Naturally Brewed Soy Sauce, 250ml",
+      "price": 15.29,
+      "sizeText": "250ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/8559",
+      "size": {
+       "qty": 0.25,
+       "unit": "l"
+      },
+      "unitPrice": 61.16,
+      "unitLabel": "د/لتر",
+      "score": 2
+     },
+     {
+      "name": "Ching's Secret Dark Soy Sauce, 750ml",
+      "price": 8.79,
+      "sizeText": "750ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1074565",
+      "size": {
+       "qty": 0.75,
+       "unit": "l"
+      },
+      "unitPrice": 11.72,
+      "unitLabel": "د/لتر",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Soya Sauce",
+     "price": 11.95,
+     "sizeText": "300ml",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z338034A62FE9CE83CA4FZ-1/",
+     "size": {
+      "qty": 0.3,
+      "unit": "l"
+     },
+     "unitPrice": 39.83,
+     "unitLabel": "د/لتر",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Japenese Soy Sauce",
+      "price": 8.25,
+      "sizeText": "200ml",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZA00F8B42AEEA93DC5796Z-1/",
+      "size": {
+       "qty": 0.2,
+       "unit": "l"
+      },
+      "unitPrice": 41.25,
+      "unitLabel": "د/لتر",
+      "score": 1
+     },
+     {
+      "name": "Soya Sauce",
+      "price": 16.2,
+      "sizeText": "250ml",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z3B78BB802771D1DF31BBZ-1/",
+      "size": {
+       "qty": 0.25,
+       "unit": "l"
+      },
+      "unitPrice": 64.8,
+      "unitLabel": "د/لتر",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "oyster-sauce": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "MyChoice Oyster Sauce, 345g",
+     "price": 7.19,
+     "sizeText": "345g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/2270398",
+     "size": {
+      "qty": 0.345,
+      "unit": "kg"
+     },
+     "unitPrice": 20.84,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Mama Sita's Oyster Sauce, 765ml",
+      "price": 17.99,
+      "sizeText": "765ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/9398",
+      "size": {
+       "qty": 0.765,
+       "unit": "l"
+      },
+      "unitPrice": 23.52,
+      "unitLabel": "د/لتر",
+      "score": 1
+     },
+     {
+      "name": "Lee Kum Kee Panda Brand Oyster Sauce, 510g",
+      "price": 13.79,
+      "sizeText": "510g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1036739",
+      "size": {
+       "qty": 0.51,
+       "unit": "kg"
+      },
+      "unitPrice": 27.04,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Mama Sitas Oyster Sauce 405ml",
+      "price": 11.59,
+      "sizeText": "405ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/8550",
+      "size": {
+       "qty": 0.405,
+       "unit": "l"
+      },
+      "unitPrice": 28.62,
+      "unitLabel": "د/لتر",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Oyster Sauce",
+     "price": 10.1,
+     "sizeText": "375grams",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z000711AD7EE6225FEC02Z-1/",
+     "size": null,
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Oyster Sauce",
+      "price": 14.45,
+      "sizeText": "405ml",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZA50CF49246EA376B3FDEZ-1/",
+      "size": {
+       "qty": 0.405,
+       "unit": "l"
+      },
+      "unitPrice": 35.68,
+      "unitLabel": "د/لتر",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "fish-sauce": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 3,
+    "best": {
+     "name": "Fiesta Pinoy Patis Fish Sauce 750ml",
+     "price": 5.99,
+     "sizeText": "750ml",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/875164",
+     "size": {
+      "qty": 0.75,
+      "unit": "l"
+     },
+     "unitPrice": 7.99,
+     "unitLabel": "د/لتر",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Jade Bridge Fish Sauce 150ml",
+      "price": 5.49,
+      "sizeText": "150ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1929410",
+      "size": {
+       "qty": 0.15,
+       "unit": "l"
+      },
+      "unitPrice": 36.6,
+      "unitLabel": "د/لتر",
+      "score": 1
+     },
+     {
+      "name": "De Siam Thailand Fish Sauce 60ml",
+      "price": 3.79,
+      "sizeText": "60ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1200419",
+      "size": {
+       "qty": 0.06,
+       "unit": "l"
+      },
+      "unitPrice": 63.17,
+      "unitLabel": "د/لتر",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "worcester": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 1,
+    "best": {
+     "name": "Lea And Perrins Worcestershire Sauce 150ml",
+     "price": 16.99,
+     "sizeText": "150ml",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/9462",
+     "size": {
+      "qty": 0.15,
+      "unit": "l"
+     },
+     "unitPrice": 113.27,
+     "unitLabel": "د/لتر",
+     "score": 1
+    },
+    "alt": []
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "salsa": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Cantina Salsa Mexicana Sauce 210g",
+     "price": 10.79,
+     "sizeText": "210g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/6597",
+     "size": {
+      "qty": 0.21,
+      "unit": "kg"
+     },
+     "unitPrice": 51.38,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Mission Mild Mexicana Chunky Salsa 300g",
+      "price": 15.79,
+      "sizeText": "300g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2168447",
+      "size": {
+       "qty": 0.3,
+       "unit": "kg"
+      },
+      "unitPrice": 52.63,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Old El Paso Thick 'N Chunky Hot Original Salsa, 226g",
+      "price": 13.79,
+      "sizeText": "226g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1211220",
+      "size": {
+       "qty": 0.226,
+       "unit": "kg"
+      },
+      "unitPrice": 61.02,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Tostitos Medium Chunky Salsa, 439.4g",
+      "price": 27.29,
+      "sizeText": "439.4g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/152617",
+      "size": {
+       "qty": 0.43939999999999996,
+       "unit": "kg"
+      },
+      "unitPrice": 62.11,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Fresh Tomato Salsa Dip UAE",
+     "price": 6.85,
+     "sizeText": "250g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z67FEBAC3CE09616C7AABZ-1/",
+     "size": {
+      "qty": 0.25,
+      "unit": "kg"
+     },
+     "unitPrice": 27.4,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Chunky Salsa Dip Mild",
+      "price": 16.7,
+      "sizeText": "312g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZB5E885AB9DF2B58E0BEEZ-1/",
+      "size": {
+       "qty": 0.312,
+       "unit": "kg"
+      },
+      "unitPrice": 53.53,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "caesar": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 5,
+    "best": {
+     "name": "Heinz Caesar Salad Dressing Top Down Squeezy Bottle 400ml",
+     "price": 15.79,
+     "sizeText": "400ml",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1426779",
+     "size": {
+      "qty": 0.4,
+      "unit": "l"
+     },
+     "unitPrice": 39.47,
+     "unitLabel": "د/لتر",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "American Garden Creamy Caesar Dressing & Dip 473ml",
+      "price": 25.29,
+      "sizeText": "473ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/830334",
+      "size": {
+       "qty": 0.473,
+       "unit": "l"
+      },
+      "unitPrice": 53.47,
+      "unitLabel": "د/لتر",
+      "score": 1
+     },
+     {
+      "name": "American Garden Creamy Caesar Dressing and Dip, 267ml",
+      "price": 14.99,
+      "sizeText": "267ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/9720",
+      "size": {
+       "qty": 0.267,
+       "unit": "l"
+      },
+      "unitPrice": 56.14,
+      "unitLabel": "د/لتر",
+      "score": 1
+     },
+     {
+      "name": "Heinz Creamy Caesar Salad Dressing 400ml",
+      "price": 24.49,
+      "sizeText": "400ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/912690",
+      "size": {
+       "qty": 0.4,
+       "unit": "l"
+      },
+      "unitPrice": 61.22,
+      "unitLabel": "د/لتر",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Creamy Caesar Salad Dressing Sauce",
+     "price": 7.25,
+     "sizeText": "237ml",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z24C1B463A5EF063ECAE4Z-1/",
+     "size": {
+      "qty": 0.237,
+      "unit": "l"
+     },
+     "unitPrice": 30.59,
+     "unitLabel": "د/لتر",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Caesar Dressing",
+      "price": 19.6,
+      "sizeText": "400ml",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZA194FD0F1A3A3515B478Z-1/",
+      "size": {
+       "qty": 0.4,
+       "unit": "l"
+      },
+      "unitPrice": 49,
+      "unitLabel": "د/لتر",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "hummus": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Hummus",
+     "price": 4.25,
+     "sizeText": "250g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1993902",
+     "size": {
+      "qty": 0.25,
+      "unit": "kg"
+     },
+     "unitPrice": 17,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "California Garden Hummus Tahina Dip, 220g",
+      "price": 3.99,
+      "sizeText": "220g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/10667",
+      "size": {
+       "qty": 0.22,
+       "unit": "kg"
+      },
+      "unitPrice": 18.14,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Almarai Lemon Twist Hummus, 250g",
+      "price": 6.29,
+      "sizeText": "250g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1841457",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 25.16,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Hummus",
+      "price": 6.42,
+      "sizeText": "250g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1717909",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 25.68,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Hummus Classic",
+     "price": 7.4,
+     "sizeText": "250g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z3EAB4B22FD54A3E9141AZ-1/",
+     "size": {
+      "qty": 0.25,
+      "unit": "kg"
+     },
+     "unitPrice": 29.6,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Fresh Hummus Dip",
+      "price": 9.4,
+      "sizeText": "250g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z9B811A6FC81AEB02E235Z-1/",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 37.6,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "tahini": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Carrefour Tahina, 500g",
+     "price": 18.99,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1493973",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 37.98,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Carrefour 100% Sesame Seeds Tahina Cream 250g",
+      "price": 9.79,
+      "sizeText": "250g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1493844",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 39.16,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Halwani Bros Finest Tahina, 1kg",
+      "price": 45.29,
+      "sizeText": "1kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/308670",
+      "size": {
+       "qty": 1,
+       "unit": "kg"
+      },
+      "unitPrice": 45.29,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Halwani Bros Al Nakhla Tahina, 500g",
+      "price": 23.79,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/508771",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 47.58,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Premium Tahina",
+     "price": 14.75,
+     "sizeText": "400g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z192C084F552DAC27DBC2Z-1/",
+     "size": {
+      "qty": 0.4,
+      "unit": "kg"
+     },
+     "unitPrice": 36.88,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Tahina",
+      "price": 17.5,
+      "sizeText": "400g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z5AE48284F01FEEC3F32AZ-1/",
+      "size": {
+       "qty": 0.4,
+       "unit": "kg"
+      },
+      "unitPrice": 43.75,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "pickles": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Mixed Pickles (Egypt)",
+     "price": 1.25,
+     "sizeText": "250g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/66058",
+     "size": {
+      "qty": 0.25,
+      "unit": "kg"
+     },
+     "unitPrice": 5,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Shan Mixed Pickle (Achar), 1kg",
+      "price": 13.29,
+      "sizeText": "1kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1169452",
+      "size": {
+       "qty": 1,
+       "unit": "kg"
+      },
+      "unitPrice": 13.29,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Special Mixed Pickles",
+      "price": 4.72,
+      "sizeText": "250g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1256878",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 18.88,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Mychoice Mixed Pickles in Vinegar, 370g",
+      "price": 7.19,
+      "sizeText": "370g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2264753",
+      "size": {
+       "qty": 0.37,
+       "unit": "kg"
+      },
+      "unitPrice": 19.43,
+      "unitLabel": "د/كغ",
+      "score": 2
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 1,
+    "best": {
+     "name": "Mixed Pickles",
+     "price": 15.5,
+     "sizeText": "720g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z4007C6D64AF5DBE146B5Z-1/",
+     "size": {
+      "qty": 0.72,
+      "unit": "kg"
+     },
+     "unitPrice": 21.53,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": []
+   }
+  },
+  "olives": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Acorsa Sliced Black Olives Jar, 950g",
+     "price": 31.99,
+     "sizeText": "950g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/9616",
+     "size": {
+      "qty": 0.95,
+      "unit": "kg"
+     },
+     "unitPrice": 33.67,
+     "unitLabel": "د/كغ",
+     "score": 3
+    },
+    "alt": [
+     {
+      "name": "Sliced Black Olives (Spain)",
+      "price": 10.2,
+      "sizeText": "300g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/66441",
+      "size": {
+       "qty": 0.3,
+       "unit": "kg"
+      },
+      "unitPrice": 34,
+      "unitLabel": "د/كغ",
+      "score": 3
+     },
+     {
+      "name": "Acorsa Black Sliced Olives Jar, 470g",
+      "price": 16.79,
+      "sizeText": "470g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/9612",
+      "size": {
+       "qty": 0.47,
+       "unit": "kg"
+      },
+      "unitPrice": 35.72,
+      "unitLabel": "د/كغ",
+      "score": 3
+     },
+     {
+      "name": "Torrent Plain Black Olives, 440g",
+      "price": 10.79,
+      "sizeText": "440g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1546903",
+      "size": {
+       "qty": 0.44,
+       "unit": "kg"
+      },
+      "unitPrice": 24.52,
+      "unitLabel": "د/كغ",
+      "score": 2
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Spanish Sliced Black Olives",
+     "price": 9.95,
+     "sizeText": "440g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z92489885291EB2AF5C59Z-1/",
+     "size": {
+      "qty": 0.44,
+      "unit": "kg"
+     },
+     "unitPrice": 22.61,
+     "unitLabel": "د/كغ",
+     "score": 3
+    },
+    "alt": [
+     {
+      "name": "Black Whole Olives",
+      "price": 11.3,
+      "sizeText": "465g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZA35709F1B650534C7407Z-1/",
+      "size": {
+       "qty": 0.465,
+       "unit": "kg"
+      },
+      "unitPrice": 24.3,
+      "unitLabel": "د/كغ",
+      "score": 2
+     }
+    ]
+   }
+  },
+  "corn": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "My Choice Whole Kernel Sweet Corn, 340g",
+     "price": 2.99,
+     "sizeText": "340g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/2286460",
+     "size": {
+      "qty": 0.34,
+      "unit": "kg"
+     },
+     "unitPrice": 8.79,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Green Giant Niblet Sweet Corn, 340g",
+      "price": 8.19,
+      "sizeText": "340g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/10568",
+      "size": {
+       "qty": 0.34,
+       "unit": "kg"
+      },
+      "unitPrice": 24.09,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Al Alali Whole Kernel Sweet Corn, 200g",
+      "price": 4.99,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/762526",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 24.95,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Cozina Whole Sweet Corn, 180g Pack of 4",
+      "price": 8.99,
+      "sizeText": "180g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2127419",
+      "size": {
+       "qty": 0.18,
+       "unit": "kg"
+      },
+      "unitPrice": 49.94,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Whole Kernel Sweet Corn",
+     "price": 6,
+     "sizeText": "425g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/ZE095E0A356B695B07EAFZ-1/",
+     "size": {
+      "qty": 0.425,
+      "unit": "kg"
+     },
+     "unitPrice": 14.12,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Whole Kernel Sweet Corn",
+      "price": 3.45,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZEF93A30BE961DC774E6FZ-1/",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 17.25,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "black-beans": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "peas": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 5,
+    "best": {
+     "name": "Basma Frozen Garden Green Peas, 400g",
+     "price": 8.29,
+     "sizeText": "400g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/232575",
+     "size": {
+      "qty": 0.4,
+      "unit": "kg"
+     },
+     "unitPrice": 20.72,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Wattie's Frozen Garden Peas 900g",
+      "price": 19.29,
+      "sizeText": "900g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/66762",
+      "size": {
+       "qty": 0.9,
+       "unit": "kg"
+      },
+      "unitPrice": 21.43,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Green Giant Frozen Garden Peas 900g",
+      "price": 19.79,
+      "sizeText": "900g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/66780",
+      "size": {
+       "qty": 0.9,
+       "unit": "kg"
+      },
+      "unitPrice": 21.99,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Green Giant Frozen Green Peas and Diced Carrots, 450g",
+      "price": 10.79,
+      "sizeText": "450g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/490069",
+      "size": {
+       "qty": 0.45,
+       "unit": "kg"
+      },
+      "unitPrice": 23.98,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "lentils": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Al Zahraa Red Masoor Dal 1kg",
+     "price": 6.99,
+     "sizeText": "1kg",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1938981",
+     "size": {
+      "qty": 1,
+      "unit": "kg"
+     },
+     "unitPrice": 6.99,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Los Pinos Masoor Dal",
+      "price": 5.5,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1778471",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 11,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Peacock Masoor Dal 500g",
+      "price": 5.59,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1419873",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 11.18,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Bayara Masoor Dal, 1kg",
+      "price": 12.49,
+      "sizeText": "1kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/889130",
+      "size": {
+       "qty": 1,
+       "unit": "kg"
+      },
+      "unitPrice": 12.49,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Masoor Dal Split Red Lentil",
+     "price": 6.25,
+     "sizeText": "1kg",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/ZD300A61FEDBA34DD5407Z-1/",
+     "size": {
+      "qty": 1,
+      "unit": "kg"
+     },
+     "unitPrice": 6.25,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Masoor Dal",
+      "price": 5.6,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z1D00B69659CDA8EEC035Z-1/",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 11.2,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "harees": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "flour": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Al Baker All Purpose Flour, 2kg",
+     "price": 9.69,
+     "sizeText": "2kg",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/98152",
+     "size": {
+      "qty": 2,
+      "unit": "kg"
+     },
+     "unitPrice": 4.84,
+     "unitLabel": "د/كغ",
+     "score": 3
+    },
+    "alt": [
+     {
+      "name": "Grand Mills All Purpose Flour, 2kg+1kg",
+      "price": 9.99,
+      "sizeText": "2kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2203656",
+      "size": {
+       "qty": 2,
+       "unit": "kg"
+      },
+      "unitPrice": 5,
+      "unitLabel": "د/كغ",
+      "score": 3
+     },
+     {
+      "name": "Grand Mills Number 1 All Purpose Flour, 2kg",
+      "price": 10.49,
+      "sizeText": "2kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1107285",
+      "size": {
+       "qty": 2,
+       "unit": "kg"
+      },
+      "unitPrice": 5.25,
+      "unitLabel": "د/كغ",
+      "score": 3
+     },
+     {
+      "name": "Al Baker, All Purpose Patent Flour, 2kg",
+      "price": 12.29,
+      "sizeText": "2kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1514589",
+      "size": {
+       "qty": 2,
+       "unit": "kg"
+      },
+      "unitPrice": 6.14,
+      "unitLabel": "د/كغ",
+      "score": 3
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "All Purpose Flour No 1",
+     "price": 17.1,
+     "sizeText": "5kg",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z37CF7F2364EE8823C133Z-1/",
+     "size": {
+      "qty": 5,
+      "unit": "kg"
+     },
+     "unitPrice": 3.42,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "All Purpose Flour",
+      "price": 11.85,
+      "sizeText": "2kg",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZCDC88A2F3341FE226665Z-1/",
+      "size": {
+       "qty": 2,
+       "unit": "kg"
+      },
+      "unitPrice": 5.92,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "All Purpose Flour",
+      "price": 6.2,
+      "sizeText": "1kg",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z07E0ACE55A9AB5EEA37EZ-1/",
+      "size": {
+       "qty": 1,
+       "unit": "kg"
+      },
+      "unitPrice": 6.2,
+      "unitLabel": "د/كغ",
+      "score": 2
+     }
+    ]
+   }
+  },
+  "breadcrumbs": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 5,
+    "best": {
+     "name": "Safa Plain Bread Crumbs, 425g",
+     "price": 7.99,
+     "sizeText": "425g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/5470",
+     "size": {
+      "qty": 0.425,
+      "unit": "kg"
+     },
+     "unitPrice": 18.8,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "American Classic Plain Bread Crumbs, 425g",
+      "price": 9.69,
+      "sizeText": "425g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1148715",
+      "size": {
+       "qty": 0.425,
+       "unit": "kg"
+      },
+      "unitPrice": 22.8,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "American Classic Plain Bread Crumbs, 425g Pack of 2",
+      "price": 9.99,
+      "sizeText": "425g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1208934",
+      "size": {
+       "qty": 0.425,
+       "unit": "kg"
+      },
+      "unitPrice": 23.51,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "American Garden Plain Bread Crumbs, 425g",
+      "price": 10.49,
+      "sizeText": "425g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/8712",
+      "size": {
+       "qty": 0.425,
+       "unit": "kg"
+      },
+      "unitPrice": 24.68,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Panko Bread Crumbs",
+     "price": 10.65,
+     "sizeText": "200g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z8565C645719A0675D05BZ-1/",
+     "size": {
+      "qty": 0.2,
+      "unit": "kg"
+     },
+     "unitPrice": 53.25,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Fresh Bread Crumbs",
+      "price": 4.65,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z170A26E056F66C96DBDEZ-1/",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 9.3,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Plain Bread Crumbs",
+      "price": 8.35,
+      "sizeText": "283g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZEAEC3A8B2C224A0AF54FZ-1/",
+      "size": {
+       "qty": 0.283,
+       "unit": "kg"
+      },
+      "unitPrice": 29.51,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "cornstarch": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 5,
+    "best": {
+     "name": "Los Pinos Cornstarch",
+     "price": 6.29,
+     "sizeText": "1KG",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1778468",
+     "size": {
+      "qty": 1,
+      "unit": "kg"
+     },
+     "unitPrice": 6.29,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": []
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 1,
+    "best": null,
+    "alt": []
+   }
+  },
+  "yeast": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 3,
+    "best": {
+     "name": "Saf Instant Yeast, 500g",
+     "price": 20.79,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1207020",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 41.58,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Green'S Active Dried Yeast 30g",
+      "price": 3.19,
+      "sizeText": "30g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1799732",
+      "size": {
+       "qty": 0.03,
+       "unit": "kg"
+      },
+      "unitPrice": 106.33,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Carrefour Original Baker's Yeast, 30g",
+      "price": 5.69,
+      "sizeText": "30g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/902329",
+      "size": {
+       "qty": 0.03,
+       "unit": "kg"
+      },
+      "unitPrice": 189.67,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 1,
+    "best": {
+     "name": "Instant Yeast",
+     "price": 15.25,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z83D0E917C7864734DFCAZ-1/",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 30.5,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": []
+   }
+  },
+  "sugar": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 5,
+    "best": {
+     "name": "Mychoice Refined White Sugar 1kg",
+     "price": 3.99,
+     "sizeText": "1kg",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/2264766",
+     "size": {
+      "qty": 1,
+      "unit": "kg"
+     },
+     "unitPrice": 3.99,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Carrefour Fine Grain White Sugar 2kg",
+      "price": 8.49,
+      "sizeText": "2kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1316671",
+      "size": {
+       "qty": 2,
+       "unit": "kg"
+      },
+      "unitPrice": 4.25,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Carrefour Fine Grain White Sugar 1kg",
+      "price": 4.29,
+      "sizeText": "1kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1316670",
+      "size": {
+       "qty": 1,
+       "unit": "kg"
+      },
+      "unitPrice": 4.29,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "SIS Fine Grain Granulated White Sugar, 2kg",
+      "price": 9.79,
+      "sizeText": "2kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/8340",
+      "size": {
+       "qty": 2,
+       "unit": "kg"
+      },
+      "unitPrice": 4.89,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Fine Grain White Sugar",
+     "price": 8.95,
+     "sizeText": "2kg",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z0CFE760DA7BA3E1949BFZ-1/",
+     "size": {
+      "qty": 2,
+      "unit": "kg"
+     },
+     "unitPrice": 4.47,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Fine Grain White Sugar",
+      "price": 5.45,
+      "sizeText": "1kg",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZA1007C25E47CF73267B0Z-1/",
+      "size": {
+       "qty": 1,
+       "unit": "kg"
+      },
+      "unitPrice": 5.45,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Refined Sugar",
+      "price": 11.2,
+      "sizeText": "2kg",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZBB42F51BEF5A9EBF0691Z-1/",
+      "size": {
+       "qty": 2,
+       "unit": "kg"
+      },
+      "unitPrice": 5.6,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "honey": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 6,
+    "best": {
+     "name": "Al Shifa Natural Floral Honey, 750g",
+     "price": 39.99,
+     "sizeText": "750g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1604744",
+     "size": {
+      "qty": 0.75,
+      "unit": "kg"
+     },
+     "unitPrice": 53.32,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Langnese Bee Easy Wild Flower Honey, 500g",
+      "price": 30.49,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/604580",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 60.98,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Al Shifa Natural Honey, 125g",
+      "price": 8.89,
+      "sizeText": "125g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/126700",
+      "size": {
+       "qty": 0.125,
+       "unit": "kg"
+      },
+      "unitPrice": 71.12,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Capilano Pure Honey Squeeze Bottle, 400g",
+      "price": 28.79,
+      "sizeText": "400g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/106684",
+      "size": {
+       "qty": 0.4,
+       "unit": "kg"
+      },
+      "unitPrice": 71.97,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Pure Honey",
+     "price": 8.3,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/ZE83184A1DE8F910179DFZ-1/",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 16.6,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Pure And Natural Squeeze Honey Bottle",
+      "price": 9.7,
+      "sizeText": "400g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z1977B884F2D5C8FCF458Z-1/",
+      "size": {
+       "qty": 0.4,
+       "unit": "kg"
+      },
+      "unitPrice": 24.25,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Flower Honey Squeeze",
+      "price": 42.85,
+      "sizeText": "400g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZE7D4F46808F0D5A9BAF1Z-1/",
+      "size": {
+       "qty": 0.4,
+       "unit": "kg"
+      },
+      "unitPrice": 107.13,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "almonds": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 5,
+    "best": {
+     "name": "Los Pinos Blanched Almonds",
+     "price": 15.74,
+     "sizeText": "200g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1795612",
+     "size": {
+      "qty": 0.2,
+      "unit": "kg"
+     },
+     "unitPrice": 78.7,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Best Pure and Natural Blanched Whole Almonds, 325g",
+      "price": 30.79,
+      "sizeText": "325g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1107641",
+      "size": {
+       "qty": 0.325,
+       "unit": "kg"
+      },
+      "unitPrice": 94.74,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Bayara Almonds Blanched Jumbo 200g",
+      "price": 23.99,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/71625",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 119.95,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Bayara Jumbo Almonds 1kg",
+      "price": 71.29,
+      "sizeText": "1kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1504556",
+      "size": {
+       "qty": 1,
+       "unit": "kg"
+      },
+      "unitPrice": 71.29,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Raw Almonds",
+     "price": 30.25,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/ZF86D9A074C64E883C5E5Z-1/",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 60.5,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Raw Almonds",
+      "price": 6.15,
+      "sizeText": "100g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZA1ABA6EA51A947A85C1EZ-1/",
+      "size": {
+       "qty": 0.1,
+       "unit": "kg"
+      },
+      "unitPrice": 61.5,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Jumbo Almonds",
+      "price": 19.4,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z8AB14B5AE09E527F873FZ-1/",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 97,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "cashew": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 3,
+    "best": {
+     "name": "Los Pinos Raw Cashews",
+     "price": 18.6,
+     "sizeText": "300g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1778315",
+     "size": {
+      "qty": 0.3,
+      "unit": "kg"
+     },
+     "unitPrice": 62,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Los Pinos Raw Jumbo Cashews",
+      "price": 15.28,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1778302",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 76.4,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Bayara Jumbo Cashew Kernels 400g",
+      "price": 36.99,
+      "sizeText": "400g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1504544",
+      "size": {
+       "qty": 0.4,
+       "unit": "kg"
+      },
+      "unitPrice": 92.47,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Raw Cashew",
+     "price": 7.65,
+     "sizeText": "100g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z083F5A3ECF67F6D8EC86Z-1/",
+     "size": {
+      "qty": 0.1,
+      "unit": "kg"
+     },
+     "unitPrice": 76.5,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Jumbo Cashew Nuts",
+      "price": 16.8,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z780530C5D792B216B0D1Z-1/",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 84,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "raisins": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 5,
+    "best": {
+     "name": "Los Pinos Brown Raisins",
+     "price": 6.9,
+     "sizeText": "300g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1918947",
+     "size": {
+      "qty": 0.3,
+      "unit": "kg"
+     },
+     "unitPrice": 23,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Los Pinos Golden Raisins",
+      "price": 14.2,
+      "sizeText": "500g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1778307",
+      "size": {
+       "qty": 0.5,
+       "unit": "kg"
+      },
+      "unitPrice": 28.4,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Bayara Brown Raisins, 250g",
+      "price": 9.79,
+      "sizeText": "250g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/564084",
+      "size": {
+       "qty": 0.25,
+       "unit": "kg"
+      },
+      "unitPrice": 39.16,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Los Pinos Black Raisins",
+      "price": 14.7,
+      "sizeText": "300g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1778293",
+      "size": {
+       "qty": 0.3,
+       "unit": "kg"
+      },
+      "unitPrice": 49,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Raisins Golden",
+     "price": 7.8,
+     "sizeText": "250g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z9F823EFAA32A04894BADZ-1/",
+     "size": {
+      "qty": 0.25,
+      "unit": "kg"
+     },
+     "unitPrice": 31.2,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Raisins Golden Medium",
+      "price": 7.8,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZD46E7C21029907B3AB5AZ-1/",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 39,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "peanuts": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 3,
+    "best": {
+     "name": "Carrefour Classic Roasted Salted Peanuts, 500g",
+     "price": 15.79,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1309653",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 31.58,
+     "unitLabel": "د/كغ",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "Halabi Roasted and Salted Peanuts, 150g",
+      "price": 7.39,
+      "sizeText": "150g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2285678",
+      "size": {
+       "qty": 0.15,
+       "unit": "kg"
+      },
+      "unitPrice": 49.27,
+      "unitLabel": "د/كغ",
+      "score": 2
+     },
+     {
+      "name": "Tabasco Roasted Peanuts, Classic Flavor, 200g",
+      "price": 15.29,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2309186",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 76.45,
+      "unitLabel": "د/كغ",
+      "score": 2
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Peanuts",
+     "price": 7.3,
+     "sizeText": "500g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z6339729C8C69AB743AD1Z-1/",
+     "size": {
+      "qty": 0.5,
+      "unit": "kg"
+     },
+     "unitPrice": 14.6,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Salted Peanuts",
+      "price": 10.1,
+      "sizeText": "300g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z7F9D555327D10D148F4AZ-1/",
+      "size": {
+       "qty": 0.3,
+       "unit": "kg"
+      },
+      "unitPrice": 33.67,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "sesame": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 4,
+    "best": {
+     "name": "Al Zahraa White Sesame Seeds 100g",
+     "price": 1.49,
+     "sizeText": "100g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/2200431",
+     "size": {
+      "qty": 0.1,
+      "unit": "kg"
+     },
+     "unitPrice": 14.9,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Los Pinos Roasted Sesame Seeds",
+      "price": 9.75,
+      "sizeText": "300g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1778391",
+      "size": {
+       "qty": 0.3,
+       "unit": "kg"
+      },
+      "unitPrice": 32.5,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Los Pinos Sesame Seeds",
+      "price": 9.75,
+      "sizeText": "300g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1778396",
+      "size": {
+       "qty": 0.3,
+       "unit": "kg"
+      },
+      "unitPrice": 32.5,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Bayara Sesame Seeds, 200g",
+      "price": 9.59,
+      "sizeText": "200g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/69360",
+      "size": {
+       "qty": 0.2,
+       "unit": "kg"
+      },
+      "unitPrice": 47.95,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "White Till Sesame Seeds",
+     "price": 3.45,
+     "sizeText": "100g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/ZDC96F513EA5494E911F9Z-1/",
+     "size": {
+      "qty": 0.1,
+      "unit": "kg"
+     },
+     "unitPrice": 34.5,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Sesame Seeds White",
+      "price": 3.6,
+      "sizeText": "100g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZA17EE1F694025205092BZ-1/",
+      "size": {
+       "qty": 0.1,
+       "unit": "kg"
+      },
+      "unitPrice": 36,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "coconut-milk": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 5,
+    "best": {
+     "name": "Dee Dee Coconut Milk, 400ml",
+     "price": 4.79,
+     "sizeText": "400ml",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1422019",
+     "size": {
+      "qty": 0.4,
+      "unit": "l"
+     },
+     "unitPrice": 11.97,
+     "unitLabel": "د/لتر",
+     "score": 2
+    },
+    "alt": [
+     {
+      "name": "American Garden Coconut Milk, 400ml",
+      "price": 7.49,
+      "sizeText": "400ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/241100",
+      "size": {
+       "qty": 0.4,
+       "unit": "l"
+      },
+      "unitPrice": 18.72,
+      "unitLabel": "د/لتر",
+      "score": 2
+     },
+     {
+      "name": "Eastern Coconut Milk Tin, 400ml",
+      "price": 9.29,
+      "sizeText": "400ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/798526",
+      "size": {
+       "qty": 0.4,
+       "unit": "l"
+      },
+      "unitPrice": 23.22,
+      "unitLabel": "د/لتر",
+      "score": 2
+     },
+     {
+      "name": "Organic Larder Regular Coconut Milk, 400ml",
+      "price": 12.79,
+      "sizeText": "400ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1152939",
+      "size": {
+       "qty": 0.4,
+       "unit": "l"
+      },
+      "unitPrice": 31.97,
+      "unitLabel": "د/لتر",
+      "score": 2
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 2,
+    "best": {
+     "name": "Coconut Milk Can",
+     "price": 3.85,
+     "sizeText": "400ml",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/ZA48B32C795EDCCE416A4Z-1/",
+     "size": {
+      "qty": 0.4,
+      "unit": "l"
+     },
+     "unitPrice": 9.63,
+     "unitLabel": "د/لتر",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Coconut Milk",
+      "price": 7.95,
+      "sizeText": "400ml",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/Z4BE31448A6D9934CE3EEZ-1/",
+      "size": {
+       "qty": 0.4,
+       "unit": "l"
+      },
+      "unitPrice": 19.88,
+      "unitLabel": "د/لتر",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "rose-water": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 5,
+    "best": {
+     "name": "Rabee Natural Distilled Rose Water, 1L",
+     "price": 12.79,
+     "sizeText": "1L",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/72890",
+     "size": {
+      "qty": 1,
+      "unit": "l"
+     },
+     "unitPrice": 12.79,
+     "unitLabel": "د/لتر",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Yamama Rose Water, 300ml",
+      "price": 6.89,
+      "sizeText": "300ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1718125",
+      "size": {
+       "qty": 0.3,
+       "unit": "l"
+      },
+      "unitPrice": 22.97,
+      "unitLabel": "د/لتر",
+      "score": 1
+     },
+     {
+      "name": "Al Jaser Rose Water 565ml",
+      "price": 14.29,
+      "sizeText": "565ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1669396",
+      "size": {
+       "qty": 0.565,
+       "unit": "l"
+      },
+      "unitPrice": 25.29,
+      "unitLabel": "د/لتر",
+      "score": 1
+     },
+     {
+      "name": "Quba Rose Water 570ml",
+      "price": 14.49,
+      "sizeText": "570ml",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1705755",
+      "size": {
+       "qty": 0.57,
+       "unit": "l"
+      },
+      "unitPrice": 25.42,
+      "unitLabel": "د/لتر",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "stock": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 4,
+    "best": {
+     "name": "Knorr Chicken Stock Cubes, 20g",
+     "price": 0.99,
+     "sizeText": "20g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/942331",
+     "size": {
+      "qty": 0.02,
+      "unit": "kg"
+     },
+     "unitPrice": 49.5,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Nestle Maggi Chicken Stock Cube With Herbs 20g",
+      "price": 1.19,
+      "sizeText": "20g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1648848",
+      "size": {
+       "qty": 0.02,
+       "unit": "kg"
+      },
+      "unitPrice": 59.5,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Nestle Maggi Chicken Stock 18g Pack of 8",
+      "price": 9.19,
+      "sizeText": "18g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2217471",
+      "size": {
+       "qty": 0.018,
+       "unit": "kg"
+      },
+      "unitPrice": 510.56,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Nestle Maggi Chicken Stock Bouillon Cubes With Herbs 20g Pack of 24",
+      "price": 25.79,
+      "sizeText": "20g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1648847",
+      "size": {
+       "qty": 0.02,
+       "unit": "kg"
+      },
+      "unitPrice": 1289.5,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 3,
+    "best": {
+     "name": "Chicken Stock Bouillon Cubes",
+     "price": 15.85,
+     "sizeText": "24 x 20g",
+     "oos": false,
+     "url": "https://minutes.noon.com/uae-en/now-product/Z084A048AE761FF4CEF41Z-1/",
+     "size": {
+      "qty": 0.48,
+      "unit": "kg"
+     },
+     "unitPrice": 33.02,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Chicken Stock Bouillon Cubes",
+      "price": 0.7,
+      "sizeText": "20g",
+      "oos": false,
+      "url": "https://minutes.noon.com/uae-en/now-product/ZE7AE4EA8BDF3E19431EBZ-1/",
+      "size": {
+       "qty": 0.02,
+       "unit": "kg"
+      },
+      "unitPrice": 35,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   }
+  },
+  "pineapple": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 2,
+    "best": {
+     "name": "California Garden Pineapple Slices, 565g",
+     "price": 7.99,
+     "sizeText": "565g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/10519",
+     "size": {
+      "qty": 0.565,
+      "unit": "kg"
+     },
+     "unitPrice": 14.14,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "California Garden Sliced Pineapple in Syrup, 825g",
+      "price": 11.79,
+      "sizeText": "825g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/10520",
+      "size": {
+       "qty": 0.825,
+       "unit": "kg"
+      },
+      "unitPrice": 14.29,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "bamboo": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 1,
+    "best": {
+     "name": "American Classic Bamboo Shoots in Water, 540g",
+     "price": 5.19,
+     "sizeText": "540g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/132497",
+     "size": {
+      "qty": 0.54,
+      "unit": "kg"
+     },
+     "unitPrice": 9.61,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": []
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "curry-cubes": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "green-curry": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 3,
+    "best": {
+     "name": "De Siam Green Curry Paste, 200g",
+     "price": 15.49,
+     "sizeText": "200g",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1787358",
+     "size": {
+      "qty": 0.2,
+      "unit": "kg"
+     },
+     "unitPrice": 77.45,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "De Siam Thai Green Curry Paste With Spicy Green Chillies And Lemongrass 70g",
+      "price": 6.99,
+      "sizeText": "70g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1200421",
+      "size": {
+       "qty": 0.07,
+       "unit": "kg"
+      },
+      "unitPrice": 99.86,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "Blue Dragon Green Curry Paste, 50g",
+      "price": 14.99,
+      "sizeText": "50g",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1403687",
+      "size": {
+       "qty": 0.05,
+       "unit": "kg"
+      },
+      "unitPrice": 299.8,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "gochujang": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "charcoal": {
+   "carrefour": {
+    "checked": "2026-10-25T11:30:02.747Z",
+    "found": 5,
+    "best": {
+     "name": "Somagic Premium Charcoal Briquettes, 4kg",
+     "price": 29.99,
+     "sizeText": "4kg",
+     "oos": false,
+     "url": "https://www.carrefouruae.com/mafuae/en/p/1240416",
+     "size": {
+      "qty": 4,
+      "unit": "kg"
+     },
+     "unitPrice": 7.5,
+     "unitLabel": "د/كغ",
+     "score": 1
+    },
+    "alt": [
+     {
+      "name": "Somagic Charcoal 4kg",
+      "price": 41.99,
+      "sizeText": "4kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1155248",
+      "size": {
+       "qty": 4,
+       "unit": "kg"
+      },
+      "unitPrice": 10.5,
+      "unitLabel": "د/كغ",
+      "score": 1
+     },
+     {
+      "name": "AL Riyah Charcoal Round Black Pack of 60",
+      "price": 18.99,
+      "sizeText": "",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/1875893",
+      "size": null,
+      "score": 1
+     },
+     {
+      "name": "Burkan Natural Charcoal, 1kg",
+      "price": 19.99,
+      "sizeText": "1kg",
+      "oos": false,
+      "url": "https://www.carrefouruae.com/mafuae/en/p/2250486",
+      "size": {
+       "qty": 1,
+       "unit": "kg"
+      },
+      "unitPrice": 19.99,
+      "unitLabel": "د/كغ",
+      "score": 1
+     }
+    ]
+   },
+   "noon": {
+    "checked": "2026-10-25T11:30:02.804Z",
     "found": 0,
     "best": null,
     "alt": []
    }
   }
  },
- "errors": [
-  "lamb-bone@carrefour: page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.carrefouruae.com/mafuae/en/search?keyword=lamb\nCall log:\n  - nav",
-  "lamb-cubes@carrefour: page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.carrefouruae.com/mafuae/en/search?keyword=lamb%20cubes\nCall log:",
-  "chicken-whole@carrefour: page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.carrefouruae.com/mafuae/en/search?keyword=whole%20chicken\nCall l",
-  "onion@carrefour: page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.carrefouruae.com/mafuae/en/search?keyword=onion\nCall log:\n  - na"
- ]
+ "errors": []
 }
