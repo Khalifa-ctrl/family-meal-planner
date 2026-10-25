@@ -148,6 +148,14 @@ textarea{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radiu
 .lib .it .del{align-self:flex-start;margin-top:4px}
 .lib .it .cu{font-size:11px;color:var(--accent);font-weight:500}
 .imp{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.pr{display:flex;flex-direction:column;gap:2px;margin-inline-start:28px;font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.pr .best{color:var(--ok);font-weight:500}
+.pr a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--line)}
+.pr .st{display:inline-block;min-width:4.5em}
+.pr .na{color:var(--hot)}
+.psum{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:12px 0}
+.psum .stat .v{font-size:19px}
+.pmeta{font-size:12.5px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .toast{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));right:50%;transform:translateX(50%);background:var(--fg);color:var(--bg);padding:9px 16px;border-radius:999px;font-weight:600;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:20}
 .toast.show{opacity:1}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -598,6 +606,41 @@ function render(){
   $('#confirm').textContent=confirmed?'✅ الأسبوع مثبّت — عرض قائمة الجمعية':'✅ ثبّت الأسبوع وطلّع قائمة الجمعية';
   renderShop();
 }
+// ---------- prices (data/prices.json written by the price robot) ----------
+let CAT=null,PRICES=null;
+async function loadPrices(){
+  try{const [c,p]=await Promise.all([fetch('data/catalog.json',{cache:'no-store'}).then(r=>r.ok?r.json():null),fetch('data/prices.json',{cache:'no-store'}).then(r=>r.ok?r.json():null)]);
+    CAT=c;PRICES=p;if(CAT)CAT.items.forEach(i=>{i.re=new RegExp(i.match,'i')});}catch(e){CAT=null;PRICES=null}
+  if(confirmed)renderShop();
+}
+function keyFor(name){if(!CAT)return null;const n=name.replace(/\s*\(.*?\)\s*/g,'').trim();const hit=CAT.items.find(i=>i.re.test(n))||CAT.items.find(i=>i.re.test(name));return hit?hit.key:null}
+function storeInfo(key){if(!PRICES||!PRICES.items[key])return null;return PRICES.items[key]}
+function bestOf(key){const d=storeInfo(key);if(!d)return null;const opts=Object.entries(d).filter(([s,r])=>r&&r.best).map(([s,r])=>({store:s,p:r.best}));if(!opts.length)return null;
+  const cmp=(a,b)=>((a.p.unitPrice??a.p.price)-(b.p.unitPrice??b.p.price));opts.sort(cmp);return {best:opts[0],all:opts}}
+function priceLine(i){
+  if(!CAT)return '';const key=keyFor(i.name);if(!key)return '';const b=bestOf(key);
+  if(!b)return `<div class="pr"><span class="na">ما لقيته في المتاجر المربوطة</span></div>`;
+  const label=o=>`<span class="st">${CAT.stores[o.store].label}</span> <a href="${o.p.url}" target="_blank" rel="noopener">${o.p.name}</a> — <b>${num(o.p.price)} د</b>${o.p.unitPrice?` (${num(o.p.unitPrice)} ${o.p.unitLabel})`:''}${o.p.oos?' · غير متوفر':''}`;
+  return `<div class="pr">${b.all.map((o,ix)=>`<div class="${ix===0?'best':''}">${ix===0?'✓ ':''}${label(o)}</div>`).join('')}</div>`;
+}
+function renderPriceSummary(byCat){
+  const meta=$('#pmeta'),sum=$('#psum');if(!meta)return;
+  if(!CAT||!PRICES||!PRICES.updatedAt){meta.innerHTML='<span>الأسعار: ما فيه بيانات بعد — الروبوت ما اشتغل.</span>';sum.innerHTML='';return}
+  const d=new Date(PRICES.updatedAt);
+  meta.innerHTML=`<span>🏷️ أسعار ${PRICES.area||''} · آخر تحديث ${d.toLocaleDateString('ar-AE',{weekday:'short',day:'numeric',month:'short'})} ${d.toLocaleTimeString('ar-AE',{hour:'2-digit',minute:'2-digit'})}</span>`;
+  const stores=Object.keys(CAT.stores);const tot={},cnt={},wins={};stores.forEach(s=>{tot[s]=0;cnt[s]=0;wins[s]=0});
+  const catWins={};let matched=0,total=0;
+  Object.entries(byCat).forEach(([c,items])=>items.forEach(i=>{total++;const key=keyFor(i.name);if(!key)return;const b=bestOf(key);if(!b)return;matched++;
+    wins[b.best.store]++;(catWins[c]=catWins[c]||{})[b.best.store]=(catWins[c][b.best.store]||0)+1;
+    b.all.forEach(o=>{tot[o.store]+=o.p.price;cnt[o.store]++})}));
+  const meatWin=catWins.m?Object.entries(catWins.m).sort((a,b)=>b[1]-a[1])[0]:null;
+  const bestStore=Object.entries(wins).sort((a,b)=>b[1]-a[1])[0];
+  sum.innerHTML=`
+   <div class="stat"><div class="k">الأرخص لأغلب الأصناف</div><div class="v">${bestStore&&bestStore[1]?CAT.stores[bestStore[0]].label:'—'}</div><div class="u">${bestStore?num(bestStore[1]):0} من ${num(matched)} صنف متطابق</div></div>
+   <div class="stat"><div class="k">اللحوم والدجاج والسمك اليوم</div><div class="v">${meatWin?CAT.stores[meatWin[0]].label:'—'}</div><div class="u">${CAT.stores[meatWin?meatWin[0]:stores[0]].delivery}</div></div>
+   ${stores.map(s=>`<div class="stat"><div class="k">تقدير سلة ${CAT.stores[s].label}</div><div class="v">${num(Math.round(tot[s]))}<span class="u">د · ${num(cnt[s])} صنف</span></div></div>`).join('')}
+   <div class="stat"><div class="k">تغطية الأسعار</div><div class="v">${num(matched)} / ${num(total)}</div><div class="u">صنف في القائمة له سعر · الباقي بهارات أو غير مربوط</div></div>`;
+}
 function shoppingData(){
   const agg={},spices=new Set(),tools=new Set();
   plan.forEach(d=>[byId[d.lunch],byId[d.dinner]].forEach(m=>{
@@ -619,11 +662,13 @@ function renderShop(){
   if(!confirmed){el.classList.remove('on');el.innerHTML='';return}
   el.classList.add('on');
   const {byCat,spices,tools}=shoppingData();
+  setTimeout(()=>renderPriceSummary(byCat),0);
   const total=Object.values(byCat).reduce((s,a)=>s+a.length,0);
   const done=Object.values(byCat).reduce((s,a)=>s+a.filter(i=>checked[i.name+'|'+i.u]).length,0);
   el.innerHTML=`<div class="shop-h"><div><h2>🛒 قائمة الجمعية للأسبوع</h2><p class="note">${num(total)} صنف مجمّعة من ${num(plan.length*2)} وجبات · تم شراء ${num(done)}</p></div>
-    <div class="actions"><button class="sm" id="copyShop">نسخ القائمة (واتساب)</button><button class="sm" id="clearChecks">إلغاء كل العلامات</button><button class="sm" id="unconfirm">فتح الجدول للتعديل</button></div></div>
-   <div class="cats">${['m','v','d','b','g','o'].filter(c=>byCat[c]).map(c=>`<div class="cat"><h3>${CATS[c]}<small>${num(byCat[c].length)}</small></h3><ul>${byCat[c].map(i=>{const k=i.name+'|'+i.u;return `<li class="${checked[k]?'done':''}"><label><input type="checkbox" id="chk-${k.replace(/[^\w؀-ۿ]/g,'_')}" data-chk="${k}" ${checked[k]?'checked':''}><span>${i.name}</span><span class="q">${num(i.q)} ${i.u}</span></label></li>`}).join('')}</ul></div>`).join('')}</div>
+    <div class="actions"><button class="sm" id="copyShop">نسخ القائمة (واتساب)</button><button class="sm" id="clearChecks">إلغاء كل العلامات</button><button class="sm" id="unconfirm">فتح الجدول للتعديل</button><a class="sm" href="https://github.com/Khalifa-ctrl/family-meal-planner/actions/workflows/prices.yml" target="_blank" rel="noopener" style="font:inherit;font-family:var(--font-display);font-weight:500;border:1px solid var(--line);padding:4px 10px;border-radius:999px;font-size:12.5px;color:var(--fg);text-decoration:none">🤖 سجل تحديثات الأسعار</a></div></div>
+   <div class="pmeta" id="pmeta"></div><div class="psum" id="psum"></div>
+   <div class="cats">${['m','v','d','b','g','o'].filter(c=>byCat[c]).map(c=>`<div class="cat"><h3>${CATS[c]}<small>${num(byCat[c].length)}</small></h3><ul>${byCat[c].map(i=>{const k=i.name+'|'+i.u;return `<li class="${checked[k]?'done':''}"><label><input type="checkbox" id="chk-${k.replace(/[^\w؀-ۿ]/g,'_')}" data-chk="${k}" ${checked[k]?'checked':''}><span>${i.name}</span><span class="q">${num(i.q)} ${i.u}</span></label>${priceLine(i)}</li>`}).join('')}</ul></div>`).join('')}</div>
    <div class="pantry"><h3>🧂 بهارات ومخزن — تأكدوا إنها موجودة</h3><div class="chips" style="margin-top:6px">${spices.map(s=>`<span>${s}</span>`).join('')}</div></div>
    <div class="pantry"><h3>🍳 الأدوات اللي بتحتاجونها هالأسبوع</h3><div class="toolsbox">${tools.map(t=>`<span>${t}</span>`).join('')}</div></div>`;
 }
@@ -722,6 +767,7 @@ $('#addForm').addEventListener('submit',e=>{
   if(n){e.target.reset();renderChips();toast('تمت إضافة الوجبة للمكتبة')}else toast('الاسم موجود مسبقاً أو ناقص');
 });
 renderChips();
+loadPrices();
 plan=plan.filter(d=>byId[d.lunch]&&byId[d.dinner]);
 if(!plan.length)plan=[{lunch:'majboos-chicken',dinner:'burger'},{lunch:'biryani-lamb',dinner:'pasta-chicken'},{lunch:'maqluba',dinner:'shawarma'},{lunch:'majboos-tuna',dinner:'steak'},{lunch:'thareed',dinner:'pizza'}];
 render();
