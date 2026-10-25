@@ -1,0 +1,37 @@
+name: تحديث الأسعار (Price robot)
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "مفاتيح محددة فقط (مثال: lamb-bone,onion) — اتركه فارغاً للكل"
+        required: false
+        default: ""
+permissions:
+  contents: write
+concurrency:
+  group: prices
+  cancel-in-progress: true
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install playwright@1.47.2 --no-save
+        working-directory: scraper
+      - run: npx playwright install --with-deps chromium
+        working-directory: scraper
+      - name: Scrape prices
+        env:
+          ONLY: ${{ github.event.inputs.only }}
+        run: node scraper/scrape.js
+      - name: Commit prices.json
+        run: |
+          git config user.name "price-robot"
+          git config user.email "price-robot@users.noreply.github.com"
+          git add data/prices.json
+          git diff --cached --quiet || git commit -m "chore: update prices $(date -u +%F)"
+          git push
