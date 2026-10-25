@@ -1,1 +1,54 @@
-{"updatedAt":null,"items":{},"stores":{}}
+{
+ "updatedAt": "2026-10-25T10:23:39.097Z",
+ "area": "الرقايب، عجمان",
+ "stores": {
+  "carrefour": {
+   "ok": 0,
+   "fail": 4
+  },
+  "noon": {
+   "ok": 4,
+   "fail": 0
+  }
+ },
+ "items": {
+  "lamb-bone": {
+   "noon": {
+    "checked": "2026-10-25T10:23:39.097Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "lamb-cubes": {
+   "noon": {
+    "checked": "2026-10-25T10:23:39.097Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "chicken-whole": {
+   "noon": {
+    "checked": "2026-10-25T10:23:39.097Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  },
+  "onion": {
+   "noon": {
+    "checked": "2026-10-25T10:23:39.097Z",
+    "found": 0,
+    "best": null,
+    "alt": []
+   }
+  }
+ },
+ "errors": [
+  "lamb-bone@carrefour: page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.carrefouruae.com/mafuae/en/search?keyword=lamb\nCall log:\n  - nav",
+  "lamb-cubes@carrefour: page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.carrefouruae.com/mafuae/en/search?keyword=lamb%20cubes\nCall log:",
+  "chicken-whole@carrefour: page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.carrefouruae.com/mafuae/en/search?keyword=whole%20chicken\nCall l",
+  "onion@carrefour: page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.carrefouruae.com/mafuae/en/search?keyword=onion\nCall log:\n  - na"
+ ]
+}
