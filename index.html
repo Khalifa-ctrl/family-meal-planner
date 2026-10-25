@@ -141,6 +141,13 @@ input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline
 .gate input{font:inherit;font-size:28px;letter-spacing:.5em;text-align:center;padding:10px;border:1px solid var(--line);border-radius:12px;background:var(--surface-2);color:var(--fg);width:100%;font-variant-numeric:tabular-nums;direction:ltr}
 .gate input:focus-visible{outline:2px solid var(--accent)}
 .gate .err{color:var(--hot);font-size:13px;min-height:1.2em}
+.addf{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:14px}
+.addf label.f input,.addf label.f select,.addf label.f textarea{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--fg);width:100%}
+.addf .full{grid-column:1/-1}
+textarea{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--fg);width:100%;min-height:90px;resize:vertical}
+.lib .it .del{align-self:flex-start;margin-top:4px}
+.lib .it .cu{font-size:11px;color:var(--accent);font-weight:500}
+.imp{display:flex;flex-direction:column;gap:8px;margin-top:14px}
 .toast{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom,0px));right:50%;transform:translateX(50%);background:var(--fg);color:var(--bg);padding:9px 16px;border-radius:999px;font-weight:600;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:20}
 .toast.show{opacity:1}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -186,6 +193,7 @@ input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline
     <div><div class="note" style="margin-bottom:6px">مكوّنات مستبعدة</div><div class="chips" id="excl"></div></div>
     <div><div class="note" style="margin-bottom:6px">التصويت</div><button class="sm" id="reset">تصفير التصويت</button></div>
   </div>
+  <div class="settings"><div><div class="note" style="margin-bottom:6px">المطابخ المسموحة (غدا وعشا)</div><div class="chips" id="cuis"></div></div></div>
   <div class="rules">
     <div class="rule"><b>حمدان</b>بروتين مشوي بس (دجاج / لحم / سمك) + عيش أبيض. بدون صالونة ولا صوصات. حصته محسوبة لحالها.</div>
     <div class="rule"><b>خليفة</b>كل شيء ما عدا الخيار والكوسة والباذنجان — مستبعدة من كل الطبخات والسلطات.</div>
@@ -195,8 +203,33 @@ input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline
 </details>
 
 <details class="panel">
+  <summary>➕ إضافة وجبات جديدة / تحديث المكتبة</summary>
+  <p class="note">ثلاث طرق: (١) أضف وجبة يدوياً من النموذج. (٢) اضغط "اطلب تحديث من كلود" وينسخ لك طلب جاهز — ألصقه في محادثة كلود، وترجع لك قائمة وجبات بصيغة JSON تلصقها في خانة الاستيراد. (٣) الصق أي JSON بنفس الصيغة مباشرة. الوجبات المضافة تنحفظ على هذا الجهاز.</p>
+  <div class="actions" style="margin-top:10px"><button class="primary" id="askClaude">🤖 اطلب تحديث من كلود (ينسخ الطلب)</button><button id="exportCustom">نسخ الوجبات المضافة (JSON)</button></div>
+  <div class="imp"><label class="f" for="importBox">استيراد وجبات (JSON)</label><textarea id="importBox" placeholder='[{"name":"...","kind":"dinner","type":"pasta","cuisine":"italian","kcal":600, ...}]'></textarea><div><button class="ok" id="importBtn">استيراد</button></div></div>
+  <h3 style="margin-top:18px">إضافة وجبة يدوياً</h3>
+  <form class="addf" id="addForm">
+    <label class="f">اسم الوجبة<input id="a-name" required></label>
+    <label class="f">الوجبة<select id="a-kind"><option value="lunch">غدا</option><option value="dinner">عشا</option></select></label>
+    <label class="f">نوع العشا<select id="a-type"></select></label>
+    <label class="f">المطبخ<select id="a-cuisine"></select></label>
+    <label class="f">الكالوري (للشخص)<input id="a-kcal" type="number" required min="100" value="600"></label>
+    <label class="f">بروتين غ<input id="a-p" type="number" value="35"></label>
+    <label class="f">كارب غ<input id="a-c" type="number" value="60"></label>
+    <label class="f">دهون غ<input id="a-f" type="number" value="22"></label>
+    <label class="f full">المرافقات / الوصف المختصر<input id="a-side"></label>
+    <label class="f">حصة حمدان (مشوي + عيش أبيض)<input id="a-hamdan" value="دجاج مشوي + عيش أبيض"></label>
+    <label class="f">كالوري حصة حمدان<input id="a-hk" type="number" value="480"></label>
+    <label class="f full">المكونات — سطر لكل مكوّن: الاسم | الكمية | الوحدة | الفئة (m لحوم، v خضار، d ألبان، b مخبوزات، g بقالة، s بهارات)<textarea id="a-ing" placeholder="صدور دجاج | 700 | غ | m&#10;عيش بسمتي | 3 | كوب | g"></textarea></label>
+    <label class="f full">الأدوات (افصل بفاصلة)<input id="a-tools" placeholder="قدر كبير، شواية، فرن"></label>
+    <label class="f full">الطريقة باختصار<textarea id="a-steps"></textarea></label>
+    <div class="full"><button type="submit" class="primary">حفظ الوجبة</button></div>
+  </form>
+</details>
+
+<details class="panel">
   <summary>مكتبة الأكلات والكالوري</summary>
-  <p class="note">الكالوري لحصة معتدلة لشخص بالغ. المقادير في كل وصفة لـ ٤ أشخاص (حصة حمدان المشوية ضمنها). المكتبة تضم أكلات إماراتية وخليجية وهندية للغدا، وعشا عصري خفيف.</p>
+  <p class="note">الكالوري لحصة معتدلة لشخص بالغ. المقادير في كل وصفة لـ ٤ أشخاص (حصة حمدان المشوية ضمنها). المكتبة تضم أكلات إماراتية وخليجية وهندية وإيطالية ويابانية وكورية وصينية وتايلندية ومكسيكية. الوجبات اللي تضيفها تظهر هنا بعلامة "مضافة" وتقدر تحذفها.</p>
   <div class="lib" id="lib"></div>
 </details>
 
@@ -222,7 +255,7 @@ input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline
 // ---------- ingredient shorthand: [name, qty, unit, cat] ----------
 // cat: m=لحوم ودجاج وسمك, v=خضار وفواكه, d=ألبان وبيض, g=بقالة جافة, b=مخبوزات, s=بهارات (مخزن), o=أخرى
 const T={pot:'قدر كبير',pc:'قدر ضغط',grill:'شواية / غريل',oven:'فرن',pan:'مقلاة',wok:'مقلاة عميقة',tray:'صينية فرن',blend:'خلاط',strain:'مصفاة',bowl:'بول كبير',rolling:'نشّابة',pizza:'صينية بيتزا',skew:'أسياخ'};
-const LIB=[
+const BASE=[
  // ---------- غدا تقليدي ----------
  {id:'majboos-chicken',kind:'lunch',name:'مجبوس دجاج',side:'دقوس + سلطة (طماط، خس، جزر)',kcal:700,p:38,c:78,f:24,hamdan:'دجاج مشوي + عيش أبيض',hk:500,
   ing:[['دجاج كامل',1.5,'كغ','m'],['عيش بسمتي',3,'كوب','g'],['بصل',3,'حبة','v'],['طماط',4,'حبة','v'],['ثوم',6,'فص','v'],['لومي (ليمون أسود)',3,'حبة','s'],['بهارات مجبوس',2,'ملعقة','s'],['زعفران',1,'رشة','s'],['ماء ورد',1,'ملعقة','g'],['زيت',4,'ملعقة','g'],['خس',1,'حبة','v'],['جزر',2,'حبة','v'],['كزبرة خضرا',1,'ربطة','v']],
@@ -413,7 +446,63 @@ const LIB=[
  {id:'turkish-kebab',kind:'dinner',type:'grill',name:'كباب أضنة تركي',side:'خبز تنور + بصل بالسماق + طماط مشوية',kcal:600,p:40,c:44,f:30,hamdan:'الكباب نفسه + عيش أبيض',hk:540,
   ing:[['لحم غنم مفروم',800,'غ','m'],['فلفل أحمر حلو مفروم',1,'حبة','v'],['بصل',2,'حبة','v'],['بقدونس',1,'ربطة','v'],['فلفل أحمر مجروش',1,'ملعقة','s'],['كمون',1,'ملعقة','s'],['سماق',1,'ملعقة','s'],['خبز تنور / عربي',1,'كيس','b'],['طماط',4,'حبة','v'],['فلفل أخضر طويل',4,'حبة','v'],['عيش أبيض (لحمدان)',1,'كوب','g']],
   tools:['grill','skew'],steps:'المفروم يعجن بالفلفل والبهار ويلف على أسياخ عريضة. حصة حمدان بدون الفلفل الحار.'},
+ // ---------- مطابخ عالمية ----------
+ {id:'risotto',kind:'lunch',cuisine:'italian',name:'ريزوتو دجاج بالفطر',side:'بارميزان + سلطة روكا',kcal:680,p:34,c:70,f:26,hamdan:'دجاج مشوي + عيش أبيض',hk:480,
+  ing:[['عيش أربوريو',2,'كوب','g'],['صدور دجاج',600,'غ','m'],['فطر',250,'غ','v'],['بصل',1,'حبة','v'],['ثوم',3,'فص','v'],['مرق دجاج',1,'لتر','g'],['زبدة',50,'غ','d'],['جبن بارميزان مبشور',80,'غ','d'],['زيت زيتون',2,'ملعقة','g'],['روكا',1,'ربطة','v'],['عيش أبيض (لحمدان)',1,'كوب','g']],
+  tools:['pot','pan','grill'],steps:'العيش يتحمر بالزبدة والبصل ويضاف المرق تدريجياً مع التحريك ٢٠ دقيقة. الدجاج والفطر محمرين فوق.'},
+ {id:'chicken-parm',kind:'dinner',type:'grill',cuisine:'italian',name:'دجاج بارميزان',side:'صلصة طماط + موزاريلا + سباغيتي قليل',kcal:620,p:42,c:48,f:26,hamdan:'الدجاج مشوي بدون تغليف + عيش أبيض',hk:460,
+  ing:[['صدور دجاج مفرودة',800,'غ','m'],['بقسماط',1,'كوب','g'],['بيض',2,'حبة','d'],['جبن بارميزان مبشور',60,'غ','d'],['جبن موزاريلا',150,'غ','d'],['صلصة طماط',1,'علبة','g'],['سباغيتي',250,'غ','g'],['أوريغانو',1,'ملعقة صغيرة','s'],['زيت',3,'ملعقة','g'],['عيش أبيض (لحمدان)',1,'كوب','g']],
+  tools:['pan','tray','oven','grill'],steps:'الصدور بالبقسماط تتحمر بسرعة، صلصة وجبن فوقها وفرن ١٥ دقيقة.'},
+ {id:'pesto-pasta',kind:'dinner',type:'pasta',cuisine:'italian',name:'باستا بيستو بالدجاج',side:'ريحان + صنوبر + طماط كرزية',kcal:590,p:34,c:60,f:24,hamdan:'صدر دجاج مشوي + عيش أبيض',hk:450,
+  ing:[['باستا (فوزيلي)',400,'غ','g'],['صدور دجاج',600,'غ','m'],['ريحان طازج',2,'ربطة','v'],['صنوبر أو لوز',50,'غ','g'],['ثوم',2,'فص','v'],['جبن بارميزان مبشور',60,'غ','d'],['زيت زيتون',5,'ملعقة','g'],['طماط كرزية',200,'غ','v'],['ليمون',1,'حبة','v'],['عيش أبيض (لحمدان)',1,'كوب','g']],
+  tools:['blend','pot','grill'],steps:'البيستو بالخلاط: ريحان + صنوبر + ثوم + بارميزان + زيت. يخلط مع الباستا الساخنة والدجاج المشوي.'},
+ {id:'teriyaki',kind:'dinner',type:'rice',cuisine:'japanese',name:'دجاج ترياكي + عيش ياباني',side:'بروكلي مطهو بالبخار + سمسم',kcal:580,p:38,c:64,f:16,hamdan:'الدجاج مشوي قبل الصوص + عيش أبيض',hk:460,
+  ing:[['أفخاذ دجاج مسحبة',800,'غ','m'],['عيش ياباني أو جاسمين',2.5,'كوب','g'],['صوص صويا',5,'ملعقة','g'],['ميرين (أو عسل)',3,'ملعقة','g'],['سكر بني',1,'ملعقة','g'],['زنجبيل طازج',20,'غ','v'],['ثوم',3,'فص','v'],['بروكلي',1,'حبة','v'],['سمسم محمص',1,'ملعقة','g'],['بصل أخضر',1,'ربطة','v'],['زيت',2,'ملعقة','g']],
+  tools:['pan','pot','grill'],steps:'الدجاج يتحمر وقطع حمدان تطلع، يصب الصوص (صويا + ميرين + سكر + زنجبيل) ويتكثف دقيقتين.'},
+ {id:'katsu',kind:'dinner',type:'rice',cuisine:'japanese',name:'تشكن كاتسو بالفرن + كاري ياباني',side:'عيش أبيض + ملفوف مبشور',kcal:640,p:38,c:68,f:22,hamdan:'الدجاج مشوي بدون تغليف + عيش أبيض',hk:460,
+  ing:[['صدور دجاج مفرودة',800,'غ','m'],['بقسماط بانكو',1.5,'كوب','g'],['بيض',2,'حبة','d'],['طحين',0.5,'كوب','g'],['عيش ياباني أو جاسمين',2.5,'كوب','g'],['مكعبات كاري ياباني',1,'علبة','g'],['بطاط',2,'حبة','v'],['جزر',2,'حبة','v'],['بصل',1,'حبة','v'],['ملفوف',0.25,'حبة','v'],['زيت',3,'ملعقة','g']],
+  tools:['tray','oven','pot','grill'],steps:'الدجاج بالبانكو في الفرن ٢٠٠ درجة ٢٠ دقيقة. الكاري: خضار مسلوقة + مكعبات الكاري.'},
+ {id:'yakisoba',kind:'dinner',type:'rice',cuisine:'japanese',name:'ياكيسوبا (نودلز يابانية بالدجاج)',side:'ملفوف + جزر + صوص ياكيسوبا',kcal:560,p:32,c:66,f:16,hamdan:'دجاج مشوي + عيش أبيض',hk:450,
+  ing:[['نودلز ياكيسوبا أو رامن',400,'غ','g'],['صدور دجاج شرائح',600,'غ','m'],['ملفوف',0.25,'حبة','v'],['جزر',2,'حبة','v'],['بصل',1,'حبة','v'],['بصل أخضر',1,'ربطة','v'],['صوص صويا',3,'ملعقة','g'],['صوص محار',2,'ملعقة','g'],['كاتشب',1,'ملعقة','g'],['زيت',3,'ملعقة','g'],['عيش أبيض (لحمدان)',1,'كوب','g']],
+  tools:['wok','pot','grill'],steps:'الدجاج والخضار في الووك على نار عالية، النودلز المسلوقة، والصوص آخر دقيقة.'},
+ {id:'bulgogi',kind:'dinner',type:'grill',cuisine:'korean',name:'بولجوجي لحم كوري',side:'عيش أبيض + خس للّف + بصل أخضر',kcal:600,p:38,c:52,f:24,hamdan:'شرائح اللحم مشوية بدون صوص + عيش أبيض',hk:500,
+  ing:[['لحم بقر شرائح رقيقة',800,'غ','m'],['عيش أبيض',2.5,'كوب','g'],['صوص صويا',5,'ملعقة','g'],['سكر بني',2,'ملعقة','g'],['كمثرى أو تفاح مبشور',1,'حبة','v'],['ثوم',5,'فص','v'],['زنجبيل طازج',20,'غ','v'],['زيت سمسم',1,'ملعقة','g'],['بصل أخضر',1,'ربطة','v'],['بصل',1,'حبة','v'],['خس',1,'حبة','v'],['سمسم محمص',1,'ملعقة','g']],
+  tools:['bowl','pan','grill'],steps:'اللحم يتبل ساعتين بالصويا والسكر والكمثرى، ويتحمر بسرعة على نار عالية. يؤكل ملفوف بالخس مع العيش.'},
+ {id:'korean-chicken',kind:'dinner',type:'grill',cuisine:'korean',name:'دجاج كوري بالعسل والثوم (بالفرن)',side:'عيش أبيض + سلطة ملفوف',kcal:610,p:38,c:58,f:22,hamdan:'الدجاج مشوي قبل الصوص + عيش أبيض',hk:470,
+  ing:[['أفخاذ دجاج مسحبة',900,'غ','m'],['عيش أبيض',2.5,'كوب','g'],['نشا ذرة',0.5,'كوب','g'],['عسل',3,'ملعقة','g'],['صوص صويا',3,'ملعقة','g'],['معجون غوتشوجانغ (اختياري، خفيف)',1,'ملعقة','g'],['ثوم',6,'فص','v'],['زنجبيل طازج',20,'غ','v'],['ملفوف',0.25,'حبة','v'],['جزر',1,'حبة','v'],['سمسم محمص',1,'ملعقة','g'],['زيت',3,'ملعقة','g']],
+  tools:['tray','oven','pan','grill'],steps:'الدجاج بالنشا في الفرن ٢٥ دقيقة لين يقرمش، يقلب بالصوص الساخن. اضبطوا الحار على ذوقكم.'},
+ {id:'bibimbap',kind:'lunch',cuisine:'korean',name:'بيبيمباب (عيش كوري بالخضار واللحم)',side:'بيض عيون + صوص خفيف',kcal:650,p:34,c:72,f:22,hamdan:'لحم مشوي + عيش أبيض',hk:520,
+  ing:[['عيش أبيض',3,'كوب','g'],['لحم بقر مفروم أو شرائح',600,'غ','m'],['بيض',4,'حبة','d'],['سبانخ',1,'ربطة','v'],['جزر',2,'حبة','v'],['فطر',150,'غ','v'],['براعم فول',200,'غ','v'],['ثوم',4,'فص','v'],['صوص صويا',4,'ملعقة','g'],['زيت سمسم',2,'ملعقة','g'],['سمسم محمص',1,'ملعقة','g'],['معجون غوتشوجانغ (اختياري)',1,'ملعقة','g']],
+  tools:['pan','pot'],steps:'كل خضار يتحمر لحاله بسرعة بزيت السمسم والثوم، تترتب فوق العيش مع اللحم وبيض عيون. بدون كوسة.'},
+ {id:'sweet-sour',kind:'dinner',type:'rice',cuisine:'chinese',name:'دجاج حلو وحامض بالفرن',side:'فلفل + أناناس + عيش أبيض',kcal:600,p:34,c:70,f:16,hamdan:'الدجاج مشوي بدون صوص + عيش أبيض',hk:450,
+  ing:[['صدور دجاج مكعبات',700,'غ','m'],['عيش أبيض',2.5,'كوب','g'],['نشا ذرة',0.5,'كوب','g'],['فلفل رومي ملون',2,'حبة','v'],['بصل',1,'حبة','v'],['أناناس معلب',1,'علبة','g'],['كاتشب',4,'ملعقة','g'],['خل',3,'ملعقة','g'],['سكر',2,'ملعقة','g'],['صوص صويا',2,'ملعقة','g'],['ثوم',3,'فص','v'],['زيت',3,'ملعقة','g']],
+  tools:['tray','oven','wok','grill'],steps:'الدجاج بالنشا في الفرن بدل القلي، الصوص: كاتشب + خل + سكر + صويا، يخلط مع الفلفل والأناناس.'},
+ {id:'kung-pao',kind:'dinner',type:'rice',cuisine:'chinese',name:'كونغ باو دجاج',side:'فول سوداني + فلفل + عيش أبيض',kcal:590,p:36,c:58,f:22,hamdan:'دجاج مشوي + عيش أبيض',hk:450,
+  ing:[['صدور دجاج مكعبات',700,'غ','m'],['عيش أبيض',2.5,'كوب','g'],['فول سوداني محمص',80,'غ','g'],['فلفل رومي',2,'حبة','v'],['بصل أخضر',1,'ربطة','v'],['ثوم',4,'فص','v'],['زنجبيل طازج',20,'غ','v'],['صوص صويا',4,'ملعقة','g'],['خل',1,'ملعقة','g'],['سكر',1,'ملعقة','g'],['نشا ذرة',1,'ملعقة','g'],['فلفل حار مجفف (اختياري)',3,'حبة','s'],['زيت',3,'ملعقة','g']],
+  tools:['wok','pot','grill'],steps:'الدجاج في الووك على نار عالية، الفلفل والفول السوداني، والصوص يتكثف دقيقة.'},
+ {id:'beef-broccoli',kind:'dinner',type:'rice',cuisine:'chinese',name:'لحم بالبروكلي (صيني)',side:'عيش أبيض',kcal:570,p:38,c:54,f:20,hamdan:'شرائح اللحم مشوية + عيش أبيض',hk:500,
+  ing:[['لحم بقر شرائح رقيقة',700,'غ','m'],['عيش أبيض',2.5,'كوب','g'],['بروكلي',1,'حبة','v'],['ثوم',4,'فص','v'],['زنجبيل طازج',20,'غ','v'],['صوص صويا',4,'ملعقة','g'],['صوص محار',2,'ملعقة','g'],['نشا ذرة',1,'ملعقة','g'],['سكر',1,'ملعقة صغيرة','g'],['زيت',3,'ملعقة','g']],
+  tools:['wok','pot','grill'],steps:'اللحم يتبل بالنشا والصويا، يتحمر بسرعة، البروكلي مسلوق دقيقتين، والصوص يجمعهم.'},
+ {id:'pad-thai',kind:'dinner',type:'rice',cuisine:'thai',name:'باد تاي بالدجاج',side:'نودلز رز + فول سوداني + ليمون',kcal:600,p:34,c:68,f:20,hamdan:'دجاج مشوي + عيش أبيض',hk:450,
+  ing:[['نودلز رز عريضة',350,'غ','g'],['صدور دجاج شرائح',600,'غ','m'],['بيض',2,'حبة','d'],['براعم فول',200,'غ','v'],['بصل أخضر',1,'ربطة','v'],['ثوم',3,'فص','v'],['صوص سمك',2,'ملعقة','g'],['صوص صويا',2,'ملعقة','g'],['سكر بني',2,'ملعقة','g'],['ليمون',2,'حبة','v'],['فول سوداني محمص',60,'غ','g'],['زيت',3,'ملعقة','g'],['عيش أبيض (لحمدان)',1,'كوب','g']],
+  tools:['wok','bowl','grill'],steps:'النودلز تنقع بماء دافئ، الدجاج والبيض بالووك، النودلز والصوص، والبراعم آخر شيء.'},
+ {id:'green-curry',kind:'lunch',cuisine:'thai',name:'كاري أخضر تايلندي بالدجاج + عيش جاسمين',side:'ريحان تايلندي + ليمون',kcal:690,p:36,c:68,f:28,hamdan:'دجاج مشوي + عيش أبيض',hk:480,
+  ing:[['أفخاذ دجاج مسحبة',900,'غ','m'],['عيش جاسمين',3,'كوب','g'],['معجون كاري أخضر',2,'ملعقة','g'],['حليب جوز هند',400,'مل','g'],['فاصوليا خضرا',200,'غ','v'],['فلفل رومي',1,'حبة','v'],['بامبو معلب (اختياري)',1,'علبة','g'],['صوص سمك',1,'ملعقة','g'],['سكر بني',1,'ملعقة','g'],['ريحان',1,'ربطة','v'],['ليمون',1,'حبة','v']],
+  tools:['pot','wok','grill'],steps:'المعجون يتحمر بشوي من جوز الهند، الدجاج، باقي الحليب والخضار ١٥ دقيقة. بدون باذنجان.'},
+ {id:'burrito-bowl',kind:'dinner',type:'rice',cuisine:'mexican',name:'بوريتو بول بالدجاج',side:'عيش + فاصوليا سودا + ذرة + أفوكادو',kcal:610,p:38,c:66,f:20,hamdan:'الدجاج المشوي نفسه + عيش أبيض',hk:460,
+  ing:[['صدور دجاج',700,'غ','m'],['عيش أبيض',2.5,'كوب','g'],['فاصوليا سودا معلبة',1,'علبة','g'],['ذرة حلوة معلبة',1,'علبة','g'],['أفوكادو',2,'حبة','v'],['طماط',2,'حبة','v'],['خس',1,'حبة','v'],['بهارات تاكو',2,'ملعقة','s'],['ليمون',2,'حبة','v'],['زبادي',0.5,'كوب','d'],['جبن شيدر مبشور',80,'غ','d'],['كزبرة خضرا',1,'ربطة','v']],
+  tools:['grill','pot','bowl'],steps:'كل مكوّن في صحن لحاله وكل واحد يركب بوله. الدجاج مشوي بالبهار (حصة حمدان بملح بس).'},
+ {id:'enchiladas',kind:'dinner',type:'wrap',cuisine:'mexican',name:'إنشيلادا دجاج بالفرن',side:'تورتيلا ملفوفة بصلصة طماط + جبن',kcal:620,p:36,c:58,f:26,hamdan:'دجاج مشوي + عيش أبيض',hk:450,
+  ing:[['صدور دجاج',700,'غ','m'],['تورتيلا',8,'حبة','b'],['صلصة إنشيلادا أو طماط',1,'علبة','g'],['جبن شيدر مبشور',200,'غ','d'],['بصل',1,'حبة','v'],['فلفل رومي',1,'حبة','v'],['بهارات تاكو',1.5,'ملعقة','s'],['زبادي',0.5,'كوب','d'],['كزبرة خضرا',1,'ربطة','v'],['عيش أبيض (لحمدان)',1,'كوب','g']],
+  tools:['pan','tray','oven','grill'],steps:'الدجاج مطبوخ ومفتت مع البصل والفلفل، يلف بالتورتيلا، صلصة وجبن فوق، فرن ٢٠ دقيقة.'},
 ];
+const CUISINES={gulf:'إماراتي / خليجي',indian:'هندي',western:'غربي / أمريكي',italian:'إيطالي',japanese:'ياباني',korean:'كوري',chinese:'صيني',thai:'تايلندي',mexican:'مكسيكي',turkish:'تركي',custom:'مضافة'};
+const CUIS_MAP={'butter-chicken':'indian','dal-chicken':'indian','chicken-curry':'indian','tikka-masala':'indian','korma':'indian','pasta-chicken':'italian','pasta-bolognese':'italian','pasta-shrimp':'italian','lasagna':'italian','meatballs':'italian','pizza':'italian','mini-pizza':'italian','fried-rice':'chinese','chicken-noodles':'chinese','tacos':'mexican','fajita':'mexican','quesadilla':'mexican','shrimp-tacos':'mexican','turkish-kebab':'turkish','shawarma':'gulf','mixed-grill':'gulf','kofta-tray':'gulf','shish-tawook':'gulf','grilled-fish':'gulf'};
+BASE.forEach(m=>{if(!m.cuisine)m.cuisine=CUIS_MAP[m.id]||(m.kind==='lunch'?'gulf':'western')});
+let CUSTOM=[];try{CUSTOM=JSON.parse(localStorage.getItem('mp-custom')||'[]');if(!Array.isArray(CUSTOM))CUSTOM=[]}catch(e){CUSTOM=[]}
+let LIB=[],byId={};
+function rebuild(){LIB=BASE.concat(CUSTOM.map(m=>Object.assign({},m,{custom:true})));byId=Object.fromEntries(LIB.map(m=>[m.id,m]))}
+rebuild();
 const CATS={m:'لحوم ودجاج وسمك',v:'خضار وأعشاب',d:'ألبان وبيض',b:'مخبوزات',g:'بقالة',o:'أخرى'};
 const DTYPES={burger:'برجر',pasta:'معكرونة',grill:'مشاوي',wrap:'لفائف/شاورما',pizza:'بيتزا',salad:'سلطة',rice:'عيش عصري'};
 const EXCL={cucumber:'خيار',kousa:'كوسة',eggplant:'باذنجان'};
@@ -422,13 +511,12 @@ const KIDS=['زايد','حمدان'];
 
 // ---------- state ----------
 let plan=[],locks={},votes={},confirmed=false,checked={},open={};
-let dtypesOn=new Set(Object.keys(DTYPES)),exclOn=new Set(['cucumber','kousa','eggplant']);
+let dtypesOn=new Set(Object.keys(DTYPES)),exclOn=new Set(['cucumber','kousa','eggplant']),cuisOn=new Set(Object.keys(CUISINES));
 try{votes=JSON.parse(localStorage.getItem('mp-votes')||'{}')}catch(e){votes={}}
 try{const s=JSON.parse(localStorage.getItem('mp-plan')||'null');if(s&&s.plan){plan=s.plan;locks=s.locks||{};confirmed=!!s.confirmed;checked=s.checked||{}}}catch(e){}
-try{const s=JSON.parse(localStorage.getItem('mp-settings')||'null');if(s){if(s.dtypes)dtypesOn=new Set(s.dtypes);if(s.excl)exclOn=new Set(s.excl);}}catch(e){}
-const byId=Object.fromEntries(LIB.map(m=>[m.id,m]));
+try{const s=JSON.parse(localStorage.getItem('mp-settings')||'null');if(s){if(s.dtypes)dtypesOn=new Set(s.dtypes);if(s.excl)exclOn=new Set(s.excl);if(s.cuis)cuisOn=new Set(s.cuis);}}catch(e){}
 const $=s=>document.querySelector(s);
-function save(){try{localStorage.setItem('mp-plan',JSON.stringify({plan,locks,confirmed,checked}));localStorage.setItem('mp-votes',JSON.stringify(votes));localStorage.setItem('mp-settings',JSON.stringify({dtypes:[...dtypesOn],excl:[...exclOn]}))}catch(e){}}
+function save(){try{localStorage.setItem('mp-plan',JSON.stringify({plan,locks,confirmed,checked}));localStorage.setItem('mp-votes',JSON.stringify(votes));localStorage.setItem('mp-settings',JSON.stringify({dtypes:[...dtypesOn],excl:[...exclOn],cuis:[...cuisOn]}))}catch(e){}}
 function toast(t){const el=$('#toast');el.textContent=t;el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('show'),1800)}
 function voteScore(id){const v=votes[id]||{};return KIDS.reduce((s,k)=>s+(v[k]==='up'?1:v[k]==='down'?-1:0),0)}
 function bothDown(id){const v=votes[id]||{};return KIDS.every(k=>v[k]==='down')}
@@ -436,6 +524,7 @@ function allowed(m){
   if(m.excl&&m.excl.some(x=>exclOn.has(x)))return false;
   if(m.kind==='dinner'&&!dtypesOn.has(m.type))return false;
   if(bothDown(m.id))return false;
+  if(!cuisOn.has(m.cuisine))return false;
   return m.kcal<=(m.kind==='lunch'?+$('#maxL').value:+$('#maxD').value);
 }
 function pick(kind,used,prev){
@@ -505,7 +594,7 @@ function render(){
     return `<article class="day"><div class="day-h"><h2>${DAYS[dt.getDay()]}</h2><span class="date">${fmt(dt)}</span></div>${meal(L,'L')}${meal(D,'D')}
       <div class="day-total"><span>إجمالي اليوم</span><b>${num(L.kcal+D.kcal)} كالوري</b></div></article>`;
   }).join('');
-  $('#lib').innerHTML=LIB.map(m=>`<div class="it ${allowed(m)?'':'off'}"><b>${m.name}</b><span class="m">${m.kind==='lunch'?'غدا':'عشا · '+DTYPES[m.type]} · ${num(m.kcal)} كالوري · حمدان ${num(m.hk)}</span><span class="m">تصويت: ${voteScore(m.id)>0?'+':''}${num(voteScore(m.id))}</span></div>`).join('');
+  $('#lib').innerHTML=LIB.map(m=>`<div class="it ${allowed(m)?'':'off'}"><b>${m.name}</b><span class="cu">${CUISINES[m.cuisine]||''}${m.custom?' · مضافة':''}</span><span class="m">${m.kind==='lunch'?'غدا':'عشا · '+(DTYPES[m.type]||'')} · ${num(m.kcal)} كالوري · حمدان ${num(m.hk)}</span><span class="m">تصويت: ${voteScore(m.id)>0?'+':''}${num(voteScore(m.id))}</span>${m.custom?`<button class="sm del" data-del="${m.id}">حذف</button>`:''}</div>`).join('');
   $('#confirm').textContent=confirmed?'✅ الأسبوع مثبّت — عرض قائمة الجمعية':'✅ ثبّت الأسبوع وطلّع قائمة الجمعية';
   renderShop();
 }
@@ -559,6 +648,7 @@ document.addEventListener('click',e=>{
   if(b.dataset.vote){const[id,k,dir]=b.dataset.vote.split('|');votes[id]=votes[id]||{};votes[id][k]=votes[id][k]===dir?null:dir;save();render();return}
   if(b.dataset.lock){locks[b.dataset.lock]=!locks[b.dataset.lock];save();render();return}
   if(b.dataset.swap){const[d,s]=b.dataset.swap.split('|');swap(+d,s);return}
+  if(b.dataset.del){delCustom(b.dataset.del);toast('تم حذف الوجبة');return}
   if(b.dataset.open){open[b.dataset.open]=!open[b.dataset.open];render();return}
   if(b.id==='copyShop')copyShop();
   if(b.id==='clearChecks'){checked={};save();renderShop()}
@@ -567,6 +657,7 @@ document.addEventListener('click',e=>{
 document.addEventListener('change',e=>{
   if(e.target.dataset.chk){checked[e.target.dataset.chk]=e.target.checked;save();renderShop();return}
   if(e.target.dataset.dt){e.target.checked?dtypesOn.add(e.target.dataset.dt):dtypesOn.delete(e.target.dataset.dt);save();render()}
+  if(e.target.dataset.cu){e.target.checked?cuisOn.add(e.target.dataset.cu):cuisOn.delete(e.target.dataset.cu);save();render()}
   if(e.target.dataset.ex){e.target.checked?exclOn.add(e.target.dataset.ex):exclOn.delete(e.target.dataset.ex);save();render()}
   if(['maxL','maxD','start'].includes(e.target.id))render();
   if(e.target.id==='ndays')generate();
@@ -579,8 +670,59 @@ $('#reset').onclick=()=>{votes={};save();render();toast('تم تصفير الت�
 function renderChips(){
   $('#dtypes').innerHTML=Object.entries(DTYPES).map(([k,v])=>`<label><input type="checkbox" id="dt-${k}" data-dt="${k}" ${dtypesOn.has(k)?'checked':''}>${v}</label>`).join('');
   $('#excl').innerHTML=Object.entries(EXCL).map(([k,v])=>`<label><input type="checkbox" id="ex-${k}" data-ex="${k}" ${exclOn.has(k)?'checked':''}>${v}</label>`).join('');
+  $('#cuis').innerHTML=Object.entries(CUISINES).map(([k,v])=>`<label><input type="checkbox" id="cu-${k}" data-cu="${k}" ${cuisOn.has(k)?'checked':''}>${v}</label>`).join('');
+  $('#a-type').innerHTML=Object.entries(DTYPES).map(([k,v])=>`<option value="${k}">${v}</option>`).join('');
+  $('#a-cuisine').innerHTML=Object.entries(CUISINES).map(([k,v])=>`<option value="${k}" ${k==='custom'?'selected':''}>${v}</option>`).join('');
 }
+// ---------- custom meals ----------
+const TOOL_BY_NAME=Object.fromEntries(Object.entries(T).map(([k,v])=>[v,k]));
+function slug(){return 'c'+Date.now().toString(36)+Math.random().toString(36).slice(2,6)}
+function normalize(m){
+  const kind=m.kind==='lunch'?'lunch':'dinner';
+  const ing=(Array.isArray(m.ing)?m.ing:[]).map(i=>Array.isArray(i)?[String(i[0]),+i[1]||1,String(i[2]||'حبة'),['m','v','d','b','g','s','o'].includes(i[3])?i[3]:'g']:[String(i.name||''),+i.qty||1,String(i.unit||'حبة'),['m','v','d','b','g','s','o'].includes(i.cat)?i.cat:'g']).filter(i=>i[0]);
+  const tools=(Array.isArray(m.tools)?m.tools:[]).map(t=>T[t]?t:TOOL_BY_NAME[t]).filter(Boolean);
+  return {id:m.id&&!byId[m.id]?String(m.id):slug(),kind,type:kind==='dinner'?(DTYPES[m.type]?m.type:'grill'):undefined,cuisine:CUISINES[m.cuisine]?m.cuisine:'custom',
+    name:String(m.name||'').trim(),side:String(m.side||''),kcal:+m.kcal||600,p:+m.p||30,c:+m.c||60,f:+m.f||20,hamdan:String(m.hamdan||'دجاج مشوي + عيش أبيض'),hk:+m.hk||450,ing,tools:tools.length?tools:['pot'],steps:String(m.steps||'')};
+}
+function addCustom(list){
+  let n=0;list.forEach(raw=>{const m=normalize(raw);if(!m.name)return;if(LIB.some(x=>x.name===m.name))return;CUSTOM.push(m);n++});
+  try{localStorage.setItem('mp-custom',JSON.stringify(CUSTOM))}catch(e){}
+  rebuild();render();return n;
+}
+function delCustom(id){CUSTOM=CUSTOM.filter(m=>m.id!==id);try{localStorage.setItem('mp-custom',JSON.stringify(CUSTOM))}catch(e){}rebuild();plan=plan.filter(d=>byId[d.lunch]&&byId[d.dinner]);if(!plan.length)generate();else render()}
+const CLAUDE_PROMPT=()=>`أبغيك تقترح لي ١٠ وجبات جديدة لجدول أكل عيلتي (٤ أفراد) وترجعها لي بصيغة JSON فقط بدون أي نص إضافي، عشان أستوردها في صفحة الجدول.
+
+قواعد العيلة:
+- الغدا تقليدي (إماراتي/خليجي/هندي)، والعشا عصري خفيف (برجر، باستا، مشاوي، لفائف، بيتزا، سلطة، أطباق عيش عالمية).
+- ممنوع نهائياً: الخيار، الكوسة، الباذنجان.
+- حصة معتدلة: الغدا ٦٠٠–٧٨٠ كالوري، العشا ٤٥٠–٦٥٠ كالوري للشخص.
+- حمدان ياكل بروتين مشوي بس (دجاج/لحم/سمك) + عيش أبيض، فكل وجبة لازم فيها حقل "hamdan" يوضح كيف تطلع له حصته من نفس الطبخة.
+- نوّع المطابخ: ${Object.values(CUISINES).filter(x=>x!=='مضافة').join('، ')}.
+- الأكلات الموجودة عندي حالياً (لا تكررها): ${LIB.map(m=>m.name).join('، ')}.
+
+الصيغة المطلوبة (مصفوفة JSON):
+[{"name":"اسم الوجبة","kind":"lunch أو dinner","type":"للعشا فقط: burger|pasta|grill|wrap|pizza|salad|rice","cuisine":"gulf|indian|western|italian|japanese|korean|chinese|thai|mexican|turkish","side":"المرافقات باختصار","kcal":600,"p":35,"c":60,"f":22,"hamdan":"حصة حمدان","hk":470,"ing":[["اسم المكوّن",700,"غ","m"]],"tools":["pot","grill"],"steps":"الطريقة باختصار"}]
+
+فئات المكونات (الحقل الرابع): m لحوم ودجاج وسمك، v خضار وأعشاب، d ألبان وبيض، b مخبوزات، g بقالة، s بهارات. المقادير لـ ٤ أشخاص.
+الأدوات المتاحة: pot, pc, grill, oven, pan, wok, tray, blend, strain, bowl, rolling, pizza, skew.`;
+$('#askClaude').onclick=()=>copyText(CLAUDE_PROMPT(),'تم نسخ الطلب — ألصقه في محادثة كلود');
+$('#exportCustom').onclick=()=>copyText(JSON.stringify(CUSTOM,null,1),CUSTOM.length?'تم نسخ الوجبات المضافة':'ما فيه وجبات مضافة بعد');
+$('#importBtn').onclick=()=>{
+  let txt=$('#importBox').value.trim();if(!txt){toast('الصق JSON أولاً');return}
+  const a=txt.indexOf('['),b=txt.lastIndexOf(']');if(a>-1&&b>a)txt=txt.slice(a,b+1);
+  let arr;try{arr=JSON.parse(txt)}catch(e){toast('الصيغة غير صحيحة — لازم تكون JSON');return}
+  if(!Array.isArray(arr))arr=[arr];
+  const n=addCustom(arr);$('#importBox').value='';toast(n?`تمت إضافة ${num(n)} وجبة`:'ما انضاف شيء (مكررة أو ناقصة)');
+};
+$('#addForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const ing=$('#a-ing').value.split('\n').map(l=>l.split('|').map(x=>x.trim())).filter(l=>l[0]).map(l=>[l[0],parseFloat(l[1])||1,l[2]||'حبة',l[3]||'g']);
+  const tools=$('#a-tools').value.split(/[,،]/).map(x=>x.trim()).filter(Boolean);
+  const n=addCustom([{name:$('#a-name').value,kind:$('#a-kind').value,type:$('#a-type').value,cuisine:$('#a-cuisine').value,side:$('#a-side').value,kcal:$('#a-kcal').value,p:$('#a-p').value,c:$('#a-c').value,f:$('#a-f').value,hamdan:$('#a-hamdan').value,hk:$('#a-hk').value,ing,tools,steps:$('#a-steps').value}]);
+  if(n){e.target.reset();renderChips();toast('تمت إضافة الوجبة للمكتبة')}else toast('الاسم موجود مسبقاً أو ناقص');
+});
 renderChips();
+plan=plan.filter(d=>byId[d.lunch]&&byId[d.dinner]);
 if(!plan.length)plan=[{lunch:'majboos-chicken',dinner:'burger'},{lunch:'biryani-lamb',dinner:'pasta-chicken'},{lunch:'maqluba',dinner:'shawarma'},{lunch:'majboos-tuna',dinner:'steak'},{lunch:'thareed',dinner:'pizza'}];
 render();
 </script>
