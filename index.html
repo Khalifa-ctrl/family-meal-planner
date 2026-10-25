@@ -240,7 +240,7 @@ textarea{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radiu
 <script>
 // ---------- passcode gate ----------
 (function(){
-  const HASH='8117b6a362ed8b065bd32227d7c6a3d15295e6affcabfc0a233ee19401924cb4';
+  const HASH='01c129ed7519d254ea277de8724df98232b2e489479eec2e561f0ec71f396326';
   const gate=document.getElementById('gate'),form=document.getElementById('gateForm'),pin=document.getElementById('pin'),err=document.getElementById('pinErr');
   let ok=false;try{ok=localStorage.getItem('mp-auth')===HASH}catch(e){}
   if(ok)return;
