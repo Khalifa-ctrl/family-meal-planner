@@ -1,16 +1,14 @@
 {
- "updatedAt": "2026-10-25T11:30:02.804Z",
+ "updatedAt": "2026-10-25T11:30:33.661Z",
  "area": "الرقايب، عجمان",
  "stores": {
   "carrefour": {
-   "ok": 99,
-   "found": 93,
-   "checked": "2026-10-25T11:30:02.747Z"
+   "ok": 0,
+   "fail": 3
   },
   "noon": {
-   "ok": 99,
-   "found": 66,
-   "checked": "2026-10-25T11:30:02.804Z"
+   "ok": 0,
+   "fail": 0
   }
  },
  "items": {
@@ -7825,5 +7823,9 @@
    }
   }
  },
- "errors": []
+ "errors": [
+  "lamb-cubes@carrefour: page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.carrefouruae.com/mafuae/en/search?keyword=",
+  "onion@carrefour: page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.carrefouruae.com/mafuae/en/search?keyword=",
+  "flour@carrefour: page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://www.carrefouruae.com/mafuae/en/search?keyword="
+ ]
 }
